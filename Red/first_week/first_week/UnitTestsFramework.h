@@ -41,11 +41,11 @@ private:
 };
 
 
-//template <typename First, typename Second>
-//std::ostream& operator << (std::ostream& out, const std::pair<First, Second>& p)
-//{
+template <typename First, typename Second>
+std::ostream& operator << (std::ostream& out, const std::pair<First, Second>& p)
+{
 	//return out << '(' << p.first << ", " << p.second << ')';
-//}
+}
 
 template <typename Collection>
 std::string Join(const Collection& c, const std::string& d)
