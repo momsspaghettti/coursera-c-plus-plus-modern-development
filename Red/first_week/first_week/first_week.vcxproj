@@ -116,6 +116,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="max_element_if.cpp" />
+    <ClCompile Include="UnitTestsFramework.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="max_element_if.h" />
+    <ClInclude Include="UnitTestsFramework.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
