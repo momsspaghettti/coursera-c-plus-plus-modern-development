@@ -77,7 +77,7 @@ void TestNoMax()
 }
 
 
-void TestAll()
+void TestAllMaxElemetIfTests()
 {
     TestRunner tr;
 

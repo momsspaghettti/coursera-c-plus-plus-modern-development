@@ -4,7 +4,7 @@
 void TestUniqueMax();
 void TestSeveralMax();
 void TestNoMax();
-void TestAll();
+void TestAllMaxElemetIfTests();
 
 
 template<typename ForwardIterator, typename UnaryPredicate>

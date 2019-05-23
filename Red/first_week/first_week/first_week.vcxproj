@@ -115,11 +115,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="logger.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="max_element_if.cpp" />
+    <ClCompile Include="sort_by.cpp" />
     <ClCompile Include="UnitTestsFramework.cpp" />
+    <ClCompile Include="update_field.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="airline_ticket.h" />
+    <ClInclude Include="logger.h" />
     <ClInclude Include="max_element_if.h" />
     <ClInclude Include="UnitTestsFramework.h" />
   </ItemGroup>

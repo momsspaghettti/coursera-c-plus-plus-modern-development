@@ -1,10 +1,13 @@
-#include "iostream"
 #include "max_element_if.h"
+#include "logger.h"
+#include "airline_ticket.h"
 
 
 int main()
 {
-	TestAll();
+	TestAllMaxElemetIfTests();
+	TestSortBy();
+	TestUpdates();
 
 	getchar();
 	getchar();

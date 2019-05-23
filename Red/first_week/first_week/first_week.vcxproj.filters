@@ -24,12 +24,27 @@
     <ClCompile Include="UnitTestsFramework.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="logger.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="sort_by.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="update_field.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="max_element_if.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="UnitTestsFramework.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="logger.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="airline_ticket.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

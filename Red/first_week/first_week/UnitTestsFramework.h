@@ -45,7 +45,7 @@ private:
 template <typename First, typename Second>
 std::ostream& operator << (std::ostream& out, const std::pair<First, Second>& p)
 {
-	//return out << '(' << p.first << ", " << p.second << ')';
+	return out << '(' << p.first << ", " << p.second << ')';
 }
 
 template <typename Collection>
@@ -113,15 +113,17 @@ void TestRunner::RunTest(TestFunction test_function, const std::string& test_fun
 }
 
 
-#define ASSERT_EQUAL(x, y) {            \
+#define ASSERT_EQUAL(x, y)              \
+{                                       \
   std::ostringstream os;                \
   os << #x << " != " << #y << ", "      \
     << __FILE__ << ":" << __LINE__;     \
   AssertEqual(x, y, os.str());          \
 }
 
-#define ASSERT(x) {                     \
-  std::ostringstream os;                     \
+#define ASSERT(x)                       \
+{                                       \
+  std::ostringstream os;                \
   os << #x << " is false, "             \
     << __FILE__ << ":" << __LINE__;     \
   Assert(x, os.str());                  \
