@@ -235,6 +235,7 @@ private:
 	map<Date, set<string>> data;
 };
 
+
 int main()
 {
 	Database db;
