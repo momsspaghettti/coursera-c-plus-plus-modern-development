@@ -149,9 +149,11 @@ void TestAll()
     tr.RunTest(TestParseCondition, "TestParseCondition");
 	tr.RunTest(TestDateOutput, "TestDateOutput");
 	tr.RunTest(TestParseDate, "TestParseDate");
+
 	tr.RunTest(TestDatabaseAddAndPrint, "TestDatabaseAddAndPrint");
 	tr.RunTest(TestDatabaseFind, "TestDatabaseFind");
 	tr.RunTest(TestDatabaseRemove, "TestDatabaseRemove");
+
 	tr.RunTest(TestDatabaseLast, "TestDatabaseLast");
 	tr.RunTest(TestDateComparisonNode, "TestDateComparisonNode");
 	tr.RunTest(TestEventComparisonNode, "TestEventComparisonNode");
