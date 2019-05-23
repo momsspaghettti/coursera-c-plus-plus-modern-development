@@ -5,6 +5,7 @@
 #include <map>
 #include <set>
 #include <string>
+#include <sstream>
 
 
 template <typename First, typename Second>
@@ -110,3 +111,21 @@ void TestRunner::RunTest(TestFunction test_function, const std::string& test_fun
 		std::cerr << test_function_name << " fail: " << ex.what() << std::endl;
 	}
 }
+
+
+#define ASSERT_EQUAL(x, y) {            \
+  std::ostringstream os;                \
+  os << #x << " != " << #y << ", "      \
+    << __FILE__ << ":" << __LINE__;     \
+  AssertEqual(x, y, os.str());          \
+}
+
+#define ASSERT(x) {                     \
+  std::ostringstream os;                     \
+  os << #x << " is false, "             \
+    << __FILE__ << ":" << __LINE__;     \
+  Assert(x, os.str());                  \
+}
+
+#define RUN_TEST(tr, func) \
+  tr.RunTest(func, #func)
