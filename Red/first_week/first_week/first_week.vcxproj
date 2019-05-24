@@ -118,7 +118,9 @@
     <ClCompile Include="logger.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="max_element_if.cpp" />
+    <ClCompile Include="print_values.cpp" />
     <ClCompile Include="sort_by.cpp" />
+    <ClCompile Include="uniq_id.cpp" />
     <ClCompile Include="UnitTestsFramework.cpp" />
     <ClCompile Include="update_field.cpp" />
   </ItemGroup>
@@ -126,6 +128,8 @@
     <ClInclude Include="airline_ticket.h" />
     <ClInclude Include="logger.h" />
     <ClInclude Include="max_element_if.h" />
+    <ClInclude Include="print_values.h" />
+    <ClInclude Include="uniq_id.h" />
     <ClInclude Include="UnitTestsFramework.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
