@@ -1,22 +1,11 @@
-#include <iostream>
-
-
-template<typename T>
-class Widget
-{
-    Widget(T v)
-    {
-		value = v;
-    }
-
-private:
-	T value;
-};
+#include "sort_students.h"
+#include "learner.h"
 
 
 int main()
 {
-	Widget w(5);
+	TestSortStudents();
+	TestLearner();
 
     return 0;
 }

@@ -124,7 +124,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="learner.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="sort_students.cpp" />
+    <ClCompile Include="UnitTestsFramework.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="learner.h" />
+    <ClInclude Include="Profiler.h" />
+    <ClInclude Include="sort_students.h" />
+    <ClInclude Include="UnitTestsFramework.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
