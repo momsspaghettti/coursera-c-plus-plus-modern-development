@@ -4,6 +4,10 @@
 #include "print_values.h"
 #include <iomanip>
 #include "uniq_id.h"
+#include "UnitTestsFramework.h"
+#include "table.h"
+#include "my_deque.h"
+#include <ctime>
 
 
 int main()
@@ -13,6 +17,8 @@ int main()
 	TestUpdates();
 	TestPrintValues();
 	TestUniqId();
+	TestTable();
+	TestMyDeque();
 
 	getchar();
 	getchar();
