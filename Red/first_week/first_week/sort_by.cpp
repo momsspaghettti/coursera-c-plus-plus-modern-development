@@ -21,15 +21,15 @@ void Test()
     {"CDG", "SVO", "AirFrance", {2018, 3,  1}, {13, 00}, {2018, 3,  1}, {17, 30}, 8000},
     };
 
-    sort(begin(tixs), end(tixs), SORT_BY(price));
+    std::sort(std::begin(tixs), std::end(tixs), SORT_BY(price));
     ASSERT_EQUAL(tixs.front().price, 1200);
     ASSERT_EQUAL(tixs.back().price, 9000);
 
-    sort(begin(tixs), end(tixs), SORT_BY(from));
+    std::sort(std::begin(tixs), std::end(tixs), SORT_BY(from));
     ASSERT_EQUAL(tixs.front().from, "AER");
     ASSERT_EQUAL(tixs.back().from, "VKO");
 
-    sort(begin(tixs), end(tixs), SORT_BY(arrival_date));
+    std::sort(begin(tixs), end(tixs), SORT_BY(arrival_date));
     ASSERT_EQUAL(tixs.front().arrival_date, (Date{2018, 2, 9}));
     ASSERT_EQUAL(tixs.back().arrival_date, (Date{2018, 3, 5}));
 }

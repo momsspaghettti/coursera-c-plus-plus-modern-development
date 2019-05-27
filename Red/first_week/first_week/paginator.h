@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <algorithm>
+#include <vector>
 
 
 template <typename Iterator >
@@ -40,6 +41,11 @@ public:
 	Paginator<Iterator>(Iterator begin, Iterator end, const size_t& page_size)
 	{
 	    const size_t size = end - begin;
+
+        if (size == 0)
+        {
+            return;
+        }
 
         if (page_size >= size)
         {

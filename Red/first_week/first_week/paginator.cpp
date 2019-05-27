@@ -18,7 +18,7 @@ void TestPageCounts()
     ASSERT_EQUAL(Paginate(v, 14).size(), 2u);
 
 	v = std::vector<int>(0);
-	ASSERT_EQUAL(Paginate(v, 5).size(), 1);
+	ASSERT_EQUAL(Paginate(v, 5).size(), v.size());
 }
 
 

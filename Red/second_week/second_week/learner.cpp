@@ -8,7 +8,10 @@ int Learner::Learn(const std::vector<std::string>& words)
 {
 	const size_t old_size = dict_.size();
 
-	dict_.insert(words.begin(), words.end());
+    for (const std::string& word : words)
+    {
+		dict_.insert(word);
+    }
 
 	return static_cast<int>(dict_.size() - old_size);
 }
@@ -16,7 +19,17 @@ int Learner::Learn(const std::vector<std::string>& words)
 
 std::vector<std::string> Learner::KnownWords()
 {
-    return { dict_.begin(), dict_.end() };
+	std::vector<std::string> result(dict_.size());
+
+	size_t i = 0;
+
+	for (const std::string& word : dict_)
+	{
+		result[i] = word;
+		++i;
+	}
+
+	return result;
 }
 
 
@@ -26,7 +39,7 @@ void TestLearner()
 
 	Learner learner;
 
-    for (int i = 0; i < 4000; ++i)
+    for (int i = 0; i < 3000; ++i)
     {
 		learner.Learn({ 10, std::to_string(i) });
 
