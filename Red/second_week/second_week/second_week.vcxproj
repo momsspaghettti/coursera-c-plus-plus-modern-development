@@ -124,9 +124,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="books.cpp" />
+    <ClCompile Include="hotels.cpp" />
     <ClCompile Include="learner.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="sort_students.cpp" />
+    <ClCompile Include="trains.cpp" />
     <ClCompile Include="UnitTestsFramework.cpp" />
   </ItemGroup>
   <ItemGroup>
