@@ -123,7 +123,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="linked_list.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="object_pool.cpp" />
+    <ClCompile Include="simple_vector.cpp" />
+    <ClCompile Include="swap_sort_copy.cpp" />
+    <ClCompile Include="UnitTestsFramework.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="linked_list.h" />
+    <ClInclude Include="object_pool.h" />
+    <ClInclude Include="Profiler.h" />
+    <ClInclude Include="simple_vector.h" />
+    <ClInclude Include="swap_sort_copy.h" />
+    <ClInclude Include="UnitTestsFramework.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
