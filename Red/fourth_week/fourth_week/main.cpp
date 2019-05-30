@@ -2,6 +2,10 @@
 #include <list>
 #include <unordered_map>
 #include <stdexcept>
+#include "stack_vector.h"
+#include "translator.h"
+#include "airport_counter.h"
+#include "text_editor.h"
 
 
 void Sportsmen()
@@ -46,7 +50,12 @@ int main()
 	std::ios_base::sync_with_stdio(false);
 	std::cin.tie(nullptr);
 
-	Sportsmen();
+	//Sportsmen();
+
+	//TestStackVector();
+	//TestTranslator();
+	//TestAirportCounter();
+	TestTextEditor();
 
     return 0;
 }
