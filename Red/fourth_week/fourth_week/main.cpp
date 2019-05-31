@@ -6,6 +6,7 @@
 #include "translator.h"
 #include "airport_counter.h"
 #include "text_editor.h"
+#include "stats.h"
 
 
 void Sportsmen()
@@ -50,12 +51,13 @@ int main()
 	std::ios_base::sync_with_stdio(false);
 	std::cin.tie(nullptr);
 
-	//Sportsmen();
-
-	//TestStackVector();
-	//TestTranslator();
-	//TestAirportCounter();
+	TestStackVector();
+	TestTranslator();
+	TestAirportCounter();
 	TestTextEditor();
+	TestStats();
+
+	Sportsmen();
 
     return 0;
 }
