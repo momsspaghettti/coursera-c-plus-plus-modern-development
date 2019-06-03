@@ -76,6 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,7 +124,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="explore_key_words.cpp" />
+    <ClCompile Include="group_heavy_strings.cpp" />
+    <ClCompile Include="josephus_permutation.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="matrix_sum.cpp" />
+    <ClCompile Include="merge_sort.cpp" />
+    <ClCompile Include="paginator.cpp" />
+    <ClCompile Include="priority_collection.cpp" />
+    <ClCompile Include="simple_vector.cpp" />
+    <ClCompile Include="split_into_sentences.cpp" />
+    <ClCompile Include="UnitTestsFramework.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="explore_key_words.h" />
+    <ClInclude Include="group_heavy_strings.h" />
+    <ClInclude Include="josephus_permutation.h" />
+    <ClInclude Include="matrix_sum.h" />
+    <ClInclude Include="merge_sort.h" />
+    <ClInclude Include="paginator.h" />
+    <ClInclude Include="priority_collection.h" />
+    <ClInclude Include="Profiler.h" />
+    <ClInclude Include="simple_vector.h" />
+    <ClInclude Include="split_into_sentences.h" />
+    <ClInclude Include="UnitTestsFramework.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
