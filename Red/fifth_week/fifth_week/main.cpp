@@ -12,15 +12,15 @@
 
 int main()
 {
-	//TestJosephusPermutation();
-	//TestGroupHeavyStrings();
-	//TestSimpleVector();
-	//TestSplitIntoSentences();
-	//TestMergeSort();
-	//TestPriorityCollection();
-	//TestMatrixSum();
-	//TestExploreKeyWords();
-	//TestSynchronized();
+	TestJosephusPermutation();
+	TestGroupHeavyStrings();
+	TestSimpleVector();
+	TestSplitIntoSentences();
+	TestMergeSort();
+	TestPriorityCollection();
+	TestMatrixSum();
+	TestExploreKeyWords();
+	TestSynchronized();
 	TestConcurrentMap();
 
     return 0;
