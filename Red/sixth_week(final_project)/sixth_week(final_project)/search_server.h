@@ -1,24 +1,45 @@
 #pragma once
-#include <string>
-#include <unordered_map>
-#include <unordered_set>
+#include <istream>
 #include <vector>
+#include <unordered_map>
+#include <string>
+#include <future>
+#include "synchronized.h"
 
 
-class SearchServer 
+class InvertedIndex
 {
 public:
-    SearchServer() = default;
-  
-    explicit SearchServer(std::istream& document_input);
-  
-    void UpdateDocumentBase(std::istream& document_input);
+	InvertedIndex() = default;
+	
+    explicit InvertedIndex(std::istream& document_input);
 
-    void AddQueriesStream(std::istream& query_input, std::ostream& search_results_output) const;
+    const std::vector<std::pair<size_t, size_t>>& Lookup(const std::string& word) const;
+
+    size_t GetDocsCount() const
+    {
+		return docs_count_;
+    }
 
 private:
-	const static size_t N = 50000;
-    std::vector<std::unordered_map<std::string, int>> id_to_words_;
-	std::unordered_map<std::string, std::vector<int>> word_to_ids_;
-	size_t docs_count = 0;
+	size_t docs_count_ = 0;
+    std::unordered_map<std::string, std::vector<std::pair<size_t, size_t>>> index;
+};
+
+
+class SearchServer
+{
+public:
+	SearchServer() = default;
+
+	explicit SearchServer(std::istream& document_input)
+		: index_(InvertedIndex(document_input)){}
+
+	void UpdateDocumentBase(std::istream& document_input);
+	
+    void AddQueriesStream(std::istream& query_input, std::ostream& search_results_output);
+
+private:
+	Synchronized<InvertedIndex> index_;
+    std::vector<std::future<void>> futures_;
 };

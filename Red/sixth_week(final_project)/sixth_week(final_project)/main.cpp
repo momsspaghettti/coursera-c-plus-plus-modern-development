@@ -5,8 +5,5 @@ int main()
 {
 	TestSearchServer();
 
-	getchar();
-	getchar();
-
     return 0;
 }

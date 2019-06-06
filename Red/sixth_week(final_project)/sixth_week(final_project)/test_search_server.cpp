@@ -201,29 +201,6 @@ void TestBasicSearch()
 }
 
 
-void TestPerformance()
-{
-	std::ifstream docs("docs.txt");
-	std::ifstream quires("quires.txt");
-
-	std::ostringstream out;
-
-	SearchServer sr;
-	{
-		TIME_IT("Total");
-		{
-			TIME_IT("Read DataBase");
-			sr.UpdateDocumentBase(docs);
-		}
-
-		{
-			TIME_IT("Quires Processing");
-			sr.AddQueriesStream(quires, out);
-		}
-	}
-}
-
-
 void TestSearchServer()
 {
     TestRunner tr;
@@ -232,5 +209,4 @@ void TestSearchServer()
 	RUN_TEST(tr, TestHitCount);
 	RUN_TEST(tr, TestRanking);
 	RUN_TEST(tr, TestBasicSearch);
-	RUN_TEST(tr, TestPerformance);
 }

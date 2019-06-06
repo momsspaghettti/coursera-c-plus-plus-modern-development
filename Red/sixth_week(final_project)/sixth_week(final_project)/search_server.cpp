@@ -1,106 +1,131 @@
 #include "search_server.h"
-#include <sstream>
-#include <utility>
-#include <future>
-#include <stdexcept>
-#include <algorithm>
 #include "iterator_range.h"
+#include <numeric>
+#include <algorithm>
 #include <iterator>
+#include <sstream>
+#include <future>
 
 
-std::vector<std::string> SplitIntoWords(std::string&& line)
+std::vector<std::string> SplitIntoWords(const std::string& line)
 {
-    std::istringstream words_input(std::move(line));
-	return {std::make_move_iterator(std::istream_iterator<std::string>(words_input)), 
+    std::istringstream wordsInput(line);
+	return {std::make_move_iterator(std::istream_iterator<std::string>(wordsInput)), 
 	    std::make_move_iterator(std::istream_iterator<std::string>()) };
+}
+
+
+InvertedIndex::InvertedIndex(std::istream& document_input)
+{
+	index.reserve(15000);
+
+	std::string line;
+	while(std::getline(document_input, line))
+	{
+		++docs_count_;
+		size_t id = docs_count_ - 1;
+		
+	    for (const std::string& word : SplitIntoWords(line)) 
+		{
+			auto& id_to_count = index[word];
+			if (!id_to_count.empty() && id_to_count.back().first == id)
+			{
+				++id_to_count.back().second;
+			}
+			else 
+			{
+				id_to_count.emplace_back(id, 1);
+			}
+		}
+	}
+}
+
+
+const std::vector<std::pair<size_t, size_t>>& InvertedIndex::Lookup(const std::string& word) const
+{
+	static const std::vector<std::pair<size_t, size_t>> result;
+	if (const auto it = index.find(word); it != index.end())
+	{
+		return it->second;
+	}
+	return result;
+}
+
+
+void UpdateDocumentBaseSingleThread(std::istream& document_input, Synchronized<InvertedIndex>& index)
+{
+	InvertedIndex new_index(document_input);
+	std::swap(index.GetAccess().ref_to_value, new_index);
+}
+
+
+void AddQueriesStreamSingleThread(std::istream& query_input, 
+	std::ostream& search_results_output, Synchronized<InvertedIndex>& index_)
+{
+    std::vector<size_t> ids_to_count;
+    std::vector<int64_t> ids;
+
+	std::string line;
+	while(std::getline(query_input, line))
+	{
+		const auto words = SplitIntoWords(line);
+		
+		auto access = index_.GetAccess();
+		const size_t docs_count = access.ref_to_value.GetDocsCount();
+		ids_to_count.assign(docs_count, 0);
+		ids.resize(docs_count);
+
+		auto& index = access.ref_to_value;
+		for (const auto& word : words) 
+		{
+			for (const auto& [doc_id, hit_count] : index.Lookup(word)) 
+			{
+				ids_to_count[doc_id] += hit_count;
+			}
+		}
+
+		std::iota(ids.begin(), ids.end(), 0);
+		
+	    std::partial_sort(std::begin(ids), Head(ids, 5).end(), std::end(ids), 
+			[&ids_to_count](int64_t lhs, int64_t rhs)
+		{
+			return std::pair(ids_to_count[lhs], -lhs) > std::pair(ids_to_count[rhs], -rhs);
+		});
+
+		search_results_output << line << ':';
+		
+	    for (size_t doc_id : Head(ids, 5)) 
+		{
+			const size_t hit_count = ids_to_count[doc_id];
+			if (hit_count == 0) 
+			{
+				break;
+			}
+
+			search_results_output << " {" << "docid: " << doc_id << ", " << "hitcount: " << hit_count << '}';
+		}
+		
+	    search_results_output << '\n';
+	}
 }
 
 
 void SearchServer::UpdateDocumentBase(std::istream& document_input)
 {
-	word_to_ids_.clear();
-	id_to_words_ = std::vector<std::unordered_map<std::string, int>>(50000);
-	word_to_ids_.reserve(10000);
-	docs_count = 0;
+	/*
+	 * futures_.push_back(std::async(UpdateDocumentBaseSingleThread, 
+		ref(document_input), std::ref(index_)));
+	 */
 
-	std::string line;
-	size_t id = 0;
-	std::unordered_set<std::string> tmp_set;
-	tmp_set.reserve(1000);
-    while (std::getline(document_input, line))
-    {
-		tmp_set.clear();
-		for (auto& word : SplitIntoWords(std::move(line)))
-		{
-			++id_to_words_[id][word];
-			const auto check = tmp_set.insert(word);
-			if (check.second)
-				word_to_ids_[word].push_back(id);
-		}
-		++id;
-    }
-
-	docs_count = id;
+	UpdateDocumentBaseSingleThread(document_input, index_);
 }
 
 
-SearchServer::SearchServer(std::istream& document_input)
+void SearchServer::AddQueriesStream(std::istream& query_input, std::ostream& search_results_output)
 {
-	UpdateDocumentBase(document_input);
-}
-
-
-void SearchServer::AddQueriesStream(std::istream& query_input, std::ostream& search_results_output) const
-{
-	std::ios_base::sync_with_stdio(false);
-	query_input.tie(nullptr);
-	std::vector<int> id_to_hit_count(docs_count);
-	std::vector<std::pair<int, int>> tmp;
-	tmp.reserve(docs_count);
-
-	std::string line;
-    while (std::getline(query_input, line))
-    {
-		id_to_hit_count.assign(docs_count, 0);
-
-		for (std::string& word : SplitIntoWords(std::move(line)))
-		{
-			try
-			{
-				for (const int& id : word_to_ids_.at(word))
-				{
-					id_to_hit_count[id] += id_to_words_.at(id).at(word);
-				}
-			}
-			catch (std::out_of_range&)
-			{
-			}
-		}
-
-		tmp.clear();
-
-		for (size_t i = 0; i < docs_count; ++i)
-		{
-			if (id_to_hit_count.at(i) > 0)
-			{
-				tmp.emplace_back(std::make_pair(i, id_to_hit_count.at(i)));
-			}
-		}
-
-		search_results_output << line << ':';
-
-		std::partial_sort(std::make_move_iterator(tmp.begin()), std::make_move_iterator(tmp.begin() + std::min(5,
-			static_cast<int>(tmp.size()))), std::make_move_iterator(tmp.end()),
-			[](const std::pair<int, int>& lhs, const std::pair<int, int>& rhs)
-		{
-			return std::make_pair(lhs.second, -lhs.first) > std::make_pair(rhs.second, -rhs.first);
-		});
-
-		for (auto& [doc_id, hit_count] : Head(tmp, 5))
-		{
-			search_results_output << " {" << "docid: " << doc_id << ", " << "hitcount: " << hit_count << '}';
-		}
-
-		search_results_output << '\n';
-    }
+	/*
+	 * futures_.push_back(std::async(AddQueriesStreamSingleThread, 
+		ref(query_input), ref(search_results_output), std::ref(index_)));
+	 */
+	AddQueriesStreamSingleThread(query_input, search_results_output, index_);
 }

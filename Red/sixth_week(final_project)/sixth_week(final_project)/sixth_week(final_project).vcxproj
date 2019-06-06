@@ -128,6 +128,7 @@
     <ClInclude Include="parse.h" />
     <ClInclude Include="Profiler.h" />
     <ClInclude Include="search_server.h" />
+    <ClInclude Include="synchronized.h" />
     <ClInclude Include="test_search_server.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="UnitTestsFramework.h" />
@@ -136,6 +137,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="parse.cpp" />
     <ClCompile Include="search_server.cpp" />
+    <ClCompile Include="synchronized.cpp" />
     <ClCompile Include="test_search_server.cpp" />
     <ClCompile Include="UnitTestsFramework.cpp" />
   </ItemGroup>

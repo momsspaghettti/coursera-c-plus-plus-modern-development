@@ -7,7 +7,8 @@ std::string_view Strip(std::string_view s)
 	s.remove_suffix(s.size() - pos - 1);
 
 	pos = s.find_first_not_of(' ');
-	s.remove_prefix(pos);
+    if (pos != s.npos)
+	    s.remove_prefix(pos);
 
 	return s;
 }
@@ -19,7 +20,11 @@ std::vector<std::string_view> SplitBy(std::string_view s, char sep)
 	result.reserve(s.size() / 2);
 
 	size_t pos = s.find_first_not_of(sep);
-	s.remove_prefix(pos);
+
+	if (pos == s.npos)
+		return result;
+	
+    s.remove_prefix(pos);
 
     while (pos != s.npos)
     {
