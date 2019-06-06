@@ -17,9 +17,8 @@ std::vector<std::string> SplitIntoWords(const std::string& line)
 
 void SearchServer::UpdateDocumentBase(std::istream& document_input)
 {
-	words_.clear();
 	word_to_ids_.clear();
-	id_to_words_ = std::vector<std::unordered_map<std::string_view, int>>(50000);
+	id_to_words_ = std::vector<std::unordered_map<std::string, int>>(50000);
 	word_to_ids_.reserve(10000);
 
 	std::string line;
@@ -31,11 +30,10 @@ void SearchServer::UpdateDocumentBase(std::istream& document_input)
 		tmp_set.clear();
 		for (auto& word : SplitIntoWords(line))
 		{
-			auto iter = words_.insert(word);
-			++id_to_words_[id][*iter.first];
-			const auto check = tmp_set.insert(*iter.first);
+			++id_to_words_[id][word];
+			const auto check = tmp_set.insert(word);
 			if (check.second)
-				word_to_ids_[*iter.first].push_back(id);
+				word_to_ids_[word].push_back(id);
 		}
 		++id;
     }
@@ -83,7 +81,7 @@ void SearchServer::AddQueriesStream(std::istream& query_input, std::ostream& sea
 		{
 			if (id_to_hit_count.at(i) > 0)
 			{
-				tmp.push_back({ i, std::move(id_to_hit_count.at(i)) });
+				tmp.emplace_back(std::make_pair(i, std::move(id_to_hit_count.at(i))));
 			}
 		}
 

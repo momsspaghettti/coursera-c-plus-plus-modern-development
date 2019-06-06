@@ -1,10 +1,8 @@
 #pragma once
 #include <string>
-#include <set>
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
-#include "Timer.h"
 
 
 class SearchServer 
@@ -20,7 +18,6 @@ public:
 
 private:
 	const static size_t N = 50000;
-	std::set<std::string> words_;
-    std::vector<std::unordered_map<std::string_view, int>> id_to_words_;
-	std::unordered_map<std::string_view, std::vector<int>> word_to_ids_;
+    std::vector<std::unordered_map<std::string, int>> id_to_words_;
+	std::unordered_map<std::string, std::vector<int>> word_to_ids_;
 };
