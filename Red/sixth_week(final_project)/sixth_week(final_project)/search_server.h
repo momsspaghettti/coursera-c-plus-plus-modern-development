@@ -20,4 +20,5 @@ private:
 	const static size_t N = 50000;
     std::vector<std::unordered_map<std::string, int>> id_to_words_;
 	std::unordered_map<std::string, std::vector<int>> word_to_ids_;
+	size_t docs_count = 0;
 };
