@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{89CAFD75-DAA8-44BB-9AF4-780E911277BA}</ProjectGuid>
+    <ProjectGuid>{4825F4CC-AC15-417F-B708-7D12C0D75A5A}</ProjectGuid>
     <RootNamespace>sixthweekfinalproject</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -76,6 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,7 +124,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="iterator_range.h" />
+    <ClInclude Include="parse.h" />
+    <ClInclude Include="Profiler.h" />
+    <ClInclude Include="search_server.h" />
+    <ClInclude Include="test_search_server.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="UnitTestsFramework.h" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="parse.cpp" />
+    <ClCompile Include="search_server.cpp" />
+    <ClCompile Include="test_search_server.cpp" />
+    <ClCompile Include="UnitTestsFramework.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
