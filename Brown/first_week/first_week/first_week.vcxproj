@@ -123,6 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="priority_collection.cpp" />
+    <ClCompile Include="UnitTestsFramework.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="priority_collection.h" />
+    <ClInclude Include="UnitTestsFramework.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
