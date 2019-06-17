@@ -76,6 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -87,6 +88,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,12 +125,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="hash_person.cpp" />
+    <ClCompile Include="hash_point.cpp" />
+    <ClCompile Include="hash_set.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="priority_collection.cpp" />
+    <ClCompile Include="secondary_index.cpp" />
+    <ClCompile Include="secondary_index_db.cpp" />
+    <ClCompile Include="set_iterator_next.cpp" />
     <ClCompile Include="UnitTestsFramework.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="hash_person.h" />
+    <ClInclude Include="hash_point.h" />
+    <ClInclude Include="hash_set.h" />
     <ClInclude Include="priority_collection.h" />
+    <ClInclude Include="secondary_index.h" />
+    <ClInclude Include="set_iterator_next.h" />
     <ClInclude Include="UnitTestsFramework.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
