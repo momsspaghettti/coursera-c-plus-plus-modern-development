@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{F7C0F1C5-A96E-4061-8D39-EF562E8AC12C}</ProjectGuid>
-    <RootNamespace>secondweek</RootNamespace>
+    <ProjectGuid>{BEF8C0AD-D0F2-4767-9937-E5989A12A102}</ProjectGuid>
+    <RootNamespace>dualdispatching</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -88,7 +88,6 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,26 +124,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ini.cpp" />
-    <ClCompile Include="json.cpp" />
+    <ClCompile Include="collide.cpp" />
+    <ClCompile Include="geo2d.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="refactoring.cpp" />
-    <ClCompile Include="spendings_json.cpp" />
-    <ClCompile Include="spendings_xml.cpp" />
-    <ClCompile Include="test_ini_parser.cpp" />
     <ClCompile Include="UnitTestsFramework.cpp" />
-    <ClCompile Include="xml.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ini.h" />
-    <ClInclude Include="json.h" />
-    <ClInclude Include="refactoring.h" />
-    <ClInclude Include="spending.h" />
-    <ClInclude Include="spendings_json.h" />
-    <ClInclude Include="spendings_xml.h" />
-    <ClInclude Include="test_ini_parser.h" />
+    <ClInclude Include="game_object.h" />
+    <ClInclude Include="geo2d.h" />
     <ClInclude Include="UnitTestsFramework.h" />
-    <ClInclude Include="xml.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

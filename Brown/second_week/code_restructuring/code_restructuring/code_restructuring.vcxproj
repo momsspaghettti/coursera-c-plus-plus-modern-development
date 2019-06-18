@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{F7C0F1C5-A96E-4061-8D39-EF562E8AC12C}</ProjectGuid>
-    <RootNamespace>secondweek</RootNamespace>
+    <ProjectGuid>{A611C9B7-6931-46F9-8535-F2FEA1A6A642}</ProjectGuid>
+    <RootNamespace>coderestructuring</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -88,7 +88,6 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,26 +124,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ini.cpp" />
-    <ClCompile Include="json.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="refactoring.cpp" />
-    <ClCompile Include="spendings_json.cpp" />
-    <ClCompile Include="spendings_xml.cpp" />
-    <ClCompile Include="test_ini_parser.cpp" />
+    <ClCompile Include="stats_aggregator.cpp" />
+    <ClCompile Include="stats_aggregator_test.cpp" />
     <ClCompile Include="UnitTestsFramework.cpp" />
-    <ClCompile Include="xml.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ini.h" />
-    <ClInclude Include="json.h" />
-    <ClInclude Include="refactoring.h" />
-    <ClInclude Include="spending.h" />
-    <ClInclude Include="spendings_json.h" />
-    <ClInclude Include="spendings_xml.h" />
-    <ClInclude Include="test_ini_parser.h" />
+    <ClInclude Include="stats_aggregator.h" />
     <ClInclude Include="UnitTestsFramework.h" />
-    <ClInclude Include="xml.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
