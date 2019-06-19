@@ -2,14 +2,16 @@
 #include "spendings_json.h"
 #include "test_ini_parser.h"
 #include "refactoring.h"
+#include "comment_server.h"
 
 
 int main()
 {
-	TestSpendingsXML();
+    TestSpendingsXML();
 	TestSpendingsJSON();
 	TestINIParser();
 	TestRefactoring();
+	TestCommentServer();
 
     return 0;
 }

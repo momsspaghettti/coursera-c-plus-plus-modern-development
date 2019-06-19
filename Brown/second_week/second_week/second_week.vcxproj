@@ -125,6 +125,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="comment_server.cpp" />
     <ClCompile Include="ini.cpp" />
     <ClCompile Include="json.cpp" />
     <ClCompile Include="main.cpp" />
@@ -136,6 +137,7 @@
     <ClCompile Include="xml.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="comment_server.h" />
     <ClInclude Include="ini.h" />
     <ClInclude Include="json.h" />
     <ClInclude Include="refactoring.h" />
