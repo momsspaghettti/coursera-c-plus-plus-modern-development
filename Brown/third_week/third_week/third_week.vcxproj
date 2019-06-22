@@ -127,6 +127,7 @@
     <ClCompile Include="concurrent_map.cpp" />
     <ClCompile Include="lazy_value.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="polynomial.cpp" />
     <ClCompile Include="print_stats.cpp" />
     <ClCompile Include="synchronized.cpp" />
     <ClCompile Include="UnitTestsFramework.cpp" />
@@ -134,6 +135,7 @@
   <ItemGroup>
     <ClInclude Include="concurrent_map.h" />
     <ClInclude Include="lazy_value.h" />
+    <ClInclude Include="polynomial.h" />
     <ClInclude Include="print_stats.h" />
     <ClInclude Include="Profiler.h" />
     <ClInclude Include="synchronized.h" />
