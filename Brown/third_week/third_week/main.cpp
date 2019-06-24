@@ -4,16 +4,24 @@
 #include "concurrent_map.h"
 #include "polynomial.h"
 #include "object_pool.h"
+#include "animals.h"
+#include "pipeline.h"
+#include "Common.h"
 
 
 int main()
 {
-    TestPrintStats();
+    /*
+     * TestPrintStats();
 	TestLazyValue();
 	TestSynchronized();
 	TestConcurrentMap();
 	TestPolynomial();
 	TestObjectPool();
+	TestZoo();
+	TestPipeLine();
+     */
+	TestCommon();
 
 	return 0;
 }

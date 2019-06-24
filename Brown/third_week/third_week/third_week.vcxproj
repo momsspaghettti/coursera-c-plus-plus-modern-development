@@ -124,19 +124,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Common.cpp" />
     <ClCompile Include="concurrent_map.cpp" />
+    <ClCompile Include="expression_tree.cpp" />
     <ClCompile Include="lazy_value.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="object_pool.cpp" />
+    <ClCompile Include="pipeline.cpp" />
     <ClCompile Include="polynomial.cpp" />
     <ClCompile Include="print_stats.cpp" />
     <ClCompile Include="synchronized.cpp" />
     <ClCompile Include="UnitTestsFramework.cpp" />
+    <ClCompile Include="zoo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="animals.h" />
     <ClInclude Include="concurrent_map.h" />
+    <ClInclude Include="Common.h" />
     <ClInclude Include="lazy_value.h" />
     <ClInclude Include="object_pool.h" />
+    <ClInclude Include="pipeline.h" />
     <ClInclude Include="polynomial.h" />
     <ClInclude Include="print_stats.h" />
     <ClInclude Include="Profiler.h" />
