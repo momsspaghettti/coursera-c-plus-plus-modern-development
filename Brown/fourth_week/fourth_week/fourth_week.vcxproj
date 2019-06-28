@@ -128,13 +128,21 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Solution.cpp" />
     <ClCompile Include="TestTextures.cpp" />
+    <ClCompile Include="test_booking.cpp" />
     <ClCompile Include="Textures.cpp" />
+    <ClCompile Include="unique_ptr.cpp" />
     <ClCompile Include="UnitTestsFramework.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="booking.h" />
     <ClInclude Include="Common.h" />
+    <ClInclude Include="new_booking_providers.h" />
+    <ClInclude Include="new_trip_manager.h" />
+    <ClInclude Include="old_booking_providers.h" />
+    <ClInclude Include="old_trip_manager.h" />
     <ClInclude Include="Profiler.h" />
     <ClInclude Include="Textures.h" />
+    <ClInclude Include="unique_ptr.h" />
     <ClInclude Include="UnitTestsFramework.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
