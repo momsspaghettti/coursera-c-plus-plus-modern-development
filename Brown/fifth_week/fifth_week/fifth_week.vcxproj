@@ -125,13 +125,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ebook.cpp" />
+    <ClCompile Include="forbidden_domains.cpp" />
+    <ClCompile Include="hotels_booking.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stats.cpp" />
+    <ClCompile Include="tasks_tracker.cpp" />
+    <ClCompile Include="trains.cpp" />
     <ClCompile Include="UnitTestsFramework.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ebook.h" />
+    <ClInclude Include="forbidden_domains.h" />
+    <ClInclude Include="hotels_booking.h" />
     <ClInclude Include="stats.h" />
+    <ClInclude Include="tasks_tracker.h" />
+    <ClInclude Include="trains.h" />
     <ClInclude Include="UnitTestsFramework.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
