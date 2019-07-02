@@ -4,6 +4,7 @@
 #include "tasks_tracker.h"
 #include "hotels_booking.h"
 #include "forbidden_domains.h"
+#include "personal_budget.h"
 
 
 int main()
@@ -14,6 +15,7 @@ int main()
 	TestTasksTracker();
 	TestHotelsBooking();
 	TestForbiddenDomains();
+	TestPersonalBudget();
 
     return 0;
 }

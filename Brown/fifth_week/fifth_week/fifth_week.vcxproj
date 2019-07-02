@@ -128,6 +128,8 @@
     <ClCompile Include="forbidden_domains.cpp" />
     <ClCompile Include="hotels_booking.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="personal_budget.cpp" />
+    <ClCompile Include="personal_budget_tests.cpp" />
     <ClCompile Include="stats.cpp" />
     <ClCompile Include="tasks_tracker.cpp" />
     <ClCompile Include="trains.cpp" />
@@ -137,6 +139,7 @@
     <ClInclude Include="ebook.h" />
     <ClInclude Include="forbidden_domains.h" />
     <ClInclude Include="hotels_booking.h" />
+    <ClInclude Include="personal_budget.h" />
     <ClInclude Include="stats.h" />
     <ClInclude Include="tasks_tracker.h" />
     <ClInclude Include="trains.h" />
