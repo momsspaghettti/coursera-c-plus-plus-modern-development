@@ -15,13 +15,13 @@ void TestReadRouteFromString()
 	
 	std::vector<std::string> expected{ "Biryulyovo Zapadnoye", "Biryusinka", "Universam", 
 	    "Biryulyovo Tovarnaya", "Biryulyovo Passazhirskaya", "Biryulyovo Zapadnoye" };
-	ASSERT_EQUAL(data_base.routes_["256"].stops_, expected);
+	ASSERT_EQUAL(data_base.routes_["256"]->stops_, expected);
 
 	input = "750: Tolstopaltsevo - Marushkino - Rasskazovka";
 	expected = std::vector < std::string>{ "Tolstopaltsevo", "Marushkino", "Rasskazovka" };
 
 	data_base.ReadRouteFromString(input);
-	ASSERT_EQUAL(data_base.routes_["750"].stops_, expected);
+	ASSERT_EQUAL(data_base.routes_["750"]->stops_, expected);
 }
 
 

@@ -4,6 +4,7 @@
 #include <optional>
 #include <utility>
 #include <unordered_set>
+#include <memory>
 
 
 struct RouteStats
@@ -20,10 +21,10 @@ struct RouteStats
 };
 
 
-class RouteInfo
+class IRouteInfo
 {
 public:
-    RouteInfo()
+    IRouteInfo()
     {
 		stops_.reserve(100);
 		route_stats_ = RouteStats();
@@ -33,7 +34,11 @@ public:
 
 	void Build(const BusStopsDataBase& stops_database);
 
+	virtual void RecomputeStatsInChildClass() = 0;
+
 	[[nodiscard]] const RouteStats& GetRouteStats() const;
+
+	virtual ~IRouteInfo() = default;
 
 private:
 	RouteStats route_stats_;
@@ -41,6 +46,23 @@ private:
 	std::unordered_set<std::string> unique_stops_;
 
     friend void TestReadRouteFromString();
+
+	friend class DirectRoute;
+	friend class RoundRoute;
+};
+
+
+class DirectRoute : public IRouteInfo
+{
+public:
+	void RecomputeStatsInChildClass() override;
+};
+
+
+class RoundRoute : public IRouteInfo
+{
+public:
+    void RecomputeStatsInChildClass() override;
 };
 
 
@@ -64,7 +86,8 @@ public:
 	friend std::ostream& operator<<(std::ostream& output, const RouteResponse& response);
 
 private:
-	std::unordered_map<std::string, RouteInfo> routes_;
+	std::unordered_map<std::string, 
+    std::shared_ptr<IRouteInfo>> routes_;
 
 	friend void TestReadRouteFromString();
 };

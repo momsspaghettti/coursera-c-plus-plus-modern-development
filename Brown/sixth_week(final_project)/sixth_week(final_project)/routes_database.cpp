@@ -1,12 +1,11 @@
 #include "routes_database.h"
-#include <stdexcept>
 
 
 void RoutesDataBase::BuildAllRoutes(const BusStopsDataBase& stops_database)
 {
 	for (auto& pair_ : routes_)
 	{
-		pair_.second.Build(stops_database);
+		pair_.second->Build(stops_database);
 	}
 }
 
@@ -20,7 +19,7 @@ RoutesDataBase::RouteResponse RoutesDataBase::GetRouteStats(const std::string& b
 
     if (finder != routes_.end())
     {
-		response.second = finder->second.GetRouteStats();
+		response.second = finder->second->GetRouteStats();
     }
 
 	return response;
@@ -51,40 +50,65 @@ std::ostream& operator<<(std::ostream& output, const RoutesDataBase::RouteRespon
 void RoutesDataBase::ReadRouteFromString(std::string_view route_line)
 {
 	auto pos = route_line.find_first_of(':');
+	std::string bus_name = std::string(route_line.substr(0, pos));
 
-	RouteInfo& route_info = 
-		routes_[std::string(route_line.substr(0, pos))];
-	route_line.remove_prefix(pos + 2);
+	route_line.remove_prefix(pos + 2);	
 
 	const char delimiter =
 		route_line.find_first_of('>') != route_line.npos ? '>' : '-';
+
+	std::shared_ptr<IRouteInfo> route_info;
+
+    if (delimiter == '-')
+    {
+		route_info = std::make_shared<DirectRoute>();
+    }
+    else
+    {
+		route_info = std::make_shared<RoundRoute>();
+    }
+
+	routes_[bus_name] = route_info;
 
     while (pos != route_line.npos)
     {
 		pos = route_line.find_first_of(delimiter);
 
 		pos = pos == route_line.npos ? pos : pos - 1;
-		route_info.AddStop(std::string(route_line.substr(0, pos )));
+		route_info->AddStop(std::string(route_line.substr(0, pos )));
 
 		route_line.remove_prefix(pos + 3);
     }
 }
 
 
-void RouteInfo::AddStop(const std::string& stop)
+void IRouteInfo::AddStop(const std::string& stop)
 {
 	stops_.push_back(stop);
 	unique_stops_.insert(stop);
 }
 
 
-const RouteStats& RouteInfo::GetRouteStats() const
+const RouteStats& IRouteInfo::GetRouteStats() const
 {
 	return route_stats_;
 }
 
 
-void RouteInfo::Build(const BusStopsDataBase& stops_database)
+void DirectRoute::RecomputeStatsInChildClass()
+{
+	route_stats_.route_length *= 2;
+	route_stats_.stops_on_route = 2 * stops_.size() - 1;
+}
+
+
+void RoundRoute::RecomputeStatsInChildClass()
+{
+	route_stats_.stops_on_route = stops_.size();
+}
+
+
+void IRouteInfo::Build(const BusStopsDataBase& stops_database)
 {
     if (stops_.empty())
         return;
@@ -103,15 +127,7 @@ void RouteInfo::Build(const BusStopsDataBase& stops_database)
 				stops_database.ComputeDistanceBetweenStops(stops_[i], stops_[i + 1]);
 		}
 
-        if (*stops_.cbegin() == *stops_.crbegin())
-        {
-			route_stats_.stops_on_route = stops_.size();
-        }
-        else
-        {
-			route_stats_.stops_on_route = 2 * stops_.size() - 1;
-			route_stats_.route_length *= 2;
-        }
+		RecomputeStatsInChildClass();
 
 		route_stats_.unique_stops = unique_stops_.size();
     }
