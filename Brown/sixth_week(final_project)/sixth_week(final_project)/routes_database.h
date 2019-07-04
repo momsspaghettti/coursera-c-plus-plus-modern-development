@@ -3,7 +3,7 @@
 #include <vector>
 #include <optional>
 #include <utility>
-
+#include <unordered_set>
 
 
 struct RouteStats
@@ -38,8 +38,9 @@ public:
 private:
 	RouteStats route_stats_;
 	std::vector<std::string> stops_;
+	std::unordered_set<std::string> unique_stops_;
 
-	friend void TestReadRouteFromString();
+    friend void TestReadRouteFromString();
 };
 
 
@@ -60,10 +61,14 @@ public:
 
 	[[nodiscard]] RouteResponse GetRouteStats(const std::string& bus) const;
 
+	friend std::ostream& operator<<(std::ostream& output, const RouteResponse& response);
+
 private:
 	std::unordered_map<std::string, RouteInfo> routes_;
 
 	friend void TestReadRouteFromString();
-
-	friend std::ostream& operator<<(std::ostream& output, const RouteResponse& response);
 };
+
+
+std::ostream& operator<<(std::ostream& output, 
+	const RoutesDataBase::RouteResponse& response);

@@ -130,6 +130,7 @@
     <ClCompile Include="routes_database_tests.cpp" />
     <ClCompile Include="stops_database.cpp" />
     <ClCompile Include="transport_guide_manager.cpp" />
+    <ClCompile Include="transport_guide_manager_tests.cpp" />
     <ClCompile Include="transport_guide_test.cpp" />
     <ClCompile Include="UnitTestsFramework.cpp" />
   </ItemGroup>
@@ -139,6 +140,7 @@
     <ClInclude Include="routes_database_tests.h" />
     <ClInclude Include="stops_database.h" />
     <ClInclude Include="transport_guide_manager.h" />
+    <ClInclude Include="transport_guide_manager_tests.h" />
     <ClInclude Include="transport_guide_tests.h" />
     <ClInclude Include="UnitTestsFramework.h" />
   </ItemGroup>

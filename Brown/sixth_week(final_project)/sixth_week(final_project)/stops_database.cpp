@@ -2,6 +2,7 @@
 #include <cmath>
 #include <sstream>
 #include <utility>
+#include <stdexcept>
 
 
 std::istream& operator>>(std::istream& input, GroundPoint& point)

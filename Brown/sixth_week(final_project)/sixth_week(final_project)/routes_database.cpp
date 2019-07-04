@@ -1,12 +1,13 @@
 #include "routes_database.h"
+#include <stdexcept>
 
 
 void RoutesDataBase::BuildAllRoutes(const BusStopsDataBase& stops_database)
 {
-    for (auto& pair_ : routes_)
-    {
+	for (auto& pair_ : routes_)
+	{
 		pair_.second.Build(stops_database);
-    }
+	}
 }
 
 
@@ -26,9 +27,30 @@ RoutesDataBase::RouteResponse RoutesDataBase::GetRouteStats(const std::string& b
 }
 
 
+std::ostream& operator<<(std::ostream& output, const RoutesDataBase::RouteResponse& response)
+{
+	output.precision(6);
+
+	output << "Bus " << response.first << ": ";
+
+    if (response.second)
+    {
+		output << response.second->stops_on_route << " stops on route, " <<
+			response.second->unique_stops << " unique stops, " <<
+			response.second->route_length << " route length";
+    }
+    else
+    {
+		output << "not found";
+    }
+
+	return output;
+}
+
+
 void RoutesDataBase::ReadRouteFromString(std::string_view route_line)
 {
-	auto pos = route_line.find_first_of(": ");
+	auto pos = route_line.find_first_of(':');
 
 	RouteInfo& route_info = 
 		routes_[std::string(route_line.substr(0, pos))];
@@ -52,6 +74,7 @@ void RoutesDataBase::ReadRouteFromString(std::string_view route_line)
 void RouteInfo::AddStop(const std::string& stop)
 {
 	stops_.push_back(stop);
+	unique_stops_.insert(stop);
 }
 
 
@@ -76,20 +99,20 @@ void RouteInfo::Build(const BusStopsDataBase& stops_database)
     {
 		for (size_t i = 0; i < stops_.size() - 1; ++i)
 		{
-			route_stats_.route_length += 
+			route_stats_.route_length +=
 				stops_database.ComputeDistanceBetweenStops(stops_[i], stops_[i + 1]);
 		}
 
         if (*stops_.cbegin() == *stops_.crbegin())
         {
 			route_stats_.stops_on_route = stops_.size();
-			route_stats_.unique_stops = stops_.size() - 1;
         }
         else
         {
 			route_stats_.stops_on_route = 2 * stops_.size() - 1;
-			route_stats_.unique_stops = stops_.size();
 			route_stats_.route_length *= 2;
         }
+
+		route_stats_.unique_stops = unique_stops_.size();
     }
 }
