@@ -1,6 +1,7 @@
 #pragma once
 #include "routes_database.h"
 #include "stops_database.h"
+#include <memory>
 
 
 class TransportGuideManager
@@ -19,7 +20,14 @@ public:
 
 	void AddRoute(const std::string& route_description);
 
-	void WriteResponse(const std::string& bus, std::ostream& output) const;
+	enum class ResponseType
+	{
+		BUS,
+		STOP,
+	};
+
+	void WriteResponse(ResponseType response_type, 
+		const std::string& response_param, std::ostream& output) const;
 
 private:
 	BusStopsDataBase stops_database_;

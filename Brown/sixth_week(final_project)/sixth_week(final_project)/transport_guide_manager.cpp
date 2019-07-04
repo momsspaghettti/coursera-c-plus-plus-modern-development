@@ -57,7 +57,7 @@ void TransportGuideManager::perform_read_queries(int queries_count, std::istream
 void TransportGuideManager::perform_write_queries(int queries_count, 
 	std::istream& input, std::ostream& output) const
 {
-	std::string line, query, bus;
+	std::string line, query, bus, stop;
 	for (int i = 0; i < queries_count; ++i)
 	{
 		std::getline(input, line, '\n');
@@ -71,8 +71,15 @@ void TransportGuideManager::perform_write_queries(int queries_count,
 		{
 			std::getline(buffer, bus, '\n');
 
-			WriteResponse(bus, output);
+			WriteResponse(ResponseType::BUS, bus, output);
 		}
+
+        if (query == "Stop")
+        {
+			std::getline(buffer, stop, '\n');
+
+			WriteResponse(ResponseType::STOP, stop, output);
+        }
 	}
 }
 
@@ -89,7 +96,17 @@ void TransportGuideManager::AddRoute(const std::string& route_description)
 }
 
 
-void TransportGuideManager::WriteResponse(const std::string& bus, std::ostream& output) const
+void TransportGuideManager::WriteResponse(ResponseType response_type, 
+	const std::string& response_param, std::ostream& output) const
 {
-	output << routes_database_.GetRouteStats(bus) << '\n';
+    switch (response_type)
+    {
+	case ResponseType::BUS:
+		output << routes_database_.GetRouteStats(response_param) << '\n';
+        break;
+
+	case ResponseType::STOP:
+		output << stops_database_.GetBusStopStat(response_param) << '\n';
+        break;
+    }
 }

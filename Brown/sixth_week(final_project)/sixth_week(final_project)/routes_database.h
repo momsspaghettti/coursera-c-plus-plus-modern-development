@@ -13,11 +13,14 @@ struct RouteStats
 	{
 		stops_on_route = unique_stops = 0;
 		route_length = 0;
+	    direct_distance = curvature = 0;
 	}
 
 	int stops_on_route;
 	int unique_stops;
 	double route_length;
+	double direct_distance;
+	double curvature;
 };
 
 
@@ -32,7 +35,7 @@ public:
 
 	void AddStop(const std::string& stop);
 
-	void Build(const BusStopsDataBase& stops_database);
+	void Build(BusStopsDataBase& stops_database, const std::string& route_name);
 
 	virtual void RecomputeStatsInChildClass() = 0;
 
@@ -79,7 +82,7 @@ public:
 	using RouteResponse = std::pair<std::string, 
     std::optional<RouteStats>>;
 
-	void BuildAllRoutes(const BusStopsDataBase& stops_database);
+	void BuildAllRoutes(BusStopsDataBase& stops_database);
 
 	[[nodiscard]] RouteResponse GetRouteStats(const std::string& bus) const;
 

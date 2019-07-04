@@ -3,6 +3,9 @@
 #include <iostream>
 #include <string>
 #include <unordered_map>
+#include <set>
+#include <optional>
+#include <memory>
 
 
 class GroundPoint
@@ -43,10 +46,39 @@ struct BusStop
 	std::string name;
 
 	GroundPoint coordinate;
+
+	std::unordered_map<std::string, int> distance_to_other_stops;
 };
 
 
 std::istream& operator>>(std::istream& input, BusStop& bus_stop);
+
+
+class BusStopStats
+{
+public:
+	BusStopStats() = default;
+
+	void AddBusInStat(const std::string& bus);
+
+	[[nodiscard]] const std::set<std::string>& GetStat() const;
+
+	[[nodiscard]] const std::unordered_map<std::string, int>& 
+		GetDistanceToOtherStops() const;
+
+	void SetCoordinate(const GroundPoint& coordinate);
+
+	void SetDistanceToOtherStops(const std::unordered_map<std::string, int>& other_stops);
+
+	[[nodiscard]] const GroundPoint& GetCoordinate() const;
+
+private:
+	GroundPoint coordinate_;
+
+	std::set<std::string> buses_on_stop_;
+
+	std::unordered_map<std::string, int> distance_to_other_stops_;
+};
 
 
 class BusStopsDataBase
@@ -56,11 +88,29 @@ public:
 
 	void AddStop(const BusStop& bus_stop);
 
-	[[nodiscard]] double ComputeDistanceBetweenStops(
+	[[nodiscard]] double ComputeDirectDistanceBetweenStops(
 		const std::string& from, const std::string& to) const;
 
+	[[nodiscard]] double ComputeRealDistanceBetweenStops(
+		const std::string& from, const std::string& to) const;
+
+	void AddBusOnStop(const std::string& bus, const std::string& stop);
+
+	using BusStopResponse = std::pair<std::string, 
+    std::optional<std::set<std::string>>>;
+
+	[[nodiscard]] BusStopResponse GetBusStopStat(const std::string& stop) const;
+
 private:
-	std::unordered_map<std::string, GroundPoint> bus_stops_;
+	std::unordered_map<std::string, 
+    std::shared_ptr<BusStopStats>> bus_stops_;
 
 	friend void TestBusStopsDataBase();
 };
+
+
+std::ostream& operator<<(std::ostream& output, 
+	const BusStopsDataBase::BusStopResponse& response);
+
+
+std::pair<std::string, int> ParseDistanceToStop(std::string_view line);

@@ -1,11 +1,11 @@
 #include "routes_database.h"
 
 
-void RoutesDataBase::BuildAllRoutes(const BusStopsDataBase& stops_database)
+void RoutesDataBase::BuildAllRoutes(BusStopsDataBase& stops_database)
 {
 	for (auto& pair_ : routes_)
 	{
-		pair_.second->Build(stops_database);
+		pair_.second->Build(stops_database, pair_.first);
 	}
 }
 
@@ -36,7 +36,8 @@ std::ostream& operator<<(std::ostream& output, const RoutesDataBase::RouteRespon
     {
 		output << response.second->stops_on_route << " stops on route, " <<
 			response.second->unique_stops << " unique stops, " <<
-			response.second->route_length << " route length";
+			response.second->route_length << " route length, " <<
+			response.second->curvature << " curvature";
     }
     else
     {
@@ -98,6 +99,7 @@ const RouteStats& IRouteInfo::GetRouteStats() const
 void DirectRoute::RecomputeStatsInChildClass()
 {
 	route_stats_.route_length *= 2;
+	route_stats_.direct_distance *= 2;
 	route_stats_.stops_on_route = 2 * stops_.size() - 1;
 }
 
@@ -108,7 +110,7 @@ void RoundRoute::RecomputeStatsInChildClass()
 }
 
 
-void IRouteInfo::Build(const BusStopsDataBase& stops_database)
+void IRouteInfo::Build(BusStopsDataBase& stops_database, const std::string& route_name)
 {
     if (stops_.empty())
         return;
@@ -124,11 +126,18 @@ void IRouteInfo::Build(const BusStopsDataBase& stops_database)
 		for (size_t i = 0; i < stops_.size() - 1; ++i)
 		{
 			route_stats_.route_length +=
-				stops_database.ComputeDistanceBetweenStops(stops_[i], stops_[i + 1]);
+				stops_database.ComputeRealDistanceBetweenStops(stops_[i], stops_[i + 1]);
+            
+			route_stats_.direct_distance +=
+				stops_database.ComputeDirectDistanceBetweenStops(stops_[i], stops_[i + 1]);
+
+			stops_database.AddBusOnStop(route_name, stops_[i]);
 		}
+		stops_database.AddBusOnStop(route_name, *stops_.crbegin());
 
 		RecomputeStatsInChildClass();
 
 		route_stats_.unique_stops = unique_stops_.size();
+		route_stats_.curvature = route_stats_.route_length / route_stats_.direct_distance;
     }
 }

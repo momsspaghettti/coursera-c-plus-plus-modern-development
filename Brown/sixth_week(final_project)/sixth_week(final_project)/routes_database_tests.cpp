@@ -30,14 +30,14 @@ void TestRoutesDataBase()
 	BusStop stop;
 	BusStopsDataBase stops_base;
 
-	std::stringstream input("Tolstopaltsevo: 55.611087, 37.20829 "
-		"Marushkino: 55.595884, 37.209755 "
-		"Rasskazovka: 55.632761, 37.333324 "
-		"Biryulyovo Zapadnoye: 55.574371, 37.6517 "
-		"Biryusinka: 55.581065, 37.64839 "
-		"Universam: 55.587655, 37.645687 "
-		"Biryulyovo Tovarnaya: 55.592028, 37.653656 "
-		"Biryulyovo Passazhirskaya: 55.580999, 37.659164");
+	std::stringstream input("Tolstopaltsevo: 55.611087, 37.20829\n"
+		"Marushkino: 55.595884, 37.209755\n"
+		"Rasskazovka: 55.632761, 37.333324\n"
+		"Biryulyovo Zapadnoye: 55.574371, 37.6517\n"
+		"Biryusinka: 55.581065, 37.64839\n"
+		"Universam: 55.587655, 37.645687\n"
+		"Biryulyovo Tovarnaya: 55.592028, 37.653656\n"
+		"Biryulyovo Passazhirskaya: 55.580999, 37.659164\n");
 
     while (input)
     {
@@ -82,14 +82,14 @@ void TestRouteDataBaseResponses()
 	BusStop stop;
 	BusStopsDataBase stops_base;
 
-	std::stringstream input("Tolstopaltsevo: 55.611087, 37.20829 "
-		"Marushkino: 55.595884, 37.209755 "
-		"Rasskazovka: 55.632761, 37.333324 "
-		"Biryulyovo Zapadnoye: 55.574371, 37.6517 "
-		"Biryusinka: 55.581065, 37.64839 "
-		"Universam: 55.587655, 37.645687 "
-		"Biryulyovo Tovarnaya: 55.592028, 37.653656 "
-		"Biryulyovo Passazhirskaya: 55.580999, 37.659164");
+	std::stringstream input("Tolstopaltsevo: 55.611087, 37.20829\n"
+		"Marushkino: 55.595884, 37.209755\n"
+		"Rasskazovka: 55.632761, 37.333324\n"
+		"Biryulyovo Zapadnoye: 55.574371, 37.6517\n"
+		"Biryusinka: 55.581065, 37.64839\n"
+		"Universam: 55.587655, 37.645687\n"
+		"Biryulyovo Tovarnaya: 55.592028, 37.653656\n"
+		"Biryulyovo Passazhirskaya: 55.580999, 37.659164\n");
 
 	while (input)
 	{
@@ -118,8 +118,8 @@ void TestRouteDataBaseResponses()
 	output << routes_data_base.GetRouteStats("750") << '\n';
 	output << routes_data_base.GetRouteStats("751");
 
-	const std::string expected = "Bus 256: 6 stops on route, 5 unique stops, 4371.02 route length\n"
-		"Bus 750: 5 stops on route, 3 unique stops, 20939.5 route length\n"
+	const std::string expected = "Bus 256: 6 stops on route, 5 unique stops, 4371.02 route length, 1 curvature\n"
+		"Bus 750: 5 stops on route, 3 unique stops, 20939.5 route length, 1 curvature\n"
 		"Bus 751: not found";
 
 	ASSERT_EQUAL(output.str(), expected);
