@@ -5,6 +5,7 @@
 #include <utility>
 #include <unordered_set>
 #include <memory>
+#include <cstdint>
 
 
 struct RouteStats
@@ -18,7 +19,7 @@ struct RouteStats
 
 	int stops_on_route;
 	int unique_stops;
-	double route_length;
+	uint64_t route_length;
 	double direct_distance;
 	double curvature;
 };
@@ -37,7 +38,7 @@ public:
 
 	void Build(BusStopsDataBase& stops_database, const std::string& route_name);
 
-	virtual void RecomputeStatsInChildClass() = 0;
+	virtual void RecomputeStatsInChildClass(const BusStopsDataBase&) = 0;
 
 	[[nodiscard]] const RouteStats& GetRouteStats() const;
 
@@ -48,8 +49,6 @@ private:
 	std::vector<std::string> stops_;
 	std::unordered_set<std::string> unique_stops_;
 
-    friend void TestReadRouteFromString();
-
 	friend class DirectRoute;
 	friend class RoundRoute;
 };
@@ -58,14 +57,14 @@ private:
 class DirectRoute : public IRouteInfo
 {
 public:
-	void RecomputeStatsInChildClass() override;
+	void RecomputeStatsInChildClass(const BusStopsDataBase&) override;
 };
 
 
 class RoundRoute : public IRouteInfo
 {
 public:
-    void RecomputeStatsInChildClass() override;
+    void RecomputeStatsInChildClass(const BusStopsDataBase&) override;
 };
 
 

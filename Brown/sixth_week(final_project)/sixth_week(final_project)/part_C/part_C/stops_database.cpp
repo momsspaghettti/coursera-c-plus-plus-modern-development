@@ -2,6 +2,7 @@
 #include <cmath>
 #include <sstream>
 #include <utility>
+#include <cstdint>
 
 
 std::istream& operator>>(std::istream& input, GroundPoint& point)
@@ -95,10 +96,10 @@ std::istream& operator>>(std::istream& input, BusStop& bus_stop)
 }
 
 
-std::pair<std::string, int> ParseDistanceToStop(std::string_view line)
+std::pair<std::string, unsigned> ParseDistanceToStop(std::string_view line)
 {
 	const auto pos = line.find_first_of('m');
-	int second = std::stoi(std::string(line.substr(0, pos)));
+	unsigned second = std::stoi(std::string(line.substr(0, pos)));
 
 	line.remove_prefix(pos + 5);
 
@@ -119,7 +120,7 @@ const std::set<std::string>& BusStopStats::GetStat() const
 }
 
 
-const std::unordered_map<std::string, int>& 
+const std::unordered_map<std::string, unsigned>& 
 BusStopStats::GetDistanceToOtherStops() const
 {
 	return distance_to_other_stops_;
@@ -138,7 +139,7 @@ void BusStopStats::SetCoordinate(const GroundPoint& coordinate)
 }
 
 
-void BusStopStats::SetDistanceToOtherStops(const std::unordered_map<std::string, int>& other_stops)
+void BusStopStats::SetDistanceToOtherStops(const std::unordered_map<std::string, unsigned>& other_stops)
 {
 	distance_to_other_stops_ = other_stops;
 }
@@ -183,11 +184,10 @@ double BusStopsDataBase::ComputeDirectDistanceBetweenStops(
 }
 
 
-double BusStopsDataBase::ComputeRealDistanceBetweenStops(
+uint64_t BusStopsDataBase::ComputeRealDistanceBetweenStops(
 	const std::string& from, const std::string& to) const
 {
 	const auto& from_other_stops = bus_stops_.at(from)->GetDistanceToOtherStops();
-	const auto& to_other_stops = bus_stops_.at(from)->GetDistanceToOtherStops();
 
 	const auto from_to_finder = from_other_stops.find(to);
 
@@ -196,11 +196,10 @@ double BusStopsDataBase::ComputeRealDistanceBetweenStops(
 		return from_to_finder->second;
     }
 
+	const auto& to_other_stops = bus_stops_.at(to)->GetDistanceToOtherStops();
 	const auto to_from_finder = to_other_stops.find(from);
 
 	return to_from_finder->second;
-
-	//return ComputeDirectDistanceBetweenStops(from, to);
 }
 
 

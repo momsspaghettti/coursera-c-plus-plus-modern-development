@@ -37,4 +37,6 @@ private:
 
     void perform_write_queries(int queries_count, 
 		std::istream& input, std::ostream& output) const;
+
+	std::vector<std::string> logger;
 };

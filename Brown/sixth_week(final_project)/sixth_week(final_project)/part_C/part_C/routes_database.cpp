@@ -96,15 +96,20 @@ const RouteStats& IRouteInfo::GetRouteStats() const
 }
 
 
-void DirectRoute::RecomputeStatsInChildClass()
+void DirectRoute::RecomputeStatsInChildClass(const BusStopsDataBase& stops_database)
 {
-	route_stats_.route_length *= 2;
+	for (size_t i = stops_.size() - 1; i > 0; --i)
+	{
+	    route_stats_.route_length +=
+			stops_database.ComputeRealDistanceBetweenStops(stops_[i], stops_[i - 1]);
+	}
+
 	route_stats_.direct_distance *= 2;
 	route_stats_.stops_on_route = 2 * stops_.size() - 1;
 }
 
 
-void RoundRoute::RecomputeStatsInChildClass()
+void RoundRoute::RecomputeStatsInChildClass(const BusStopsDataBase& stops_database)
 {
 	route_stats_.stops_on_route = stops_.size();
 }
@@ -135,9 +140,10 @@ void IRouteInfo::Build(BusStopsDataBase& stops_database, const std::string& rout
 		}
 		stops_database.AddBusOnStop(route_name, *stops_.crbegin());
 
-		RecomputeStatsInChildClass();
+		RecomputeStatsInChildClass(stops_database);
 
 		route_stats_.unique_stops = unique_stops_.size();
+
 		route_stats_.curvature = route_stats_.route_length / route_stats_.direct_distance;
     }
 }

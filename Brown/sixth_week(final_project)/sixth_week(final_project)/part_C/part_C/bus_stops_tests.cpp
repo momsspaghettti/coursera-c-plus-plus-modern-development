@@ -153,8 +153,8 @@ void TestBusStopsWithDistanceToOtherStops()
 
 	std::string expected_name = "Tolstopaltsevo";
 	GroundPoint expected_coordinate = GroundPoint(55.611087, 37.20829);
-	std::unordered_map<std::string, int> expected_distance = 
-		std::unordered_map<std::string, int>{{"Marushkino", 3900}};
+	std::unordered_map<std::string, unsigned> expected_distance = 
+		std::unordered_map<std::string, unsigned>{{"Marushkino", 3900}};
 
 	input >> stop;
 	ASSERT_EQUAL(stop.name, expected_name);
@@ -164,7 +164,7 @@ void TestBusStopsWithDistanceToOtherStops()
 	{
 		expected_name = "Marushkino";
 		expected_coordinate = GroundPoint(55.595884, 37.209755);
-		expected_distance = std::unordered_map<std::string, int>{ {"Rasskazovka", 9900} };
+		expected_distance = std::unordered_map<std::string, unsigned>{ {"Rasskazovka", 9900} };
 
 		stop.distance_to_other_stops.clear();
 		input >> stop;
@@ -176,7 +176,7 @@ void TestBusStopsWithDistanceToOtherStops()
 	{
 		expected_name = "Rasskazovka";
 		expected_coordinate = GroundPoint(55.632761, 37.333324);
-		expected_distance = std::unordered_map<std::string, int>();
+		expected_distance = std::unordered_map<std::string, unsigned>();
 
 		stop.distance_to_other_stops.clear();
 		input >> stop;
@@ -188,7 +188,7 @@ void TestBusStopsWithDistanceToOtherStops()
 	{
 		expected_name = "Biryulyovo Zapadnoye";
 		expected_coordinate = GroundPoint(55.574371, 37.6517);
-		expected_distance = std::unordered_map<std::string, int>{ 
+		expected_distance = std::unordered_map<std::string, unsigned>{
 		    {"Rossoshanskaya ulitsa", 7500}, {"Biryusinka", 1800}, {"Universam", 2400} };
 
 		stop.distance_to_other_stops.clear();
@@ -201,7 +201,7 @@ void TestBusStopsWithDistanceToOtherStops()
 	{
 		expected_name = "Biryusinka";
 		expected_coordinate = GroundPoint(55.581065, 37.64839);
-		expected_distance = std::unordered_map<std::string, int>{ {"Universam", 750} };
+		expected_distance = std::unordered_map<std::string, unsigned>{ {"Universam", 750} };
 
 		stop.distance_to_other_stops.clear();
 		input >> stop;
