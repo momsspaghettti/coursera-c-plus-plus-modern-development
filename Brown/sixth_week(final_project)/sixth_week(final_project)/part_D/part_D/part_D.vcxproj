@@ -76,6 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -100,6 +101,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,10 +125,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="json.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="routes_database.cpp" />
+    <ClCompile Include="stops_database.cpp" />
+    <ClCompile Include="test_json.cpp" />
+    <ClCompile Include="test_part_d.cpp" />
+    <ClCompile Include="transport_guide_manager.cpp" />
     <ClCompile Include="UnitTestsFramework.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="json.h" />
+    <ClInclude Include="routes_database.h" />
+    <ClInclude Include="stops_database.h" />
+    <ClInclude Include="test_json.h" />
+    <ClInclude Include="test_part_d.h" />
+    <ClInclude Include="transport_guide_manager.h" />
     <ClInclude Include="UnitTestsFramework.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
