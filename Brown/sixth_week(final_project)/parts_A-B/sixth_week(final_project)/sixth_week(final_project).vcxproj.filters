@@ -15,58 +15,60 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="part_E\part_E\navigation_database.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="UnitTestsFramework.cpp">
+    <ClCompile Include="part_E\part_E\main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="transport_guide_test.cpp">
+    <ClCompile Include="part_E\part_E\json.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="stops_database.cpp">
+    <ClCompile Include="part_E\part_E\UnitTestsFramework.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="bus_stops_tests.cpp">
+    <ClCompile Include="part_E\part_E\test_part_e.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="routes_database.cpp">
+    <ClCompile Include="part_E\part_E\the_main_test.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="routes_database_tests.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="transport_guide_manager.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="transport_guide_manager_tests.cpp">
+    <ClCompile Include="part_E\part_E\test_json.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="transport_guide_tests.h">
+    <ClInclude Include="part_E\part_E\graph.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="UnitTestsFramework.h">
+    <ClInclude Include="part_E\part_E\navigation_database.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="stops_database.h">
+    <ClInclude Include="part_E\part_E\router.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="bus_stops_tests.h">
+    <ClInclude Include="part_E\part_E\json.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="routes_database.h">
+    <ClInclude Include="part_E\part_E\Profiler.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="routes_database_tests.h">
+    <ClInclude Include="part_E\part_E\UnitTestsFramework.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="transport_guide_manager.h">
+    <ClInclude Include="part_E\part_E\test_part_e.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="transport_guide_manager_tests.h">
+    <ClInclude Include="part_E\part_E\the_main_test.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="part_E\part_E\test_json.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="part_E\part_E\test_expected.txt" />
+    <Text Include="part_E\part_E\test_input.txt" />
+    <Text Include="part_E\part_E\test_output.txt" />
   </ItemGroup>
 </Project>
