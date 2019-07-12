@@ -1,70 +1,182 @@
 #include "navigation_database.h"
+#include <cstdint>
 
 
-void NavigationDataBase::AddRoad(const std::string& from,
-	const std::string& to, const std::string& bus_name, unsigned distances)
+void BusInfo::AddDirectStop(size_t index, unsigned length)
 {
-	Graph::VertexId first_from_id, second_from_id,
-    first_to_id, second_to_id;
+	direct_stops_.push_back(BusStopInfo{ index, length });
+}
 
-	const auto from_finder = stop_name_to_vertex_ids_.find(from);
-	if (from_finder != stop_name_to_vertex_ids_.end())
-	{
-		first_from_id = from_finder->second.me_first;
-		second_from_id = from_finder->second.me_second;
-	} 
+
+void BusInfo::AddReverseStop(size_t index, unsigned length)
+{
+	reverse_stops_.push_back(BusStopInfo{ index, length });
+}
+
+
+bool BusInfo::IsDirectBus() const
+{
+	return !reverse_stops_.empty();
+}
+
+
+const std::vector<BusStopInfo>& BusInfo::GetDirectStops() const
+{
+	return direct_stops_;
+}
+
+
+const std::vector<BusStopInfo>& BusInfo::GetReverseStops() const
+{
+	return reverse_stops_;
+}
+
+
+void NavigationDataBase::AddDirectStop(const std::string& bus_name, 
+	const std::string& stop_name, unsigned distances_to_next)
+{
+	const auto finder = stop_name_to_vertex_id_->find(stop_name);
+
+    if (finder != stop_name_to_vertex_id_->end())
+    {
+		auto& bus_info = bus_name_to_bus_info_[bus_name];
+
+		if (!bus_info)
+			bus_info = std::make_shared<BusInfo>();
+
+		bus_info->AddDirectStop(finder->second, distances_to_next);
+    }
     else
-	{
-		stop_names_storage_.push_front(from);
+    {
+		vertex_id_to_stop_name_->push_back(stop_name);
+		stop_name_to_vertex_id_->insert({stop_name, vertex_id_to_stop_name_->size() - 1});
 
-		vertex_id_to_stop_name_.push_back(stop_names_storage_.begin());
-		vertex_id_to_stop_name_.push_back(stop_names_storage_.begin());
+		auto& bus_info = bus_name_to_bus_info_[bus_name];
 
-		first_from_id = vertex_id_to_stop_name_.size() - 2;
-		second_from_id = vertex_id_to_stop_name_.size() - 1;
+		if (!bus_info)
+			bus_info = std::make_shared<BusInfo>();
 
-		stop_name_to_vertex_ids_[from] = StopVertexes{ first_from_id, second_from_id };
-	}
+		bus_info->AddDirectStop(vertex_id_to_stop_name_->size() - 1, distances_to_next);
+    }
+}
 
-	const auto to_finder = stop_name_to_vertex_ids_.find(to);
-	if (to_finder != stop_name_to_vertex_ids_.end())
-	{
-		first_to_id = to_finder->second.me_first;
-		second_to_id = to_finder->second.me_second;
-	} 
-    else
-	{
-		stop_names_storage_.push_front(to);
 
-		vertex_id_to_stop_name_.push_back(stop_names_storage_.begin());
-		vertex_id_to_stop_name_.push_back(stop_names_storage_.begin());
+void NavigationDataBase::AddReverseStop(const std::string& bus_name, 
+	const std::string& stop_name, unsigned distances_to_next)
+{
+	const auto finder = stop_name_to_vertex_id_->find(stop_name);
 
-		first_to_id = vertex_id_to_stop_name_.size() - 2;
-		second_to_id = vertex_id_to_stop_name_.size() - 1;
-
-		stop_name_to_vertex_ids_[to] = StopVertexes{ first_to_id, second_to_id };
-	}
-
-	const Graph::Edge<double> edge1 = { first_from_id, second_from_id, 
-	    static_cast<double>(settings_.bus_wait_time) };
-	const Graph::Edge<double> edge2 = { second_from_id, first_to_id,
-		distances / settings_.bus_velocity };
-	const Graph::Edge<double> edge3 = { first_from_id, first_to_id,
-		distances / settings_.bus_velocity };
-
-	roads_graph_->AddEdge(edge1);
-	roads_graph_->AddEdge(edge2);
-	roads_graph_->AddEdge(edge3);
-
-	edge_id_to_edge_info_.push_back(std::make_shared<StopEdge>(first_from_id));
-	edge_id_to_edge_info_.push_back(std::make_shared<RoadEdge>(bus_name));
-	edge_id_to_edge_info_.push_back(std::make_shared<RoadEdge>(bus_name));
+	bus_name_to_bus_info_[bus_name]->AddReverseStop(finder->second, distances_to_next);
 }
 
 
 void NavigationDataBase::Build()
 {
+    for (const auto& bus_pair : bus_name_to_bus_info_)
+    {
+        if (bus_pair.second->IsDirectBus())
+        {
+			build_direct_route(bus_pair);
+        }
+        else
+        {
+			build_round_route(bus_pair);
+        }
+    }
+
 	router_ = std::make_shared<Graph::Router<double>>(*roads_graph_);
+}
+
+
+void NavigationDataBase::build_direct_route(
+	const std::pair<std::string, std::shared_ptr<BusInfo>>& bus_pair) const
+{
+    for (size_t i = 0; i < bus_pair.second->GetDirectStops().size() - 1; ++i)
+    {
+		uint64_t adder = bus_pair.second->GetDirectStops()[i].length_to_next;
+		unsigned counter = 0;
+        
+        for (size_t j = i + 1; j < bus_pair.second->GetDirectStops().size(); ++j)
+        {
+			++counter;
+
+			const auto from_id = bus_pair.second->GetDirectStops()[i].index;
+			const auto to_id = bus_pair.second->GetDirectStops()[j].index;
+
+			roads_graph_->AddEdge(Graph::Edge<double>{from_id, to_id, 
+				settings_.bus_wait_time + adder / settings_.bus_velocity});
+
+			edge_id_to_edge_info_->push_back(EdgeInfo{bus_pair.first, counter});
+
+            if (j + 1 != bus_pair.second->GetDirectStops().size())
+                adder += bus_pair.second->GetDirectStops()[j].length_to_next;
+        }
+
+        for (size_t j = 0; j < bus_pair.second->GetReverseStops().size() - 1; ++j)
+        {
+			++counter;
+
+			adder += bus_pair.second->GetReverseStops()[j].length_to_next;
+
+			const auto from_id = bus_pair.second->GetDirectStops()[i].index;
+			const auto to_id = bus_pair.second->GetReverseStops()[j + 1].index;
+
+			roads_graph_->AddEdge(Graph::Edge<double>{from_id, to_id,
+				settings_.bus_wait_time + adder / settings_.bus_velocity});
+
+			edge_id_to_edge_info_->push_back(EdgeInfo{bus_pair.first, counter});
+        }
+    }
+
+	for (size_t i = 0; i < bus_pair.second->GetReverseStops().size() - 1; ++i)
+	{
+		uint64_t adder = bus_pair.second->GetReverseStops()[i].length_to_next;
+		unsigned counter = 0;
+
+		for (size_t j = i + 1; j < bus_pair.second->GetReverseStops().size(); ++j)
+		{
+			++counter;
+
+			const auto from_id = bus_pair.second->GetReverseStops()[i].index;
+			const auto to_id = bus_pair.second->GetReverseStops()[j].index;
+
+			roads_graph_->AddEdge(Graph::Edge<double>{from_id, to_id,
+				settings_.bus_wait_time + adder / settings_.bus_velocity});
+
+			edge_id_to_edge_info_->push_back(EdgeInfo{bus_pair.first, counter });
+
+			if (j + 1 != bus_pair.second->GetReverseStops().size())
+				adder += bus_pair.second->GetReverseStops()[j].length_to_next;
+		}
+	}
+}
+
+
+
+void NavigationDataBase::build_round_route(
+	const std::pair<std::string, std::shared_ptr<BusInfo>>& bus_pair) const
+{
+    for (size_t i = 0; i < bus_pair.second->GetDirectStops().size() - 1; ++i)
+    {
+		uint64_t adder = bus_pair.second->GetDirectStops()[i].length_to_next;
+		unsigned counter = 0;
+
+		for (size_t j = i + 1; j < bus_pair.second->GetDirectStops().size(); ++j)
+		{
+			++counter;
+
+			const auto from_id = bus_pair.second->GetDirectStops()[i].index;
+			const auto to_id = bus_pair.second->GetDirectStops()[j].index;
+
+			roads_graph_->AddEdge(Graph::Edge<double>{from_id, to_id,
+				settings_.bus_wait_time + adder / settings_.bus_velocity});
+
+			edge_id_to_edge_info_->push_back(EdgeInfo{bus_pair.first, counter });
+
+			if (j + 1 != bus_pair.second->GetDirectStops().size())
+				adder += bus_pair.second->GetDirectStops()[j].length_to_next;
+		}
+    }
 }
 
 
@@ -76,57 +188,36 @@ std::optional<NavigationResponse> NavigationDataBase::GetDirections(
 		return NavigationResponse();
 	}
 
-	const auto from_id = stop_name_to_vertex_ids_.at(from);
-	const auto to_id = stop_name_to_vertex_ids_.at(to);
+	const auto from_finder = stop_name_to_vertex_id_->find(from);
+	const auto to_finder = stop_name_to_vertex_id_->find(to);
 
-	const auto route_info = router_->BuildRoute(from_id.me_second, to_id.me_first);
+	if (from_finder == stop_name_to_vertex_id_->end() || to_finder == stop_name_to_vertex_id_->end())
+		return std::nullopt;
+
+	const auto from_id = from_finder->second;
+	const auto to_id = to_finder->second;
+
+	const auto route_info = router_->BuildRoute(from_id, to_id);
 
 	if (route_info)
 	{
 		NavigationResponse result;
-		result.total_time = route_info->weight + settings_.bus_wait_time;
+		result.total_time = route_info->weight;
 		result.items.reserve(2 * route_info->edge_count);
 
-		result.items.push_back(std::make_shared<RoadStop>(
-			from, settings_.bus_wait_time));
-
-		double current_bus_time = 0;
-		unsigned current_bus_span_count = 0;
 		for (size_t i = 0; i < route_info->edge_count; ++i)
 		{
 			const auto edge_id = router_->GetRouteEdge(route_info->id, i);
 			const auto edge = roads_graph_->GetEdge(edge_id);
 
-            if (edge_id_to_edge_info_[edge_id]->GetEdgeType() == IEdge::EdgeType::STOP)
-            {
-                if (current_bus_time != 0)
-                {
-					result.items.push_back(std::make_shared<RoadBus>(
-						edge_id_to_edge_info_[edge_id]->GetEdgeInfoAsString(), 
-						current_bus_time, current_bus_span_count));
-                }
+			result.items.push_back(std::make_shared<RoadStop>(
+				vertex_id_to_stop_name_->at(edge.from), settings_.bus_wait_time));
 
-				current_bus_time = 0;
-				current_bus_span_count = 0;
-
-				result.items.push_back(std::make_shared<RoadStop>(
-					*vertex_id_to_stop_name_[edge_id_to_edge_info_[edge_id]->GetEdgeInfoAsId()], 
-					settings_.bus_wait_time));
-            }
-			else
-			{
-				current_bus_time += edge.weight;
-				++current_bus_span_count;
-			}
-		}
-
-		if (current_bus_time != 0)
-		{
 			result.items.push_back(std::make_shared<RoadBus>(
-				edge_id_to_edge_info_[router_->GetRouteEdge(route_info->id, 
-					route_info->edge_count - 1)]->GetEdgeInfoAsString(),
-				current_bus_time, current_bus_span_count));
-		}		
+				edge_id_to_edge_info_->at(edge_id).bus, 
+				edge.weight - settings_.bus_wait_time, 
+				edge_id_to_edge_info_->at(edge_id).span_count));
+		}	
 
 		return result;
 	} 

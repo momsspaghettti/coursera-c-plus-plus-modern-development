@@ -87,94 +87,91 @@ void TransportGuideManager::perform_write_queries(
     for (const auto& request : get_requests)
     {
 		std::map<std::string, std::shared_ptr<JsonWriter>> response;
-		response["request_id"] = 
+		response["request_id"] =
 			std::make_shared<JsonInt>(request.AsMap().at("id").AsInt());
-        
-        if(request.AsMap().at("type").AsString() == "Bus")
-        {
+
+		if (request.AsMap().at("type").AsString() == "Bus")
+		{
 			const auto route_response = routes_database_->GetRouteStats(
 				request.AsMap().at("name").AsString());
 
-            if (route_response.second)
-            {
-				response["route_length"] = 
+			if (route_response.second)
+			{
+				response["route_length"] =
 					std::make_shared<JsonInt>(route_response.second->route_length);
-				response["curvature"] = 
+				response["curvature"] =
 					std::make_shared<JsonDouble>(route_response.second->curvature);
-				response["stop_count"] = 
+				response["stop_count"] =
 					std::make_shared<JsonInt>(route_response.second->stops_on_route);
-				response["unique_stop_count"] = 
+				response["unique_stop_count"] =
 					std::make_shared<JsonInt>(route_response.second->unique_stops);
-            }
-            else
-            {
-				response["error_message"] = 
+			} else
+			{
+				response["error_message"] =
 					std::make_shared<JsonString>(std::string("not found"));
-            }
-        }
+			}
+		}
 
-        if (request.AsMap().at("type").AsString() == "Stop")
-        {
+		if (request.AsMap().at("type").AsString() == "Stop")
+		{
 			const auto stop_response = stops_database_->GetBusStopStat(
 				request.AsMap().at("name").AsString());
 
-            if (stop_response.second)
-            {
+			if (stop_response.second)
+			{
 				std::vector<std::shared_ptr<JsonWriter>> buses;
 				buses.reserve(stop_response.second->size());
 
-                for (const auto& bus : *stop_response.second)
-                {
+				for (const auto& bus : *stop_response.second)
+				{
 					buses.push_back(
 						std::make_shared<JsonString>(bus));
-                }
+				}
 
 				response["buses"] = std::make_shared<JsonArray>(buses);
-            }
-            else
-            {
+			} else
+			{
 				response["error_message"] =
 					std::make_shared<JsonString>(std::string("not found"));
-            }
-        }
+			}
+		}
 
-        if (request.AsMap().at("type").AsString() == "Route")
-        {
+		if (request.AsMap().at("type").AsString() == "Route")
+		{
 			const auto navigation_response =
 				navigation_database_->GetDirections(request.AsMap().at("from").AsString(),
 					request.AsMap().at("to").AsString());
 
-            if (navigation_response)
-            {
-				response["total_time"] = 
+			if (navigation_response)
+			{
+				response["total_time"] =
 					std::make_shared<JsonDouble>(navigation_response->total_time);
 
 				std::vector<std::shared_ptr<JsonWriter>> items;
 
-                for (const auto& item : navigation_response->items)
-                {
+				for (const auto& item : navigation_response->items)
+				{
 					std::map<std::string, std::shared_ptr<JsonWriter>> item_map;
 
 					item_map["type"] = std::make_shared<JsonString>(item->GetType());
 					item_map[item->GetName().first] = std::make_shared<JsonString>(item->GetName().second);
 					item_map["time"] = std::make_shared<JsonDouble>(item->GetTime());
 
-                    if (item->GetType() == "Bus")
-                    {
+					if (item->GetType() == "Bus")
+					{
 						item_map["span_count"] = std::make_shared<JsonInt>(*item->GetSpanCount());
-                    }
+					}
 
 					items.push_back(std::make_shared<JsonMap>(item_map));
-                }
+				}
 
 				response["items"] = std::make_shared<JsonArray>(items);
-            }
-            else
-            {
+			} else
+			{
 				response["error_message"] =
 					std::make_shared<JsonString>(std::string("not found"));
-            }
-        }
+			}
+		}
 
 		result.push_back(std::make_shared<JsonMap>(response));
     }

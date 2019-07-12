@@ -7,7 +7,6 @@
 #include <utility>
 #include <string>
 #include <variant>
-#include <forward_list>
 
 
 struct NavigationSettings
@@ -32,72 +31,38 @@ private:
 	const double KPH_TO_MPM = 1000.0 / 60.0;
 };
 
-class IEdge
+
+struct BusStopInfo
 {
-public:
-    enum class EdgeType
-    {
-        STOP,
-        ROAD,
-    };
-
-	[[nodiscard]] virtual EdgeType GetEdgeType() const = 0;
-
-	[[nodiscard]] virtual std::string GetEdgeInfoAsString() const = 0;
-
-	[[nodiscard]] virtual size_t GetEdgeInfoAsId() const = 0;
-
-	virtual ~IEdge() = default;
+	size_t index;
+	unsigned length_to_next;
 };
 
 
-class StopEdge : public IEdge
+class BusInfo
 {
 public:
-	StopEdge(size_t id) : stop_id_(id) {};
+	void AddDirectStop(size_t index, unsigned length);
 
-	[[nodiscard]] EdgeType GetEdgeType() const override
-    {
-		return EdgeType::STOP;
-    }
+	void AddReverseStop(size_t index, unsigned length);
 
-	[[nodiscard]] std::string GetEdgeInfoAsString() const override
-	{
-		return "";
-	}
+	[[nodiscard]] bool IsDirectBus() const;
+	
 
-	[[nodiscard]] size_t GetEdgeInfoAsId() const override
-	{
-		return stop_id_;
-	}
+	[[nodiscard]] const std::vector<BusStopInfo>& GetDirectStops() const;
+	
+
+	[[nodiscard]] const std::vector<BusStopInfo>& GetReverseStops() const;
 
 private:
-	const size_t stop_id_;
+	std::vector<BusStopInfo> direct_stops_;
+	std::vector<BusStopInfo> reverse_stops_;
 };
 
-
-class RoadEdge : public IEdge
+struct EdgeInfo
 {
-public:
-	RoadEdge(std::string name) : bus_name_(std::move(name)) {};
-
-	[[nodiscard]] EdgeType GetEdgeType() const override
-    {
-		return EdgeType::ROAD;
-    }
-
-	[[nodiscard]] std::string GetEdgeInfoAsString() const override
-	{
-		return bus_name_;
-	}
-
-	[[nodiscard]] size_t GetEdgeInfoAsId() const override
-	{
-		return 0;
-	}
-
-private:
-	const std::string bus_name_;
+	std::string bus;
+	unsigned span_count;
 };
 
 
@@ -114,6 +79,7 @@ public:
 
 	virtual ~IRoadPart() = default;
 };
+
 
 class RoadStop : public IRoadPart
 {
@@ -144,6 +110,7 @@ private:
 	const std::string stop_name_;
 	const double time_;
 };
+
 
 class RoadBus : public IRoadPart
 {
@@ -193,15 +160,25 @@ class NavigationDataBase
 {
 public:
 	NavigationDataBase(const NavigationSettings& settings, size_t stops_count) :
-		settings_(settings), roads_graph_(std::make_shared<Graph::DirectedWeightedGraph<double>>(2 * stops_count))
+		settings_(settings), roads_graph_(std::make_shared<Graph::DirectedWeightedGraph<double>>(stops_count))
 	{
-		stop_name_to_vertex_ids_.reserve(stops_count);
-		vertex_id_to_stop_name_.reserve(2 * stops_count);
-		edge_id_to_edge_info_.reserve(20 * stops_count);
+		stop_name_to_vertex_id_ = std::make_shared<std::unordered_map<std::string, Graph::VertexId>>();
+		stop_name_to_vertex_id_->reserve(stops_count);
+
+		vertex_id_to_stop_name_ = std::make_shared<std::vector<std::string>>();
+	    vertex_id_to_stop_name_->reserve(2 * stops_count);
+
+		edge_id_to_edge_info_ = std::make_shared<std::vector<EdgeInfo>>();
+	    edge_id_to_edge_info_->reserve(400 * stops_count);
+
+		bus_name_to_bus_info_.reserve(100);
 	}
 
-	void AddRoad(const std::string& from, const std::string& to,
-		const std::string& bus_name, unsigned distances);
+	void AddDirectStop(const std::string& bus_name, 
+		const std::string& stop_name, unsigned distances_to_next);
+
+    void AddReverseStop(const std::string& bus_name,
+		const std::string& stop_name, unsigned distances_to_next);
 
 	void Build();
 
@@ -211,28 +188,18 @@ public:
 private:
 	const NavigationSettings settings_;
 
-    struct StopVertexes
-    {
-		StopVertexes() = default;
-
-        StopVertexes(Graph::VertexId f, Graph::VertexId s)
-        {
-			me_first = f;
-			me_second = s;
-        }
-
-		Graph::VertexId me_first;
-		Graph::VertexId me_second;
-    };
-
 	std::shared_ptr<Graph::DirectedWeightedGraph<double>> roads_graph_;
 
-	std::unordered_map<std::string, StopVertexes> stop_name_to_vertex_ids_;
+	std::shared_ptr<std::unordered_map<std::string, Graph::VertexId>> stop_name_to_vertex_id_;
 
-	std::forward_list<std::string> stop_names_storage_;
-    std::vector<std::forward_list<std::string>::const_iterator> vertex_id_to_stop_name_;
+	std::shared_ptr<std::vector<std::string>> vertex_id_to_stop_name_;
 
-	std::vector<std::shared_ptr<IEdge>> edge_id_to_edge_info_;
+	std::shared_ptr<std::vector<EdgeInfo>> edge_id_to_edge_info_;
+
+	std::unordered_map<std::string, std::shared_ptr<BusInfo>> bus_name_to_bus_info_;
 
 	std::shared_ptr<Graph::Router<double>> router_;
+
+	void build_direct_route(const std::pair<std::string, std::shared_ptr<BusInfo>>&) const;
+	void build_round_route(const std::pair<std::string, std::shared_ptr<BusInfo>>&) const;
 };

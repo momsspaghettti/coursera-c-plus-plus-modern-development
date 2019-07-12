@@ -57,8 +57,9 @@ void DirectRoute::RecomputeStatsInChildClass(const std::shared_ptr<BusStopsDataB
 
 		route_stats_.route_length += real_distance;
 
-		navigation_database->AddRoad(stops_[i], stops_[i - 1], route_name, real_distance);
+		navigation_database->AddReverseStop(route_name, stops_[i], real_distance);
 	}
+	navigation_database->AddReverseStop(route_name, *stops_.cbegin(), 0);
 
 	route_stats_.direct_distance *= 2;
 	route_stats_.stops_on_route = 2 * stops_.size() - 1;
@@ -93,13 +94,15 @@ void IRouteInfo::Build(const std::shared_ptr<BusStopsDataBase>& stops_database,
 
 			route_stats_.route_length += real_distance;
 
-			navigation_database->AddRoad(stops_[i], stops_[i + 1], route_name, real_distance);
+			navigation_database->AddDirectStop(route_name, stops_[i], real_distance);
             
 			route_stats_.direct_distance +=
 				stops_database->ComputeDirectDistanceBetweenStops(stops_[i], stops_[i + 1]);
 
 			stops_database->AddBusOnStop(route_name, stops_[i]);
 		}
+		navigation_database->AddDirectStop(route_name, *stops_.crbegin(), 0);
+
 		stops_database->AddBusOnStop(route_name, *stops_.crbegin());
 
 		RecomputeStatsInChildClass(stops_database, navigation_database, route_name);

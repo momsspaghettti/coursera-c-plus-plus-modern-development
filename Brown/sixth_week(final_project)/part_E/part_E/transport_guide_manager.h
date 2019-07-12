@@ -34,6 +34,4 @@ private:
 
     void perform_write_queries(
 		const std::vector<Json::Node>& get_requests, std::ostream& output) const;
-
-	std::vector<std::string> logger;
 };
