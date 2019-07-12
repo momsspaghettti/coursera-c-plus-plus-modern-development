@@ -4,7 +4,7 @@
 
 int main()
 {
-	//TestPartE();
+	TestPartE();
 
 	TransportGuideManager manager;
 
