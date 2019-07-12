@@ -7,7 +7,6 @@ int main()
 	TestPartE();
 
 	TransportGuideManager manager;
-
 	manager.PerformQueries();
 
 	return 0;
