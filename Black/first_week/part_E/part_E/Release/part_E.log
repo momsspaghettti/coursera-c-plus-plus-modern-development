@@ -1,0 +1,15 @@
+﻿  json.cpp
+  main.cpp
+  navigation_database.cpp
+  routes_database.cpp
+  stops_database.cpp
+  test_json.cpp
+  test_part_e.cpp
+  the_main_test.cpp
+  transport_guide_manager.cpp
+  UnitTestsFramework.cpp
+  Создание кода
+  Previous IPDB not found, fall back to full compilation.
+  All 3667 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  part_E.vcxproj -> C:\Users\Иван\Desktop\C++\coursera-c-plus-plus-modern-development\Black\first_week\part_E\Release\part_E.exe
