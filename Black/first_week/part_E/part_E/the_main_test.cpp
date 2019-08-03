@@ -149,9 +149,39 @@ void Test1()
 }
 
 
+void Test2()
+{
+	TestFromFile(
+		"input2.txt",
+		"output2.txt",
+		"expected2.txt");
+}
+
+
+void Test3()
+{
+	TestFromFile(
+		"input3.txt",
+		"output3.txt",
+		"expected3.txt");
+}
+
+
+void Test4()
+{
+	TestFromFile(
+		"input4.txt",
+		"output4.txt",
+		"expected4.txt");
+}
+
+
 void MainTest()
 {
 	TestRunner tr;
 
 	RUN_TEST(tr, Test1);
+	RUN_TEST(tr, Test2);
+	RUN_TEST(tr, Test3);
+	RUN_TEST(tr, Test4);
 }

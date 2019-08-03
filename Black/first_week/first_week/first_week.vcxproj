@@ -101,6 +101,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -124,8 +125,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="san_fail2.cpp" />
     <ClCompile Include="san_fail.cpp" />
+    <ClCompile Include="sum.cpp" />
+    <ClCompile Include="svg.cpp" />
+    <ClCompile Include="UnitTestsFramework.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sum.h" />
+    <ClInclude Include="svg.h" />
+    <ClInclude Include="UnitTestsFramework.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

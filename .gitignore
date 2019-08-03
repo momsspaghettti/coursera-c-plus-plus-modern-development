@@ -35,6 +35,7 @@
 **/bin/
 **/.vs/
 **/Debug/
+*.tlog
 
 # Clion folders and files
 **/.idea/
