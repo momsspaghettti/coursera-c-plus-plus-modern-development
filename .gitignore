@@ -35,6 +35,7 @@
 **/bin/
 **/.vs/
 **/Debug/
+**/Release/
 *.tlog
 
 # Clion folders and files

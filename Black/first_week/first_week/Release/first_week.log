@@ -1,8 +1,0 @@
-﻿  main.cpp
-  svg.cpp
-  Generating code
-  255 of 600 functions (42.5%) were compiled, the rest were copied from previous compilation.
-    118 functions were new in current compilation
-    40 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  first_week.vcxproj -> C:\Users\Иван\Desktop\C++\coursera-c-plus-plus-modern-development\Black\first_week\Release\first_week.exe
