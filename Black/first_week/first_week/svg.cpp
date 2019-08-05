@@ -35,7 +35,7 @@ namespace Svg
     {
 		out << "<circle ";
 
-		ISvgBase<Circle>::Render(out);
+		SvgBase<Circle>::Render(out);
 		
         out << "cx=\"" << center_.x << "\" cy=\"" << center_.y << "\" ";
 		out << "r=\"" << radius_ << "\" ";
@@ -79,7 +79,7 @@ namespace Svg
     {
 		out << "<polyline ";
 
-		ISvgBase<Polyline>::Render(out);
+		SvgBase<Polyline>::Render(out);
 
 		out << "points=\"";
         for (const auto point : points_)
@@ -131,7 +131,7 @@ namespace Svg
     {
 		out << "<text ";
 
-		ISvgBase<Text>::Render(out);
+		SvgBase<Text>::Render(out);
 
 		out << "x=\"" << coords_.x << "\" y=\"" << coords_.y << "\" ";
 
