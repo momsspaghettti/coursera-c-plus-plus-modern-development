@@ -1,0 +1,68 @@
+[
+    {
+        "curvature": 1.42963,
+        "unique_stop_count": 3,
+        "stop_count": 4,
+        "request_id": 1,
+        "route_length": 5990
+    },
+    {
+        "curvature": 1.30156,
+        "unique_stop_count": 3,
+        "stop_count": 5,
+        "request_id": 2,
+        "route_length": 11570
+    },
+    {
+        "request_id": 3,
+        "buses": [
+            "297",
+            "635"
+        ]
+    },
+    {
+        "total_time": 11.235,
+        "items": [
+            {
+                "time": 6,
+                "type": "Wait",
+                "stop_name": "Biryulyovo Zapadnoye"
+            },
+            {
+                "span_count": 2,
+                "bus": "297",
+                "type": "Bus",
+                "time": 5.235
+            }
+        ],
+        "request_id": 4
+    },
+    {
+        "total_time": 24.21,
+        "items": [
+            {
+                "time": 6,
+                "type": "Wait",
+                "stop_name": "Biryulyovo Zapadnoye"
+            },
+            {
+                "span_count": 2,
+                "bus": "297",
+                "type": "Bus",
+                "time": 5.235
+            },
+            {
+                "time": 6,
+                "type": "Wait",
+                "stop_name": "Universam"
+            },
+            {
+                "span_count": 1,
+                "bus": "635",
+                "type": "Bus",
+                "time": 6.975
+            }
+        ],
+        "request_id": 5
+    }
+]
