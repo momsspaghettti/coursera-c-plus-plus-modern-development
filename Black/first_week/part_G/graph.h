@@ -11,8 +11,8 @@ public:
 	using ValueType = typename std::iterator_traits<It>::value_type;
 
 	Range(It begin, It end) : begin_(begin), end_(end) {}
-	It begin() const { return begin_; }
-	It end() const { return end_; }
+	[[nodiscard]] It begin() const { return begin_; }
+    [[nodiscard]] It end() const { return end_; }
 
 private:
 	It begin_;
@@ -41,7 +41,7 @@ namespace Graph
 		using IncidentEdgesRange = Range<typename IncidenceList::const_iterator>;
 
 	public:
-		DirectedWeightedGraph(size_t vertex_count);
+		explicit DirectedWeightedGraph(size_t vertex_count);
 		EdgeId AddEdge(const Edge<Weight>& edge);
 
 		[[nodiscard]] size_t GetVertexCount() const;

@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = "/home/ivan/Рабочий стол/coursera-c-plus-plus-mode
 CMakeFiles/part_G.dir/all:
 	$(MAKE) -f CMakeFiles/part_G.dir/build.make CMakeFiles/part_G.dir/depend
 	$(MAKE) -f CMakeFiles/part_G.dir/build.make CMakeFiles/part_G.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/cmake-build-release/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target part_G"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/cmake-build-release/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target part_G"
 .PHONY : CMakeFiles/part_G.dir/all
 
 # Include target in all.
@@ -81,7 +81,7 @@ all: CMakeFiles/part_G.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/part_G.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/cmake-build-release/CMakeFiles" 11
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/cmake-build-release/CMakeFiles" 13
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/part_G.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/cmake-build-release/CMakeFiles" 0
 .PHONY : CMakeFiles/part_G.dir/rule

@@ -9,4 +9,4 @@ add_executable(part_G graph.h json.cpp json.h test_json.cpp
         routes_database.h stops_database.cpp stops_database.h
         test_part_e.cpp test_part_e.h the_main_test.cpp the_main_test.h
         transport_guide_manager.cpp transport_guide_manager.h
-        UnitTestsFramework.cpp UnitTestsFramework.h)
+        UnitTestsFramework.cpp UnitTestsFramework.h svg.cpp svg.h map_database.h map_database.cpp)

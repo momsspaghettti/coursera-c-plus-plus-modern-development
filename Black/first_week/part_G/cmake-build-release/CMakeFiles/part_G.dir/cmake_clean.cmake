@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/part_G.dir/the_main_test.cpp.o"
   "CMakeFiles/part_G.dir/transport_guide_manager.cpp.o"
   "CMakeFiles/part_G.dir/UnitTestsFramework.cpp.o"
+  "CMakeFiles/part_G.dir/svg.cpp.o"
+  "CMakeFiles/part_G.dir/map_database.cpp.o"
   "part_G.pdb"
   "part_G"
 )

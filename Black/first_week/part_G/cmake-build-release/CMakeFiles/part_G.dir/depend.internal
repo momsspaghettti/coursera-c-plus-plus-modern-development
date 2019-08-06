@@ -11,12 +11,25 @@ CMakeFiles/part_G.dir/main.cpp.o
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/graph.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/json.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/main.cpp
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/map_database.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/navigation_database.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/router.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/routes_database.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/stops_database.h
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/svg.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/test_part_e.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/transport_guide_manager.h
+CMakeFiles/part_G.dir/map_database.cpp.o
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/UnitTestsFramework.h
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/graph.h
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/json.h
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/map_database.cpp
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/map_database.h
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/navigation_database.h
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/router.h
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/routes_database.h
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/stops_database.h
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/svg.h
 CMakeFiles/part_G.dir/navigation_database.cpp.o
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/graph.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/navigation_database.cpp
@@ -32,6 +45,9 @@ CMakeFiles/part_G.dir/routes_database.cpp.o
 CMakeFiles/part_G.dir/stops_database.cpp.o
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/stops_database.cpp
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/stops_database.h
+CMakeFiles/part_G.dir/svg.cpp.o
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/svg.cpp
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/svg.h
 CMakeFiles/part_G.dir/test_json.cpp.o
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/UnitTestsFramework.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/json.h
@@ -47,19 +63,23 @@ CMakeFiles/part_G.dir/the_main_test.cpp.o
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/UnitTestsFramework.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/graph.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/json.h
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/map_database.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/navigation_database.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/router.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/routes_database.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/stops_database.h
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/svg.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/the_main_test.cpp
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/the_main_test.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/transport_guide_manager.h
 CMakeFiles/part_G.dir/transport_guide_manager.cpp.o
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/graph.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/json.h
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/map_database.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/navigation_database.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/router.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/routes_database.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/stops_database.h
+ /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/svg.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/transport_guide_manager.cpp
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/transport_guide_manager.h

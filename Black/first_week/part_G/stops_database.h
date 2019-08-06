@@ -7,6 +7,9 @@
 #include <unordered_map>
 
 
+class MinMaxCoordContainer;
+
+
 class GroundPoint
 {
 public:
@@ -21,6 +24,14 @@ public:
 	static double ComputeDistance(const GroundPoint& lhs, 
 		const GroundPoint& rhs);
 
+    [[nodiscard]] double GetLatitude() const {
+        return latitude_;
+    }
+
+    [[nodiscard]] double GetLongitude() const {
+        return longitude_;
+    }
+
 private:
 	double latitude_, longitude_;
 
@@ -29,6 +40,25 @@ private:
 
 	friend bool operator!=(const GroundPoint& lhs, 
 		const GroundPoint& rhs);
+
+	friend class MinMaxCoordContainer;
+};
+
+
+class MinMaxCoordContainer
+{
+public:
+    MinMaxCoordContainer() = default;
+
+    void AddGroundPoint(const GroundPoint&);
+
+    [[nodiscard]] std::pair<GroundPoint, GroundPoint> GetMinMaxCoords() const;
+
+private:
+    GroundPoint min_, max_;
+
+    void update_min(const GroundPoint&);
+    void update_max(const GroundPoint&);
 };
 
 
@@ -91,7 +121,17 @@ public:
 
 	[[nodiscard]] size_t GetBusStopsCount() const;
 
+	[[nodiscard]] std::pair<GroundPoint, GroundPoint> GetMinMaxCoords() const;
+
+    [[nodiscard]] const std::shared_ptr<BusStopStats>& GetStopStats(const std::string& name) const {
+        return bus_stops_.at(name);
+    }
+
 private:
 	std::unordered_map<std::string, 
     std::shared_ptr<BusStopStats>> bus_stops_;
+
+	std::unique_ptr<MinMaxCoordContainer> coord_container_;
+
+	void update_coord_container(const GroundPoint&);
 };

@@ -105,6 +105,12 @@
 		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/main.cpp">
 			<Option target="part_G"/>
 		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/map_database.cpp">
+			<Option target="part_G"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/map_database.h">
+			<Option target="part_G"/>
+		</Unit>
 		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/navigation_database.cpp">
 			<Option target="part_G"/>
 		</Unit>
@@ -124,6 +130,12 @@
 			<Option target="part_G"/>
 		</Unit>
 		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/stops_database.h">
+			<Option target="part_G"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/svg.cpp">
+			<Option target="part_G"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/svg.h">
 			<Option target="part_G"/>
 		</Unit>
 		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/test_json.cpp">

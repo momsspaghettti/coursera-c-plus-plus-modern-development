@@ -204,6 +204,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/part_G.dir/build.make CMakeFiles/part_G.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+map_database.o: map_database.cpp.o
+
+.PHONY : map_database.o
+
+# target to build an object file
+map_database.cpp.o:
+	$(MAKE) -f CMakeFiles/part_G.dir/build.make CMakeFiles/part_G.dir/map_database.cpp.o
+.PHONY : map_database.cpp.o
+
+map_database.i: map_database.cpp.i
+
+.PHONY : map_database.i
+
+# target to preprocess a source file
+map_database.cpp.i:
+	$(MAKE) -f CMakeFiles/part_G.dir/build.make CMakeFiles/part_G.dir/map_database.cpp.i
+.PHONY : map_database.cpp.i
+
+map_database.s: map_database.cpp.s
+
+.PHONY : map_database.s
+
+# target to generate assembly for a file
+map_database.cpp.s:
+	$(MAKE) -f CMakeFiles/part_G.dir/build.make CMakeFiles/part_G.dir/map_database.cpp.s
+.PHONY : map_database.cpp.s
+
 navigation_database.o: navigation_database.cpp.o
 
 .PHONY : navigation_database.o
@@ -284,6 +311,33 @@ stops_database.s: stops_database.cpp.s
 stops_database.cpp.s:
 	$(MAKE) -f CMakeFiles/part_G.dir/build.make CMakeFiles/part_G.dir/stops_database.cpp.s
 .PHONY : stops_database.cpp.s
+
+svg.o: svg.cpp.o
+
+.PHONY : svg.o
+
+# target to build an object file
+svg.cpp.o:
+	$(MAKE) -f CMakeFiles/part_G.dir/build.make CMakeFiles/part_G.dir/svg.cpp.o
+.PHONY : svg.cpp.o
+
+svg.i: svg.cpp.i
+
+.PHONY : svg.i
+
+# target to preprocess a source file
+svg.cpp.i:
+	$(MAKE) -f CMakeFiles/part_G.dir/build.make CMakeFiles/part_G.dir/svg.cpp.i
+.PHONY : svg.cpp.i
+
+svg.s: svg.cpp.s
+
+.PHONY : svg.s
+
+# target to generate assembly for a file
+svg.cpp.s:
+	$(MAKE) -f CMakeFiles/part_G.dir/build.make CMakeFiles/part_G.dir/svg.cpp.s
+.PHONY : svg.cpp.s
 
 test_json.o: test_json.cpp.o
 
@@ -411,6 +465,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... map_database.o"
+	@echo "... map_database.i"
+	@echo "... map_database.s"
 	@echo "... navigation_database.o"
 	@echo "... navigation_database.i"
 	@echo "... navigation_database.s"
@@ -420,6 +477,9 @@ help:
 	@echo "... stops_database.o"
 	@echo "... stops_database.i"
 	@echo "... stops_database.s"
+	@echo "... svg.o"
+	@echo "... svg.i"
+	@echo "... svg.s"
 	@echo "... test_json.o"
 	@echo "... test_json.i"
 	@echo "... test_json.s"

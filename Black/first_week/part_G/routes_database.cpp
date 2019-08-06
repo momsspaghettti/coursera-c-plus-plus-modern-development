@@ -31,6 +31,7 @@ void RoutesDataBase::AddRoute(
 	const std::string& bus_name, const std::shared_ptr<IRouteInfo>& route_info)
 {
 	routes_[bus_name] = route_info;
+	route_names_.insert(bus_name);
 }
 
 
@@ -50,6 +51,9 @@ const RouteStats& IRouteInfo::GetRouteStats() const
 void DirectRoute::RecomputeStatsInChildClass(const std::shared_ptr<BusStopsDataBase>& stops_database, 
 	const std::shared_ptr<NavigationDataBase>& navigation_database, const std::string& route_name)
 {
+    all_stops_ = stops_;
+    all_stops_.reserve(stops_.size() - 1);
+
 	for (size_t i = stops_.size() - 1; i > 0; --i)
 	{
 		const auto real_distance =
@@ -58,6 +62,8 @@ void DirectRoute::RecomputeStatsInChildClass(const std::shared_ptr<BusStopsDataB
 		route_stats_.route_length += real_distance;
 
 		navigation_database->AddReverseStop(route_name, stops_[i], real_distance);
+
+		all_stops_.push_back(stops_[i - 1]);
 	}
 	navigation_database->AddReverseStop(route_name, *stops_.cbegin(), 0);
 
@@ -66,10 +72,20 @@ void DirectRoute::RecomputeStatsInChildClass(const std::shared_ptr<BusStopsDataB
 }
 
 
+const std::vector<std::string>& DirectRoute::GetStops() const {
+    return all_stops_;
+}
+
+
 void RoundRoute::RecomputeStatsInChildClass(const std::shared_ptr<BusStopsDataBase>& stops_database, 
 	const std::shared_ptr<NavigationDataBase>& navigation_database, const std::string& route_name)
 {
 	route_stats_.stops_on_route = stops_.size();
+}
+
+
+const std::vector<std::string>& RoundRoute::GetStops() const {
+    return stops_;
 }
 
 

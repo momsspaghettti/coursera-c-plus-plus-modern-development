@@ -4,6 +4,7 @@
 #include <fstream>
 #include "transport_guide_manager.h"
 #include "Profiler.h"
+#include "map_database.h"
 
 
 using namespace Json;
@@ -173,8 +174,6 @@ void Test4()
 }
 
 
-void MainTest();
-
 void MainTest() {
     TestRunner tr;
 
@@ -182,4 +181,5 @@ void MainTest() {
     RUN_TEST(tr, Test2);
     RUN_TEST(tr, Test3);
     RUN_TEST(tr, Test4);
+    RUN_TEST(tr, TestMapDataBase);
 }

@@ -8,6 +8,7 @@
 #include <memory>
 #include <cstdint>
 #include "navigation_database.h"
+#include <set>
 
 
 struct RouteStats
@@ -46,6 +47,8 @@ public:
 
 	[[nodiscard]] const RouteStats& GetRouteStats() const;
 
+    virtual const std::vector<std::string>& GetStops() const = 0;
+
 	virtual ~IRouteInfo() = default;
 
 private:
@@ -63,6 +66,11 @@ class DirectRoute : public IRouteInfo
 public:
 	void RecomputeStatsInChildClass(const std::shared_ptr<BusStopsDataBase>&, 
 		const std::shared_ptr<NavigationDataBase>&, const std::string&) override;
+
+	const std::vector<std::string>& GetStops() const override;
+
+private:
+    std::vector<std::string> all_stops_;
 };
 
 
@@ -71,6 +79,8 @@ class RoundRoute : public IRouteInfo
 public:
     void RecomputeStatsInChildClass(const std::shared_ptr<BusStopsDataBase>&, 
 		const std::shared_ptr<NavigationDataBase>&, const std::string&) override;
+
+    const std::vector<std::string>& GetStops() const override;
 };
 
 
@@ -92,7 +102,17 @@ public:
 
 	[[nodiscard]] RouteResponse GetRouteStats(const std::string& bus) const;
 
+    [[nodiscard]] const std::set<std::string>& GetRouteNames() const {
+        return route_names_;
+    }
+
+    [[nodiscard]] const std::shared_ptr<IRouteInfo>& GetRouteInfo(const std::string& name) const {
+        return routes_.at(name);
+    }
+
 private:
 	std::unordered_map<std::string, 
     std::shared_ptr<IRouteInfo>> routes_;
+
+	std::set<std::string> route_names_;
 };

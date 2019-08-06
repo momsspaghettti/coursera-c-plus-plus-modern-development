@@ -2,7 +2,6 @@
 #include <cmath>
 #include <sstream>
 #include <utility>
-#include <cstdint>
 
 
 bool operator!=(const GroundPoint& lhs, const GroundPoint& rhs)
@@ -26,6 +25,35 @@ double GroundPoint::ComputeDistance(const GroundPoint& lhs,
 	return std::acos(std::sin(lat1) * std::sin(lat2) + 
 		std::cos(lat1) * std::cos(lat2) *
 		std::cos(std::abs(long1 - long2))) * EARTH_RADIUS;
+}
+
+
+void MinMaxCoordContainer::AddGroundPoint(const GroundPoint& point) {
+    update_min(point);
+    update_max(point);
+}
+
+
+std::pair<GroundPoint, GroundPoint> MinMaxCoordContainer::GetMinMaxCoords() const {
+    return std::make_pair(min_, max_);
+}
+
+
+void MinMaxCoordContainer::update_min(const GroundPoint& point) {
+    if (point.latitude_ < min_.latitude_)
+        min_.latitude_ = point.latitude_;
+
+    if(point.longitude_ < min_.longitude_)
+        min_.longitude_ = point.longitude_;
+}
+
+
+void MinMaxCoordContainer::update_max(const GroundPoint& point) {
+    if (point.latitude_ > max_.latitude_)
+        max_.latitude_ = point.latitude_;
+
+    if(point.longitude_ > max_.longitude_)
+        max_.longitude_ = point.longitude_;
 }
 
 
@@ -73,6 +101,16 @@ void BusStopsDataBase::AddStop(const BusStop& bus_stop)
 	bus_stop_stat->SetCoordinate(bus_stop.coordinate);
 	bus_stop_stat->SetDistanceToOtherStops(bus_stop.distance_to_other_stops);
 	bus_stops_[bus_stop.name] = bus_stop_stat;
+
+	update_coord_container(bus_stop.coordinate);
+}
+
+
+void BusStopsDataBase::update_coord_container(const GroundPoint& point) {
+    if (!coord_container_)
+        coord_container_ = std::make_unique<MinMaxCoordContainer>();
+
+    coord_container_->AddGroundPoint(point);
 }
 
 
@@ -128,4 +166,9 @@ unsigned BusStopsDataBase::ComputeRealDistanceBetweenStops(
 	const auto to_from_finder = to_other_stops.find(from);
 
 	return to_from_finder->second;
+}
+
+
+std::pair<GroundPoint, GroundPoint> BusStopsDataBase::GetMinMaxCoords() const {
+    return coord_container_->GetMinMaxCoords();
 }
