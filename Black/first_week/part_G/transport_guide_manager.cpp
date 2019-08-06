@@ -10,7 +10,6 @@ void TransportGuideManager::PerformQueries(std::istream& input,
 {
 	input.tie(nullptr);
 	std::ios_base::sync_with_stdio(false);
-	output.precision(6);
 
 	const auto json_input = Json::Load(input).GetRoot();
 

@@ -84,12 +84,6 @@ stops_database.h
 routes_database.h
 /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/routes_database.h
 
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/navigation_database.cpp
-navigation_database.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/navigation_database.h
-cstdint
--
-
 /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/navigation_database.h
 graph.h
 /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/graph.h
@@ -127,10 +121,6 @@ utility
 -
 vector
 -
-
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/routes_database.cpp
-routes_database.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/routes_database.h
 
 /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/first_week/part_G/routes_database.h
 stops_database.h

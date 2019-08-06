@@ -58,6 +58,7 @@ private:
     void build_texts();
 
     void update_circles_map(const std::string&, const Svg::Point&);
+    void recompute_circles_map(const std::shared_ptr<BusStopsDataBase>&);
 
     std::map<std::string, Svg::Circle> circles_map_;
 

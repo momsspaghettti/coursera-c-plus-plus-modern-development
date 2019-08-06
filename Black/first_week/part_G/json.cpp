@@ -224,7 +224,6 @@ namespace Json
     std::string JsonDouble::ToString() const
     {
 		std::stringstream tmp;
-		tmp.precision(6);
 		tmp << item_;
 
 		return tmp.str();

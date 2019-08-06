@@ -53,7 +53,7 @@ namespace Svg
             switch (index)
             {
 			case 0:
-				out << R"(\")" << std::get<std::string>(*color_) << R"(\")";
+				out << std::get<std::string>(*color_);
                 break;
 
 			case 1:
@@ -70,7 +70,7 @@ namespace Svg
         }
         else
         {
-			out << R"(\"none\")";
+			out << "none";
         }
     }
 

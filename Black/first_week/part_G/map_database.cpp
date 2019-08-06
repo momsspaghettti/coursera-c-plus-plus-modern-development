@@ -52,7 +52,6 @@ Svg::Color MapDataBase::get_color_from_json(const Json::Node& json) {
 
 
 Svg::Point MapDataBase::compute_point_from_coord(const GroundPoint& coord) const {
-    // might be zero division
     double width_zoom_coef;
     double height_zoom_coef;
     double zoom_coef;
@@ -93,6 +92,7 @@ Svg::Point MapDataBase::compute_point_from_coord(const GroundPoint& coord) const
 
 std::string MapDataBase::GetMapResponse() const {
     std::ostringstream out;
+    out.precision(16);
     svg->Render(out);
 
     return out.str();
@@ -107,6 +107,8 @@ void MapDataBase::BuildMap(
         build_line(bus_name, stops_base, buses_base, palette_index);
         ++palette_index;
     }
+
+    recompute_circles_map(stops_base);
 
     build_circles();
     build_texts();
@@ -154,6 +156,18 @@ void MapDataBase::update_circles_map(
 }
 
 
+void MapDataBase::recompute_circles_map(
+        const std::shared_ptr<BusStopsDataBase>& stops_base
+        ) {
+    for (const auto& stop_pair : stops_base->GetStopsMap()) {
+        const Svg::Point stop_point =
+                compute_point_from_coord(stop_pair.second->GetCoordinate());
+
+        update_circles_map(stop_pair.first, stop_point);
+    }
+}
+
+
 void MapDataBase::build_circles() {
     for (const auto& circle_pair : circles_map_) {
         svg->Add(circle_pair.second);
@@ -173,6 +187,7 @@ void MapDataBase::build_texts() {
         Svg::Text substrate_text = text;
         substrate_text.SetFillColor(underlayer_color_)
         .SetStrokeColor(underlayer_color_)
+        .SetStrokeWidth(underlayer_width_)
         .SetStrokeLineCap("round")
         .SetStrokeLineJoin("round");
 

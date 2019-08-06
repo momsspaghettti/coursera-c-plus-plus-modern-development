@@ -55,7 +55,9 @@ public:
     [[nodiscard]] std::pair<GroundPoint, GroundPoint> GetMinMaxCoords() const;
 
 private:
-    GroundPoint min_, max_;
+    GroundPoint min_{}, max_{};
+    bool min_updated_ = false;
+    bool max_updated_ = false;
 
     void update_min(const GroundPoint&);
     void update_max(const GroundPoint&);
@@ -125,6 +127,11 @@ public:
 
     [[nodiscard]] const std::shared_ptr<BusStopStats>& GetStopStats(const std::string& name) const {
         return bus_stops_.at(name);
+    }
+
+    [[nodiscard]] const std::unordered_map<std::string,
+            std::shared_ptr<BusStopStats>>& GetStopsMap() const {
+        return bus_stops_;
     }
 
 private:

@@ -40,6 +40,11 @@ std::pair<GroundPoint, GroundPoint> MinMaxCoordContainer::GetMinMaxCoords() cons
 
 
 void MinMaxCoordContainer::update_min(const GroundPoint& point) {
+    if (!min_updated_) {
+        min_ = point;
+        min_updated_ = true;
+    }
+
     if (point.latitude_ < min_.latitude_)
         min_.latitude_ = point.latitude_;
 
@@ -49,6 +54,11 @@ void MinMaxCoordContainer::update_min(const GroundPoint& point) {
 
 
 void MinMaxCoordContainer::update_max(const GroundPoint& point) {
+    if (!max_updated_) {
+        max_ = point;
+        max_updated_ = true;
+    }
+
     if (point.latitude_ > max_.latitude_)
         max_.latitude_ = point.latitude_;
 
