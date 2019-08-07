@@ -1,0 +1,59 @@
+[
+    {
+        "unique_stop_count": 4,
+        "stop_count": 7,
+        "request_id": 1,
+        "curvature": 1.63414,
+        "route_length": 24490
+    },
+    {
+        "total_time": 29.26,
+        "items": [
+            {
+                "time": 2,
+                "stop_name": "Zagorye",
+                "type": "Wait"
+            },
+            {
+                "time": 0.46,
+                "bus": "289",
+                "span_count": 1,
+                "type": "Bus"
+            },
+            {
+                "time": 2,
+                "stop_name": "Lipetskaya ulitsa 46",
+                "type": "Wait"
+            },
+            {
+                "time": 24.8,
+                "bus": "289",
+                "span_count": 1,
+                "type": "Bus"
+            }
+        ],
+        "request_id": 2
+    },
+    {
+        "total_time": 22,
+        "items": [
+            {
+                "time": 2,
+                "stop_name": "Moskvorechye",
+                "type": "Wait"
+            },
+            {
+                "time": 20,
+                "bus": "289",
+                "span_count": 1,
+                "type": "Bus"
+            }
+        ],
+        "request_id": 3
+    },
+    {
+        "total_time": 0,
+        "items": [],
+        "request_id": 4
+    }
+]

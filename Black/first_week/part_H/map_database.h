@@ -56,6 +56,8 @@ private:
             size_t index
             );
 
+    void build_end_stops();
+
     void build_circles();
 
     void build_texts();
@@ -64,6 +66,15 @@ private:
     void recompute_circles_map(const std::shared_ptr<BusStopsDataBase>&);
 
     std::map<std::string, Svg::Circle> circles_map_;
+
+    std::map<std::string, std::vector<std::pair<Svg::Point, size_t>>> bus_to_end_stops_;
+
+    void update_end_stops_map(
+            const std::string&,
+            const std::shared_ptr<BusStopsDataBase>&,
+            const std::shared_ptr<RoutesDataBase>&,
+            size_t
+                    );
 
     friend void TestMapDataBase();
 };

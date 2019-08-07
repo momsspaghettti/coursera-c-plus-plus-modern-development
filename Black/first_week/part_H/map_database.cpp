@@ -22,8 +22,8 @@ void MapDataBase::AddRenderSettings(const std::map<std::string, Json::Node>& set
     for (const auto& json : settings_map.at("color_palette").AsArray())
         color_palette_.push_back(get_color_from_json(json));
 
-    bus_label_font_size_ = settings_map.at("bus_label_offset").AsInt();
-    const auto bus_offset = settings_map.at("stop_label_offset").AsArray();
+    bus_label_font_size_ = settings_map.at("bus_label_font_size").AsInt();
+    const auto bus_offset = settings_map.at("bus_label_offset").AsArray();
     bus_label_offset_ = Svg::Point{bus_offset[0].AsDouble(), bus_offset[1].AsDouble()};
 }
 
@@ -114,6 +114,7 @@ void MapDataBase::BuildMap(
 
     recompute_circles_map(stops_base);
 
+    build_end_stops();
     build_circles();
     build_texts();
 }
@@ -141,6 +142,7 @@ void MapDataBase::build_line(
 
         update_circles_map(stop, stop_point);
     }
+    update_end_stops_map(bus_name, stops_base, buses_base, index);
 
     svg->Add(polyline);
 }
@@ -160,6 +162,27 @@ void MapDataBase::update_circles_map(
 }
 
 
+void MapDataBase::update_end_stops_map(
+        const std::string& bus_name,
+        const std::shared_ptr<BusStopsDataBase>& stops_base,
+        const std::shared_ptr<RoutesDataBase>& buses_base,
+        size_t palette_index
+                ) {
+    const auto end_stops = buses_base->GetRouteInfo(bus_name)->GetEndStops();
+
+    for (const auto& stop : end_stops) {
+        bus_to_end_stops_[bus_name].push_back(
+                std::make_pair(
+                        compute_point_from_coord(
+                                stops_base->GetStopStats(stop)->GetCoordinate()
+                        ),
+                        palette_index
+                )
+        );
+    }
+}
+
+
 void MapDataBase::recompute_circles_map(
         const std::shared_ptr<BusStopsDataBase>& stops_base
         ) {
@@ -168,6 +191,33 @@ void MapDataBase::recompute_circles_map(
                 compute_point_from_coord(stop_pair.second->GetCoordinate());
 
         update_circles_map(stop_pair.first, stop_point);
+    }
+}
+
+
+void MapDataBase::build_end_stops() {
+    for (const auto& bus_pair : bus_to_end_stops_) {
+        for (const auto& end_stop : bus_pair.second) {
+            Svg::Text text;
+            text.SetPoint(end_stop.first)
+            .SetOffset(bus_label_offset_)
+            .SetFontSize(bus_label_font_size_)
+            .SetFontFamily("Verdana")
+            .SetFontWeight("bold")
+            .SetData(bus_pair.first);
+
+            Svg::Text substrate_text = text;
+            substrate_text.SetFillColor(underlayer_color_)
+            .SetStrokeColor(underlayer_color_)
+            .SetStrokeWidth(underlayer_width_)
+            .SetStrokeLineCap("round")
+            .SetStrokeLineJoin("round");
+
+            text.SetFillColor(color_palette_[end_stop.second]);
+
+            svg->Add(substrate_text);
+            svg->Add(text);
+        }
     }
 }
 
@@ -211,6 +261,11 @@ void TestMapDataBase()
         "padding": 50,
         "stop_radius": 5,
         "line_width": 14,
+        "bus_label_font_size": 20,
+        "bus_label_offset": [
+            7,
+            15
+        ],
         "stop_label_font_size": 20,
         "stop_label_offset": [
             7,
@@ -253,6 +308,9 @@ void TestMapDataBase()
     ASSERT(std::abs(map_database.stop_radius_ - 5) < 0.0001)
     ASSERT(std::abs(map_database.height_ - 1200) < 0.0001)
     ASSERT(std::abs(map_database.line_width_ - 14) < 0.0001)
+    ASSERT_EQUAL(map_database.bus_label_font_size_, 20)
+    ASSERT(std::abs(map_database.bus_label_offset_.x - 7) < 0.0001)
+    ASSERT(std::abs(map_database.bus_label_offset_.y - 15) < 0.0001)
     ASSERT_EQUAL(map_database.stop_label_font_size_, 20)
     ASSERT_EQUAL(map_database.underlayer_width_, 3)
     ASSERT(std::abs(map_database.stop_label_offset_.x - 7) < 0.0001)
