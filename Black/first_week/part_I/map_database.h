@@ -4,6 +4,7 @@
 #include "json.h"
 #include "stops_database.h"
 #include "routes_database.h"
+#include <unordered_map>
 
 
 class Layers
@@ -32,6 +33,7 @@ public:
         stop_labels_.push_back(l);
     }
 
+private:
     void BuildStopPoints(const std::unique_ptr<Svg::Document>& svg) const {
         for (const auto& point : stop_points_)
             svg->Add(point);
@@ -52,11 +54,24 @@ public:
             svg->Add(label);
     }
 
+public:
+    void BuildLayer(const std::string& layer, const std::unique_ptr<Svg::Document>& svg) const {
+        (this->*building_map_.at(layer))(svg);
+    }
+
 private:
     std::vector<Svg::Circle> stop_points_;
     std::vector<Svg::Polyline> bus_lines_;
     std::vector<Svg::Text> bus_labels_;
     std::vector<Svg::Text> stop_labels_;
+
+    const std::unordered_map<std::string, void (Layers::*)(const std::unique_ptr<Svg::Document>&) const>
+    building_map_ = {
+            {"bus_lines", &Layers::BuildBusLines},
+            {"bus_labels", &Layers::BuildBusLabels},
+            {"stop_points", &Layers::BuildStopPoints},
+            {"stop_labels", &Layers::BuildStopLabels},
+    };
 };
 
 

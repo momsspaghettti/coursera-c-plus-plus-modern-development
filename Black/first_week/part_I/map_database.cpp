@@ -136,17 +136,7 @@ void MapDataBase::build_layers(
 
 void MapDataBase::build_svg() {
     for (const auto& layer_name : layers_list_) {
-        if (layer_name == "bus_lines")
-            layers_object_->BuildBusLines(svg);
-
-        if (layer_name == "bus_labels")
-            layers_object_->BuildBusLabels(svg);
-
-        if (layer_name == "stop_points")
-            layers_object_->BuildStopPoints(svg);
-
-        if (layer_name == "stop_labels")
-            layers_object_->BuildStopLabels(svg);
+        layers_object_->BuildLayer(layer_name, svg);
     }
 }
 
