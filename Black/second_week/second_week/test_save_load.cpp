@@ -79,28 +79,37 @@ void TestSaveAndLoad() {
 
 
 void ComplexTest() {
-    const std::vector<std::map<std::string, std::string>> v = {
-            {
-                    {"hello", "world"},
-                    {"foo", "bar"},
-            },
-            {
-                    {"world", "hello"},
-                    {"bar", "foo"},
-            },
-            {
-                    {"foo", "foo"},
-                    {"bar", "bar"},
-            }
-    };
+    {
+        const std::vector<unsigned> v = {3, 14, 15, 92, 6};
 
-    std::stringstream ss;
-    Serialize(v, ss);
+        std::stringstream ss;
+        Serialize(v, ss);
 
-    std::vector<std::map<std::string, std::string>> v2;
-    Deserialize(ss, v2);
+        std::vector<unsigned> v2;
+        Deserialize(ss, v2);
 
-    ASSERT_EQUAL(v, v2)
+        ASSERT_EQUAL(v, v2)
+    }
+
+    {
+        const std::vector<std::map<std::string, std::string>> v = {
+                {
+                        {"a", "z"},
+                        {"b", "y"},
+                },
+                {
+                        {"p", "q"},
+                },
+        };
+
+        std::stringstream ss;
+        Serialize(v, ss);
+
+        std::vector<std::map<std::string, std::string>> v2;
+        Deserialize(ss, v2);
+
+        ASSERT_EQUAL(v, v2)
+    }
 }
 
 

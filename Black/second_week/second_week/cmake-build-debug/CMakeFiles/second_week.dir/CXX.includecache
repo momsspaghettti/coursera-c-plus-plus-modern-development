@@ -24,6 +24,32 @@ string
 sstream
 -
 
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/second_week/second_week/json_printer.h
+cassert
+-
+cmath
+-
+stdexcept
+-
+sstream
+-
+stack
+-
+string
+-
+vector
+-
+optional
+-
+UnitTestsFramework.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/second_week/second_week/UnitTestsFramework.h
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/second_week/second_week/main.cpp
+json_printer.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/second_week/second_week/json_printer.h
+save_load.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/second_week/second_week/save_load.h
+
 /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/second_week/second_week/save_load.h
 map
 -
