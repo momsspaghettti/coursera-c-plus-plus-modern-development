@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/second_week.dir/main.cpp.o CMakeFiles/second_week.dir/UnitTestsFramework.cpp.o CMakeFiles/second_week.dir/test_json_printer.cpp.o CMakeFiles/second_week.dir/json_printer.cpp.o CMakeFiles/second_week.dir/test_save_load.cpp.o  -o second_week 
