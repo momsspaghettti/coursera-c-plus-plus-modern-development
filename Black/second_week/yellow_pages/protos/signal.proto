@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package YellowPages;
+
+import "company.proto";
+
+message Signal {
+  uint64 provider_id = 1;
+  uint64 update_date = 2;
+  Company company = 3;
+}

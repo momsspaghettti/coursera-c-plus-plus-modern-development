@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/phone_book.dir/main.cpp.o CMakeFiles/phone_book.dir/UnitTestsFramework.cpp.o CMakeFiles/phone_book.dir/phone_book.cpp.o CMakeFiles/phone_book.dir/contact.pb.cc.o CMakeFiles/phone_book.dir/test_phone_book.cpp.o  -o phone_book /usr/lib/libprotobuf.so -lpthread 

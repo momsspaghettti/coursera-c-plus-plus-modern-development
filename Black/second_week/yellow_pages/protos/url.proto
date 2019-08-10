@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package YellowPages;
+
+message Url {
+  string value = 1;
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+
+package PhoneBookSerialize;
+
+
+message Date {
+    int32 year = 1;
+    int32 month = 2;
+    int32 day = 3;
+}
+
+
+message Contact {
+    string name = 1;
+    Date birthday = 2;
+    repeated string phone_number = 3;
+}
+
+
+message ContactList {
+    repeated Contact contact = 1;
+}

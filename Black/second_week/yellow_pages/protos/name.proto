@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package YellowPages;
+
+message Name {
+  string value = 1;
+  enum Type {
+    MAIN = 0;
+    SYNONYM = 1;
+    SHORT = 2;
+  }
+  Type type = 2;
+}

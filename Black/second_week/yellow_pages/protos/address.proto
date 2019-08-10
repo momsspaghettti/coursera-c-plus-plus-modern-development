@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package YellowPages;
+
+message AddressComponent {
+  string value = 1;
+  enum Type {
+    COUNTRY = 0;
+    REGION = 1;
+    CITY = 2;
+    STREET = 3;
+    HOUSE = 4;
+  }
+}
+
+message Coords {
+  double lat = 1;
+  double lon = 2;
+}
+
+message Address {
+  string formatted = 1;
+  repeated AddressComponent components = 2;
+  Coords coords = 3;
+}

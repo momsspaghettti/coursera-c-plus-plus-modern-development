@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package YellowPages;
+
+message WorkingTimeInterval {
+  enum Day {
+    EVERYDAY = 0;
+    MONDAY = 1;
+    TUESDAY = 2;
+    WEDNESDAY = 3;
+    THURSDAY = 4;
+    FRIDAY = 5;
+    SATURDAY = 6;
+    SUNDAY = 7;
+  }
+  Day day = 1;
+  int32 minutes_from = 2;
+  int32 minutes_to = 3;
+}
+
+message WorkingTime {
+  string formatted = 1;
+  repeated WorkingTimeInterval intervals = 2;
+}
