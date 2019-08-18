@@ -1,0 +1,3 @@
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/mython/interpreter/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/mython/interpreter/cmake-build-debug/CMakeFiles/interpreter.dir
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/mython/interpreter/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/mython.dir/main.cpp.o CMakeFiles/mython.dir/lexer_test.cpp.o CMakeFiles/mython.dir/UnitTestsFramework.cpp.o CMakeFiles/mython.dir/lexer.cpp.o  -o mython 
