@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/fourth_week/UnitTestsFramework.h
+iostream
+-
+sstream
+-
+vector
+-
+map
+-
+unordered_map
+-
+set
+-
+string
+-
+sstream
+-
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/fourth_week/apply_to_many.h
+utility
+-
+UnitTestsFramework.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/fourth_week/UnitTestsFramework.h
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/fourth_week/equals_to_one_of.h
+UnitTestsFramework.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/fourth_week/UnitTestsFramework.h
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/fourth_week/main.cpp
+equals_to_one_of.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/fourth_week/equals_to_one_of.h
+apply_to_many.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/fourth_week/apply_to_many.h
+

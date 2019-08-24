@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/fourth_week.dir/main.cpp.o CMakeFiles/fourth_week.dir/UnitTestsFramework.cpp.o  -o fourth_week 

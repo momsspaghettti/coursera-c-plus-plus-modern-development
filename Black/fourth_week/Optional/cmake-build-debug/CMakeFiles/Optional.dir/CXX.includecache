@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Optional/UnitTestsFramework.h
+iostream
+-
+sstream
+-
+vector
+-
+map
+-
+unordered_map
+-
+set
+-
+string
+-
+sstream
+-
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Optional/main.cpp
+optional.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Optional/optional.h
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Optional/optional.h
+utility
+-
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Optional/test_optional.cpp
+optional.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Optional/optional.h
+UnitTestsFramework.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Optional/UnitTestsFramework.h
+
