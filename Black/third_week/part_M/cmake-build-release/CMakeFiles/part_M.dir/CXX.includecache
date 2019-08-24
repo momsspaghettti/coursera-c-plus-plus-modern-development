@@ -1,0 +1,224 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/UnitTestsFramework.h
+iostream
+-
+sstream
+-
+vector
+-
+map
+-
+unordered_map
+-
+set
+-
+string
+-
+sstream
+-
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/graph.h
+cstdlib
+-
+deque
+-
+vector
+-
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/json.h
+istream
+-
+string
+-
+variant
+-
+vector
+-
+memory
+-
+utility
+-
+map
+-
+cstdint
+-
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/layers.h
+svg.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/svg.h
+vector
+-
+unordered_map
+-
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/main.cpp
+test_part_m.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/test_part_m.h
+transport_guide_manager.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/transport_guide_manager.h
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/map_database.cpp
+map_database.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/map_database.h
+algorithm
+-
+unordered_set
+-
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/map_database.h
+json.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/json.h
+UnitTestsFramework.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/UnitTestsFramework.h
+layers.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/layers.h
+routes_database.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/routes_database.h
+points_computer.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/points_computer.h
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/navigation_database.h
+graph.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/graph.h
+string
+-
+unordered_map
+-
+router.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/router.h
+memory
+-
+utility
+-
+string
+-
+variant
+-
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/points_computer.h
+utility
+-
+optional
+-
+stops_database.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/stops_database.h
+routes_database.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/routes_database.h
+svg.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/svg.h
+stops_builder.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/stops_builder.h
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/router.h
+graph.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/graph.h
+algorithm
+-
+cassert
+-
+cstdint
+-
+iterator
+-
+optional
+-
+unordered_map
+-
+utility
+-
+vector
+-
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/routes_database.h
+stops_database.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/stops_database.h
+vector
+-
+optional
+-
+utility
+-
+unordered_map
+-
+unordered_set
+-
+memory
+-
+cstdint
+-
+navigation_database.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/navigation_database.h
+set
+-
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/stops_builder.h
+string
+-
+memory
+-
+utility
+-
+stops_database.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/stops_database.h
+routes_database.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/routes_database.h
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/stops_database.h
+string
+-
+string
+-
+set
+-
+optional
+-
+memory
+-
+unordered_map
+-
+unordered_set
+-
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/svg.h
+optional
+-
+variant
+-
+string
+-
+utility
+-
+ostream
+-
+vector
+-
+cstdint
+-
+memory
+-
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/test_part_m.h
+
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/transport_guide_manager.h
+routes_database.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/routes_database.h
+stops_database.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/stops_database.h
+memory
+-
+json.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/json.h
+iostream
+-
+navigation_database.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/navigation_database.h
+map_database.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/map_database.h
+
