@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="part_L"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="part_L">
+				<Option output="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/part_L" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 part_L"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="part_L/fast">
+				<Option output="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/part_L" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 part_L/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/Profiler.h">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/UnitTestsFramework.cpp">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/UnitTestsFramework.h">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/graph.h">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/json.cpp">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/json.h">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/layers.h">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/main.cpp">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/map_database.cpp">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/map_database.h">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/navigation_database.cpp">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/navigation_database.h">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/points_computer.cpp">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/points_computer.h">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/router.h">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/routes_database.cpp">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/routes_database.h">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/stops_builder.cpp">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/stops_builder.h">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/stops_database.cpp">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/stops_database.h">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/svg.cpp">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/svg.h">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/test_json.cpp">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/test_json.h">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/test_map_database.cpp">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/test_part_l.cpp">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/test_part_l.h">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/the_main_test.cpp">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/the_main_test.h">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/transport_guide_manager.cpp">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/transport_guide_manager.h">
+			<Option target="part_L"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_L/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
