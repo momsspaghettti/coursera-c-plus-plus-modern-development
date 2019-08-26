@@ -4,7 +4,7 @@
 	<Project>
 		<Option title="part_M"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="gcc"/>
+		<Option compiler="clang"/>
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
@@ -32,16 +32,17 @@
 				<Option working_dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/8"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
-					<Add directory="/usr/include/c++/8/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/backward"/>
+					<Add directory="/usr/include/clang/8.0.0/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/Makefile&quot;  VERBOSE=1 part_M"/>
@@ -55,16 +56,17 @@
 				<Option working_dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/8"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
-					<Add directory="/usr/include/c++/8/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/backward"/>
+					<Add directory="/usr/include/clang/8.0.0/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/Makefile&quot;  VERBOSE=1 part_M/fast"/>

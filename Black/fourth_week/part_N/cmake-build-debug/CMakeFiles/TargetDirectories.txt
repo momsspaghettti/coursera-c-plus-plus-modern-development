@@ -1,0 +1,3 @@
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/part_N/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/part_N/cmake-build-debug/CMakeFiles/part_N.dir
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/part_N/cmake-build-debug/CMakeFiles/edit_cache.dir

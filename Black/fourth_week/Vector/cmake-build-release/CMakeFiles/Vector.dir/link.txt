@@ -1,1 +1,1 @@
-/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/Vector.dir/main.cpp.o CMakeFiles/Vector.dir/test_vector.cpp.o CMakeFiles/Vector.dir/UnitTestsFramework.cpp.o  -o Vector 
+/usr/bin/clang++-8  -O3 -DNDEBUG   CMakeFiles/Vector.dir/main.cpp.o CMakeFiles/Vector.dir/test_vector.cpp.o CMakeFiles/Vector.dir/UnitTestsFramework.cpp.o  -o Vector 

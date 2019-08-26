@@ -20,7 +20,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/the_main_test.cpp" "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/part_M.dir/the_main_test.cpp.o"
   "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/transport_guide_manager.cpp" "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/part_M.dir/transport_guide_manager.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

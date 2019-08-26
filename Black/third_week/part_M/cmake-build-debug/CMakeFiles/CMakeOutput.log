@@ -13,7 +13,7 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 The C compiler identification is GNU, found in "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: /usr/bin/c++ 
+Compiler: /usr/bin/clang++-8 
 Build flags: 
 Id flags:  
 
@@ -23,30 +23,30 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdCXX/a.out"
+The CXX compiler identification is Clang, found in "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_0bd61/fast 
-/usr/bin/make -f CMakeFiles/cmTC_0bd61.dir/build.make CMakeFiles/cmTC_0bd61.dir/build
+Run Build Command(s):/usr/bin/make cmTC_a950b/fast 
+/usr/bin/make -f CMakeFiles/cmTC_a950b.dir/build.make CMakeFiles/cmTC_a950b.dir/build
 make[1]: вход в каталог «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_0bd61.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_0bd61.dir/testCCompiler.c.o   -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c"
-Linking C executable cmTC_0bd61
-/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0bd61.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_0bd61.dir/testCCompiler.c.o  -o cmTC_0bd61 
+Building C object CMakeFiles/cmTC_a950b.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_a950b.dir/testCCompiler.c.o   -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c"
+Linking C executable cmTC_a950b
+/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a950b.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_a950b.dir/testCCompiler.c.o  -o cmTC_a950b 
 make[1]: выход из каталога «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_e830a/fast 
-/usr/bin/make -f CMakeFiles/cmTC_e830a.dir/build.make CMakeFiles/cmTC_e830a.dir/build
+Run Build Command(s):/usr/bin/make cmTC_ae966/fast 
+/usr/bin/make -f CMakeFiles/cmTC_ae966.dir/build.make CMakeFiles/cmTC_ae966.dir/build
 make[1]: Entering directory '/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc   -v -o CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o   -c /home/ivan/Документы/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c
+Building C object CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc   -v -o CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o   -c /home/ivan/Документы/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 OFFLOAD_TARGET_NAMES=nvptx-none
@@ -55,8 +55,8 @@ Target: x86_64-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Ubuntu 8.3.0-6ubuntu1~18.04.1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
 gcc version 8.3.0 (Ubuntu 8.3.0-6ubuntu1~18.04.1) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/8/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/ivan/Документы/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccr7k8Lj.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/8/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/ivan/Документы/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/cciQEE7a.s
 GNU C17 (Ubuntu 8.3.0-6ubuntu1~18.04.1) version 8.3.0 (x86_64-linux-gnu)
 	compiled by GNU C version 8.3.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.19-GMP
 
@@ -76,15 +76,15 @@ GNU C17 (Ubuntu 8.3.0-6ubuntu1~18.04.1) version 8.3.0 (x86_64-linux-gnu)
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 8630479b05639af80099f29538a134fa
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
- as -v --64 -o CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o /tmp/ccr7k8Lj.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o /tmp/cciQEE7a.s
 GNU assembler version 2.30 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.30
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
-Linking C executable cmTC_e830a
-/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e830a.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o  -o cmTC_e830a 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+Linking C executable cmTC_ae966
+/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae966.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o  -o cmTC_ae966 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper
@@ -96,9 +96,9 @@ Thread model: posix
 gcc version 8.3.0 (Ubuntu 8.3.0-6ubuntu1~18.04.1) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e830a' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccAol2On.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e830a /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e830a' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ae966' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5NuOKd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ae966 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ae966' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -123,11 +123,11 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_e830a/fast ]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_e830a.dir/build.make CMakeFiles/cmTC_e830a.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_ae966/fast ]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_ae966.dir/build.make CMakeFiles/cmTC_ae966.dir/build]
   ignore line: [make[1]: Entering directory '/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o   -c /home/ivan/Документы/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c]
+  ignore line: [Building C object CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o   -c /home/ivan/Документы/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -136,8 +136,8 @@ Parsed C implicit link information from above output:
   ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 8.3.0-6ubuntu1~18.04.1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
   ignore line: [Thread model: posix]
   ignore line: [gcc version 8.3.0 (Ubuntu 8.3.0-6ubuntu1~18.04.1) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/8/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/ivan/Документы/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccr7k8Lj.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/8/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/ivan/Документы/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/cciQEE7a.s]
   ignore line: [GNU C17 (Ubuntu 8.3.0-6ubuntu1~18.04.1) version 8.3.0 (x86_64-linux-gnu)]
   ignore line: [	compiled by GNU C version 8.3.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.19-GMP]
   ignore line: []
@@ -157,15 +157,15 @@ Parsed C implicit link information from above output:
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 8630479b05639af80099f29538a134fa]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [ as -v --64 -o CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o /tmp/ccr7k8Lj.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o /tmp/cciQEE7a.s]
   ignore line: [GNU assembler version 2.30 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.30]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking C executable cmTC_e830a]
-  ignore line: [/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e830a.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o  -o cmTC_e830a ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking C executable cmTC_ae966]
+  ignore line: [/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae966.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o  -o cmTC_ae966 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper]
@@ -177,13 +177,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 8.3.0 (Ubuntu 8.3.0-6ubuntu1~18.04.1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e830a' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccAol2On.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e830a /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ae966' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5NuOKd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ae966 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/8/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccAol2On.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc5NuOKd.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -201,7 +201,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_e830a] ==> ignore
+    arg [cmTC_ae966] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o] ==> ignore
@@ -213,7 +213,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../..]
-    arg [CMakeFiles/cmTC_e830a.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_ae966.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -245,14 +245,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_946ba/fast 
-/usr/bin/make -f CMakeFiles/cmTC_946ba.dir/build.make CMakeFiles/cmTC_946ba.dir/build
+Run Build Command(s):/usr/bin/make cmTC_6cbab/fast 
+/usr/bin/make -f CMakeFiles/cmTC_6cbab.dir/build.make CMakeFiles/cmTC_6cbab.dir/build
 make[1]: вход в каталог «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_946ba.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_946ba.dir/feature_tests.c.o   -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/feature_tests.c"
-Linking C executable cmTC_946ba
-/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_946ba.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_946ba.dir/feature_tests.c.o  -o cmTC_946ba 
+Building C object CMakeFiles/cmTC_6cbab.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_6cbab.dir/feature_tests.c.o   -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/feature_tests.c"
+Linking C executable cmTC_6cbab
+/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6cbab.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_6cbab.dir/feature_tests.c.o  -o cmTC_6cbab 
 make[1]: выход из каталога «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
@@ -265,14 +265,14 @@ make[1]: выход из каталога «/home/ivan/Рабочий стол/c
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_b54b3/fast 
-/usr/bin/make -f CMakeFiles/cmTC_b54b3.dir/build.make CMakeFiles/cmTC_b54b3.dir/build
+Run Build Command(s):/usr/bin/make cmTC_5130f/fast 
+/usr/bin/make -f CMakeFiles/cmTC_5130f.dir/build.make CMakeFiles/cmTC_5130f.dir/build
 make[1]: вход в каталог «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_b54b3.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_b54b3.dir/feature_tests.c.o   -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/feature_tests.c"
-Linking C executable cmTC_b54b3
-/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b54b3.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_b54b3.dir/feature_tests.c.o  -o cmTC_b54b3 
+Building C object CMakeFiles/cmTC_5130f.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_5130f.dir/feature_tests.c.o   -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/feature_tests.c"
+Linking C executable cmTC_5130f
+/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5130f.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_5130f.dir/feature_tests.c.o  -o cmTC_5130f 
 make[1]: выход из каталога «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
@@ -285,14 +285,14 @@ make[1]: выход из каталога «/home/ivan/Рабочий стол/c
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_99cfa/fast 
-/usr/bin/make -f CMakeFiles/cmTC_99cfa.dir/build.make CMakeFiles/cmTC_99cfa.dir/build
+Run Build Command(s):/usr/bin/make cmTC_2c59b/fast 
+/usr/bin/make -f CMakeFiles/cmTC_2c59b.dir/build.make CMakeFiles/cmTC_2c59b.dir/build
 make[1]: вход в каталог «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_99cfa.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_99cfa.dir/feature_tests.c.o   -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/feature_tests.c"
-Linking C executable cmTC_99cfa
-/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99cfa.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_99cfa.dir/feature_tests.c.o  -o cmTC_99cfa 
+Building C object CMakeFiles/cmTC_2c59b.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_2c59b.dir/feature_tests.c.o   -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/feature_tests.c"
+Linking C executable cmTC_2c59b
+/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c59b.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_2c59b.dir/feature_tests.c.o  -o cmTC_2c59b 
 make[1]: выход из каталога «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
@@ -303,206 +303,176 @@ make[1]: выход из каталога «/home/ivan/Рабочий стол/c
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_82bb5/fast 
-/usr/bin/make -f CMakeFiles/cmTC_82bb5.dir/build.make CMakeFiles/cmTC_82bb5.dir/build
+Run Build Command(s):/usr/bin/make cmTC_11368/fast 
+/usr/bin/make -f CMakeFiles/cmTC_11368.dir/build.make CMakeFiles/cmTC_11368.dir/build
 make[1]: вход в каталог «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_82bb5.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_82bb5.dir/testCXXCompiler.cxx.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx"
-Linking CXX executable cmTC_82bb5
-/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_82bb5.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_82bb5.dir/testCXXCompiler.cxx.o  -o cmTC_82bb5 
+Building CXX object CMakeFiles/cmTC_11368.dir/testCXXCompiler.cxx.o
+/usr/bin/clang++-8     -o CMakeFiles/cmTC_11368.dir/testCXXCompiler.cxx.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx"
+Linking CXX executable cmTC_11368
+/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11368.dir/link.txt --verbose=1
+/usr/bin/clang++-8       CMakeFiles/cmTC_11368.dir/testCXXCompiler.cxx.o  -o cmTC_11368 
 make[1]: выход из каталога «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_58d23/fast 
-/usr/bin/make -f CMakeFiles/cmTC_58d23.dir/build.make CMakeFiles/cmTC_58d23.dir/build
+Run Build Command(s):/usr/bin/make cmTC_57a5c/fast 
+/usr/bin/make -f CMakeFiles/cmTC_57a5c.dir/build.make CMakeFiles/cmTC_57a5c.dir/build
 make[1]: Entering directory '/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++    -v -o CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o -c /home/ivan/Документы/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp
-Using built-in specs.
-COLLECT_GCC=/usr/bin/c++
-OFFLOAD_TARGET_NAMES=nvptx-none
-OFFLOAD_TARGET_DEFAULT=1
-Target: x86_64-linux-gnu
-Configured with: ../src/configure -v --with-pkgversion='Ubuntu 8.3.0-6ubuntu1~18.04.1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Building CXX object CMakeFiles/cmTC_57a5c.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/clang++-8    -v -o CMakeFiles/cmTC_57a5c.dir/CMakeCXXCompilerABI.cpp.o -c /home/ivan/Документы/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp
+clang version 8.0.0-3~ubuntu18.04.1 (tags/RELEASE_800/final)
+Target: x86_64-pc-linux-gnu
 Thread model: posix
-gcc version 8.3.0 (Ubuntu 8.3.0-6ubuntu1~18.04.1) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/8/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/ivan/Документы/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccCe1dPA.s
-GNU C++14 (Ubuntu 8.3.0-6ubuntu1~18.04.1) version 8.3.0 (x86_64-linux-gnu)
-	compiled by GNU C version 8.3.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.19-GMP
-
-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/8"
-ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
-ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/8/../../../../x86_64-linux-gnu/include"
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.4.0
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.4.0
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/usr/lib/llvm-8/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -v -coverage-notes-file /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_57a5c.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /usr/lib/llvm-8/lib/clang/8.0.0 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/x86_64-linux-gnu/c++/8 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/x86_64-linux-gnu/c++/8 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/backward -internal-isystem /usr/include/clang/8.0.0/include/ -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-8/lib/clang/8.0.0/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_57a5c.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/ivan/Документы/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp -faddrsig
+clang -cc1 version 8.0.0 based upon LLVM 8.0.0 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/x86_64-linux-gnu/c++/8"
+ignoring duplicate directory "/usr/include/clang/8.0.0/include"
 #include "..." search starts here:
 #include <...> search starts here:
- /usr/include/c++/8
- /usr/include/x86_64-linux-gnu/c++/8
- /usr/include/c++/8/backward
- /usr/lib/gcc/x86_64-linux-gnu/8/include
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/x86_64-linux-gnu/c++/8
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/backward
+ /usr/include/clang/8.0.0/include
  /usr/local/include
- /usr/lib/gcc/x86_64-linux-gnu/8/include-fixed
  /usr/include/x86_64-linux-gnu
  /usr/include
 End of search list.
-GNU C++14 (Ubuntu 8.3.0-6ubuntu1~18.04.1) version 8.3.0 (x86_64-linux-gnu)
-	compiled by GNU C version 8.3.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.19-GMP
-
-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-Compiler executable checksum: 27ae9a20c27efba91196488dcf7713bb
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- as -v --64 -o CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccCe1dPA.s
-GNU assembler version 2.30 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.30
-COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/
-LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-Linking CXX executable cmTC_58d23
-/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58d23.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_58d23 
-Using built-in specs.
-COLLECT_GCC=/usr/bin/c++
-COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper
-OFFLOAD_TARGET_NAMES=nvptx-none
-OFFLOAD_TARGET_DEFAULT=1
-Target: x86_64-linux-gnu
-Configured with: ../src/configure -v --with-pkgversion='Ubuntu 8.3.0-6ubuntu1~18.04.1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Linking CXX executable cmTC_57a5c
+/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57a5c.dir/link.txt --verbose=1
+/usr/bin/clang++-8      -v CMakeFiles/cmTC_57a5c.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_57a5c 
+clang version 8.0.0-3~ubuntu18.04.1 (tags/RELEASE_800/final)
+Target: x86_64-pc-linux-gnu
 Thread model: posix
-gcc version 8.3.0 (Ubuntu 8.3.0-6ubuntu1~18.04.1) 
-COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/
-LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_58d23' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccy5ta9E.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_58d23 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_58d23' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.4.0
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.4.0
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_57a5c /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../.. -L/usr/lib/llvm-8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_57a5c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
 make[1]: Leaving directory '/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit include dir info from above output: rv=done
   found start of include info
   found start of implicit include info
-    add: [/usr/include/c++/8]
-    add: [/usr/include/x86_64-linux-gnu/c++/8]
-    add: [/usr/include/c++/8/backward]
-    add: [/usr/lib/gcc/x86_64-linux-gnu/8/include]
+    add: [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8]
+    add: [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/x86_64-linux-gnu/c++/8]
+    add: [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/backward]
+    add: [/usr/include/clang/8.0.0/include]
     add: [/usr/local/include]
-    add: [/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed]
     add: [/usr/include/x86_64-linux-gnu]
     add: [/usr/include]
   end of search list found
-  collapse include dir [/usr/include/c++/8] ==> [/usr/include/c++/8]
-  collapse include dir [/usr/include/x86_64-linux-gnu/c++/8] ==> [/usr/include/x86_64-linux-gnu/c++/8]
-  collapse include dir [/usr/include/c++/8/backward] ==> [/usr/include/c++/8/backward]
-  collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/8/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/8/include]
+  collapse include dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8] ==> [/usr/include/c++/8]
+  collapse include dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/x86_64-linux-gnu/c++/8] ==> [/usr/include/x86_64-linux-gnu/c++/8]
+  collapse include dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/backward] ==> [/usr/include/c++/8/backward]
+  collapse include dir [/usr/include/clang/8.0.0/include] ==> [/usr/include/clang/8.0.0/include]
   collapse include dir [/usr/local/include] ==> [/usr/local/include]
-  collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed] ==> [/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed]
   collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
   collapse include dir [/usr/include] ==> [/usr/include]
-  implicit include dirs: [/usr/include/c++/8;/usr/include/x86_64-linux-gnu/c++/8;/usr/include/c++/8/backward;/usr/lib/gcc/x86_64-linux-gnu/8/include;/usr/local/include;/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed;/usr/include/x86_64-linux-gnu;/usr/include]
+  implicit include dirs: [/usr/include/c++/8;/usr/include/x86_64-linux-gnu/c++/8;/usr/include/c++/8/backward;/usr/include/clang/8.0.0/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_58d23/fast ]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_58d23.dir/build.make CMakeFiles/cmTC_58d23.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_57a5c/fast ]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_57a5c.dir/build.make CMakeFiles/cmTC_57a5c.dir/build]
   ignore line: [make[1]: Entering directory '/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++    -v -o CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o -c /home/ivan/Документы/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/c++]
-  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
-  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
-  ignore line: [Target: x86_64-linux-gnu]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 8.3.0-6ubuntu1~18.04.1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Building CXX object CMakeFiles/cmTC_57a5c.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/clang++-8    -v -o CMakeFiles/cmTC_57a5c.dir/CMakeCXXCompilerABI.cpp.o -c /home/ivan/Документы/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang version 8.0.0-3~ubuntu18.04.1 (tags/RELEASE_800/final)]
+  ignore line: [Target: x86_64-pc-linux-gnu]
   ignore line: [Thread model: posix]
-  ignore line: [gcc version 8.3.0 (Ubuntu 8.3.0-6ubuntu1~18.04.1) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/8/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/ivan/Документы/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccCe1dPA.s]
-  ignore line: [GNU C++14 (Ubuntu 8.3.0-6ubuntu1~18.04.1) version 8.3.0 (x86_64-linux-gnu)]
-  ignore line: [	compiled by GNU C version 8.3.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.19-GMP]
-  ignore line: []
-  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/8"]
-  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
-  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/8/../../../../x86_64-linux-gnu/include"]
+  ignore line: [InstalledDir: /usr/bin]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.4.0]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.4.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8]
+  ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  ignore line: [ "/usr/lib/llvm-8/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debugger-tuning=gdb -v -coverage-notes-file /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_57a5c.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /usr/lib/llvm-8/lib/clang/8.0.0 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/x86_64-linux-gnu/c++/8 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/x86_64-linux-gnu/c++/8 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/backward -internal-isystem /usr/include/clang/8.0.0/include/ -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-8/lib/clang/8.0.0/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_57a5c.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/ivan/Документы/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXCompilerABI.cpp -faddrsig]
+  ignore line: [clang -cc1 version 8.0.0 based upon LLVM 8.0.0 default target x86_64-pc-linux-gnu]
+  ignore line: [ignoring nonexistent directory "/include"]
+  ignore line: [ignoring duplicate directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/x86_64-linux-gnu/c++/8"]
+  ignore line: [ignoring duplicate directory "/usr/include/clang/8.0.0/include"]
   ignore line: [#include "..." search starts here:]
   ignore line: [#include <...> search starts here:]
-  ignore line: [ /usr/include/c++/8]
-  ignore line: [ /usr/include/x86_64-linux-gnu/c++/8]
-  ignore line: [ /usr/include/c++/8/backward]
-  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/8/include]
+  ignore line: [ /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8]
+  ignore line: [ /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/x86_64-linux-gnu/c++/8]
+  ignore line: [ /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/backward]
+  ignore line: [ /usr/include/clang/8.0.0/include]
   ignore line: [ /usr/local/include]
-  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/8/include-fixed]
   ignore line: [ /usr/include/x86_64-linux-gnu]
   ignore line: [ /usr/include]
   ignore line: [End of search list.]
-  ignore line: [GNU C++14 (Ubuntu 8.3.0-6ubuntu1~18.04.1) version 8.3.0 (x86_64-linux-gnu)]
-  ignore line: [	compiled by GNU C version 8.3.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.19-GMP]
-  ignore line: []
-  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [Compiler executable checksum: 27ae9a20c27efba91196488dcf7713bb]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [ as -v --64 -o CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccCe1dPA.s]
-  ignore line: [GNU assembler version 2.30 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.30]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking CXX executable cmTC_58d23]
-  ignore line: [/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58d23.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_58d23 ]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/c++]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper]
-  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
-  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
-  ignore line: [Target: x86_64-linux-gnu]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 8.3.0-6ubuntu1~18.04.1' --with-bugurl=file:///usr/share/doc/gcc-8/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-8 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Linking CXX executable cmTC_57a5c]
+  ignore line: [/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57a5c.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/clang++-8      -v CMakeFiles/cmTC_57a5c.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_57a5c ]
+  ignore line: [clang version 8.0.0-3~ubuntu18.04.1 (tags/RELEASE_800/final)]
+  ignore line: [Target: x86_64-pc-linux-gnu]
   ignore line: [Thread model: posix]
-  ignore line: [gcc version 8.3.0 (Ubuntu 8.3.0-6ubuntu1~18.04.1) ]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/8/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_58d23' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccy5ta9E.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_58d23 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o]
-    arg [/usr/lib/gcc/x86_64-linux-gnu/8/collect2] ==> ignore
-    arg [-plugin] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccy5ta9E.res] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+  ignore line: [InstalledDir: /usr/bin]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/7.4.0]
+  ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/7.4.0]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/8]
+  ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/8]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  link line: [ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_57a5c /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crt1.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtbegin.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../.. -L/usr/lib/llvm-8/bin/../lib -L/lib -L/usr/lib CMakeFiles/cmTC_57a5c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtend.o /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/bin/ld] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
     arg [--build-id] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
     arg [-m] ==> ignore
     arg [elf_x86_64] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
-    arg [--as-needed] ==> ignore
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
-    arg [-pie] ==> ignore
-    arg [-znow] ==> ignore
-    arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_58d23] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o] ==> ignore
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib]
+    arg [cmTC_57a5c] ==> ignore
+    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtbegin.o] ==> ignore
+    arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/8] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8]
+    arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu]
     arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
-    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
-    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../..]
-    arg [CMakeFiles/cmTC_58d23.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-L/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../..] ==> dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../..]
+    arg [-L/usr/lib/llvm-8/bin/../lib] ==> dir [/usr/lib/llvm-8/bin/../lib]
+    arg [-L/lib] ==> dir [/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [CMakeFiles/cmTC_57a5c.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -510,18 +480,19 @@ Parsed CXX implicit link information from above output:
     arg [-lc] ==> lib [c]
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [-lgcc] ==> lib [gcc]
-    arg [/usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o] ==> ignore
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8] ==> [/usr/lib/gcc/x86_64-linux-gnu/8]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib] ==> [/usr/lib]
+    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/crtend.o] ==> ignore
+    arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8] ==> [/usr/lib/gcc/x86_64-linux-gnu/8]
+  collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
   collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
-  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
   collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/8/../../..] ==> [/usr/lib]
+  collapse library dir [/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../..] ==> [/usr/lib]
+  collapse library dir [/usr/lib/llvm-8/bin/../lib] ==> [/usr/lib/llvm-8/lib]
+  collapse library dir [/lib] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
   implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
-  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/8;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/8;/usr/lib/x86_64-linux-gnu;/lib/x86_64-linux-gnu;/lib64;/usr/lib;/usr/lib/llvm-8/lib;/lib]
   implicit fwks: []
 
 
@@ -530,14 +501,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++2a] compiler features compiled with the following output:
 Change Dir: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_0c612/fast 
-/usr/bin/make -f CMakeFiles/cmTC_0c612.dir/build.make CMakeFiles/cmTC_0c612.dir/build
+Run Build Command(s):/usr/bin/make cmTC_64eb8/fast 
+/usr/bin/make -f CMakeFiles/cmTC_64eb8.dir/build.make CMakeFiles/cmTC_64eb8.dir/build
 make[1]: вход в каталог «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_0c612.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++2a -o CMakeFiles/cmTC_0c612.dir/feature_tests.cxx.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/feature_tests.cxx"
-Linking CXX executable cmTC_0c612
-/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0c612.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_0c612.dir/feature_tests.cxx.o  -o cmTC_0c612 
+Building CXX object CMakeFiles/cmTC_64eb8.dir/feature_tests.cxx.o
+/usr/bin/clang++-8    -std=c++2a -o CMakeFiles/cmTC_64eb8.dir/feature_tests.cxx.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/feature_tests.cxx"
+Linking CXX executable cmTC_64eb8
+/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64eb8.dir/link.txt --verbose=1
+/usr/bin/clang++-8       CMakeFiles/cmTC_64eb8.dir/feature_tests.cxx.o  -o cmTC_64eb8 
 make[1]: выход из каталога «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
@@ -603,14 +574,14 @@ make[1]: выход из каталога «/home/ivan/Рабочий стол/c
 Detecting CXX [-std=c++17] compiler features compiled with the following output:
 Change Dir: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_e2ba2/fast 
-/usr/bin/make -f CMakeFiles/cmTC_e2ba2.dir/build.make CMakeFiles/cmTC_e2ba2.dir/build
+Run Build Command(s):/usr/bin/make cmTC_cdf6f/fast 
+/usr/bin/make -f CMakeFiles/cmTC_cdf6f.dir/build.make CMakeFiles/cmTC_cdf6f.dir/build
 make[1]: вход в каталог «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_e2ba2.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++17 -o CMakeFiles/cmTC_e2ba2.dir/feature_tests.cxx.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/feature_tests.cxx"
-Linking CXX executable cmTC_e2ba2
-/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2ba2.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_e2ba2.dir/feature_tests.cxx.o  -o cmTC_e2ba2 
+Building CXX object CMakeFiles/cmTC_cdf6f.dir/feature_tests.cxx.o
+/usr/bin/clang++-8    -std=c++17 -o CMakeFiles/cmTC_cdf6f.dir/feature_tests.cxx.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/feature_tests.cxx"
+Linking CXX executable cmTC_cdf6f
+/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cdf6f.dir/link.txt --verbose=1
+/usr/bin/clang++-8       CMakeFiles/cmTC_cdf6f.dir/feature_tests.cxx.o  -o cmTC_cdf6f 
 make[1]: выход из каталога «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
@@ -676,14 +647,14 @@ make[1]: выход из каталога «/home/ivan/Рабочий стол/c
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_47b12/fast 
-/usr/bin/make -f CMakeFiles/cmTC_47b12.dir/build.make CMakeFiles/cmTC_47b12.dir/build
+Run Build Command(s):/usr/bin/make cmTC_27340/fast 
+/usr/bin/make -f CMakeFiles/cmTC_27340.dir/build.make CMakeFiles/cmTC_27340.dir/build
 make[1]: вход в каталог «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_47b12.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_47b12.dir/feature_tests.cxx.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/feature_tests.cxx"
-Linking CXX executable cmTC_47b12
-/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47b12.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_47b12.dir/feature_tests.cxx.o  -o cmTC_47b12 
+Building CXX object CMakeFiles/cmTC_27340.dir/feature_tests.cxx.o
+/usr/bin/clang++-8    -std=c++14 -o CMakeFiles/cmTC_27340.dir/feature_tests.cxx.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/feature_tests.cxx"
+Linking CXX executable cmTC_27340
+/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_27340.dir/link.txt --verbose=1
+/usr/bin/clang++-8       CMakeFiles/cmTC_27340.dir/feature_tests.cxx.o  -o cmTC_27340 
 make[1]: выход из каталога «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
@@ -749,14 +720,14 @@ make[1]: выход из каталога «/home/ivan/Рабочий стол/c
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_1e13d/fast 
-/usr/bin/make -f CMakeFiles/cmTC_1e13d.dir/build.make CMakeFiles/cmTC_1e13d.dir/build
+Run Build Command(s):/usr/bin/make cmTC_b756d/fast 
+/usr/bin/make -f CMakeFiles/cmTC_b756d.dir/build.make CMakeFiles/cmTC_b756d.dir/build
 make[1]: вход в каталог «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_1e13d.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_1e13d.dir/feature_tests.cxx.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/feature_tests.cxx"
-Linking CXX executable cmTC_1e13d
-/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e13d.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_1e13d.dir/feature_tests.cxx.o  -o cmTC_1e13d 
+Building CXX object CMakeFiles/cmTC_b756d.dir/feature_tests.cxx.o
+/usr/bin/clang++-8    -std=c++11 -o CMakeFiles/cmTC_b756d.dir/feature_tests.cxx.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/feature_tests.cxx"
+Linking CXX executable cmTC_b756d
+/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b756d.dir/link.txt --verbose=1
+/usr/bin/clang++-8       CMakeFiles/cmTC_b756d.dir/feature_tests.cxx.o  -o cmTC_b756d 
 make[1]: выход из каталога «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 
@@ -822,14 +793,14 @@ make[1]: выход из каталога «/home/ivan/Рабочий стол/c
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_0988e/fast 
-/usr/bin/make -f CMakeFiles/cmTC_0988e.dir/build.make CMakeFiles/cmTC_0988e.dir/build
+Run Build Command(s):/usr/bin/make cmTC_964f3/fast 
+/usr/bin/make -f CMakeFiles/cmTC_964f3.dir/build.make CMakeFiles/cmTC_964f3.dir/build
 make[1]: вход в каталог «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
-Building CXX object CMakeFiles/cmTC_0988e.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_0988e.dir/feature_tests.cxx.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/feature_tests.cxx"
-Linking CXX executable cmTC_0988e
-/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0988e.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_0988e.dir/feature_tests.cxx.o  -o cmTC_0988e 
+Building CXX object CMakeFiles/cmTC_964f3.dir/feature_tests.cxx.o
+/usr/bin/clang++-8    -std=c++98 -o CMakeFiles/cmTC_964f3.dir/feature_tests.cxx.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/feature_tests.cxx"
+Linking CXX executable cmTC_964f3
+/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_964f3.dir/link.txt --verbose=1
+/usr/bin/clang++-8       CMakeFiles/cmTC_964f3.dir/feature_tests.cxx.o  -o cmTC_964f3 
 make[1]: выход из каталога «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/third_week/part_M/cmake-build-debug/CMakeFiles/CMakeTmp»
 
 

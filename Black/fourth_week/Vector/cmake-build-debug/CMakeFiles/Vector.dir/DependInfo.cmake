@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/main.cpp" "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/cmake-build-debug/CMakeFiles/Vector.dir/main.cpp.o"
   "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/test_vector.cpp" "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/cmake-build-debug/CMakeFiles/Vector.dir/test_vector.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

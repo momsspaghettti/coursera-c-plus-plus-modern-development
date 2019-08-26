@@ -60,41 +60,41 @@ include CMakeFiles/Vector.dir/flags.make
 CMakeFiles/Vector.dir/main.cpp.o: CMakeFiles/Vector.dir/flags.make
 CMakeFiles/Vector.dir/main.cpp.o: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Vector.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Vector.dir/main.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/main.cpp"
+	/usr/bin/clang++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Vector.dir/main.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/main.cpp"
 
 CMakeFiles/Vector.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Vector.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/main.cpp" > CMakeFiles/Vector.dir/main.cpp.i
+	/usr/bin/clang++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/main.cpp" > CMakeFiles/Vector.dir/main.cpp.i
 
 CMakeFiles/Vector.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Vector.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/main.cpp" -o CMakeFiles/Vector.dir/main.cpp.s
+	/usr/bin/clang++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/main.cpp" -o CMakeFiles/Vector.dir/main.cpp.s
 
 CMakeFiles/Vector.dir/test_vector.cpp.o: CMakeFiles/Vector.dir/flags.make
 CMakeFiles/Vector.dir/test_vector.cpp.o: ../test_vector.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Vector.dir/test_vector.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Vector.dir/test_vector.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/test_vector.cpp"
+	/usr/bin/clang++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Vector.dir/test_vector.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/test_vector.cpp"
 
 CMakeFiles/Vector.dir/test_vector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Vector.dir/test_vector.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/test_vector.cpp" > CMakeFiles/Vector.dir/test_vector.cpp.i
+	/usr/bin/clang++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/test_vector.cpp" > CMakeFiles/Vector.dir/test_vector.cpp.i
 
 CMakeFiles/Vector.dir/test_vector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Vector.dir/test_vector.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/test_vector.cpp" -o CMakeFiles/Vector.dir/test_vector.cpp.s
+	/usr/bin/clang++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/test_vector.cpp" -o CMakeFiles/Vector.dir/test_vector.cpp.s
 
 CMakeFiles/Vector.dir/UnitTestsFramework.cpp.o: CMakeFiles/Vector.dir/flags.make
 CMakeFiles/Vector.dir/UnitTestsFramework.cpp.o: ../UnitTestsFramework.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Vector.dir/UnitTestsFramework.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Vector.dir/UnitTestsFramework.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/UnitTestsFramework.cpp"
+	/usr/bin/clang++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Vector.dir/UnitTestsFramework.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/UnitTestsFramework.cpp"
 
 CMakeFiles/Vector.dir/UnitTestsFramework.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Vector.dir/UnitTestsFramework.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/UnitTestsFramework.cpp" > CMakeFiles/Vector.dir/UnitTestsFramework.cpp.i
+	/usr/bin/clang++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/UnitTestsFramework.cpp" > CMakeFiles/Vector.dir/UnitTestsFramework.cpp.i
 
 CMakeFiles/Vector.dir/UnitTestsFramework.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Vector.dir/UnitTestsFramework.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/UnitTestsFramework.cpp" -o CMakeFiles/Vector.dir/UnitTestsFramework.cpp.s
+	/usr/bin/clang++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fourth_week/Vector/UnitTestsFramework.cpp" -o CMakeFiles/Vector.dir/UnitTestsFramework.cpp.s
 
 # Object files for target Vector
 Vector_OBJECTS = \
