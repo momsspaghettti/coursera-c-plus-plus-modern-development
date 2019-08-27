@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="LIBANTLR4"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\antlr4_runtime\;CMake Files\antlr4_runtime\runtime\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="antlr4_static">
+				<Option output="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/runtime/libantlr4-runtime.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/runtime"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DANTLR4CPP_STATIC"/>
+					<Add option="-D_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS"/>
+					<Add directory="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src"/>
+					<Add directory="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn"/>
+					<Add directory="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/dfa"/>
+					<Add directory="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/misc"/>
+					<Add directory="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/support"/>
+					<Add directory="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree"/>
+					<Add directory="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern"/>
+					<Add directory="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/runtime/Makefile&quot;  VERBOSE=1 antlr4_static"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/runtime/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/runtime/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/runtime/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="antlr4_static/fast">
+				<Option output="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/runtime/libantlr4-runtime.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/runtime"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DANTLR4CPP_STATIC"/>
+					<Add option="-D_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS"/>
+					<Add directory="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src"/>
+					<Add directory="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn"/>
+					<Add directory="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/dfa"/>
+					<Add directory="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/misc"/>
+					<Add directory="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/support"/>
+					<Add directory="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree"/>
+					<Add directory="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern"/>
+					<Add directory="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/runtime/Makefile&quot;  VERBOSE=1 antlr4_static/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/runtime/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/runtime/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/Рабочий\ стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/runtime/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ANTLRErrorListener.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ANTLRErrorListener.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ANTLRErrorStrategy.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ANTLRErrorStrategy.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ANTLRFileStream.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ANTLRFileStream.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ANTLRInputStream.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ANTLRInputStream.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/BailErrorStrategy.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/BailErrorStrategy.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/BaseErrorListener.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/BaseErrorListener.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/BufferedTokenStream.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/BufferedTokenStream.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/CharStream.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/CharStream.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/CommonToken.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/CommonToken.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/CommonTokenFactory.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/CommonTokenFactory.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/CommonTokenStream.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/CommonTokenStream.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ConsoleErrorListener.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ConsoleErrorListener.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/DefaultErrorStrategy.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/DefaultErrorStrategy.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/DiagnosticErrorListener.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/DiagnosticErrorListener.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/Exceptions.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/Exceptions.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/FailedPredicateException.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/FailedPredicateException.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/InputMismatchException.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/InputMismatchException.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/IntStream.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/IntStream.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/InterpreterRuleContext.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/InterpreterRuleContext.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/Lexer.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/Lexer.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/LexerInterpreter.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/LexerInterpreter.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/LexerNoViableAltException.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/LexerNoViableAltException.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ListTokenSource.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ListTokenSource.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/NoViableAltException.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/NoViableAltException.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/Parser.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/Parser.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ParserInterpreter.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ParserInterpreter.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ParserRuleContext.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ParserRuleContext.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ProxyErrorListener.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/ProxyErrorListener.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/RecognitionException.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/RecognitionException.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/Recognizer.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/Recognizer.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/RuleContext.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/RuleContext.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/RuleContextWithAltNum.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/RuleContextWithAltNum.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/RuntimeMetaData.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/RuntimeMetaData.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/Token.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/Token.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/TokenSource.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/TokenSource.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/TokenStream.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/TokenStream.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/TokenStreamRewriter.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/TokenStreamRewriter.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/UnbufferedCharStream.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/UnbufferedCharStream.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/UnbufferedTokenStream.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/UnbufferedTokenStream.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/Vocabulary.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/Vocabulary.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/WritableToken.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/WritableToken.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ATN.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ATN.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ATNConfig.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ATNConfig.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ATNConfigSet.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ATNConfigSet.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ATNDeserializationOptions.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ATNDeserializationOptions.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ATNDeserializer.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ATNDeserializer.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ATNSerializer.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ATNSerializer.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ATNSimulator.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ATNSimulator.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ATNState.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ATNState.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/AbstractPredicateTransition.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/AbstractPredicateTransition.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ActionTransition.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ActionTransition.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/AmbiguityInfo.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/AmbiguityInfo.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ArrayPredictionContext.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ArrayPredictionContext.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/AtomTransition.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/AtomTransition.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/BasicBlockStartState.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/BasicBlockStartState.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/BasicState.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/BasicState.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/BlockEndState.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/BlockEndState.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/BlockStartState.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/BlockStartState.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ContextSensitivityInfo.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ContextSensitivityInfo.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/DecisionEventInfo.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/DecisionEventInfo.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/DecisionInfo.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/DecisionInfo.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/DecisionState.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/DecisionState.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/EmptyPredictionContext.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/EmptyPredictionContext.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/EpsilonTransition.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/EpsilonTransition.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ErrorInfo.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ErrorInfo.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LL1Analyzer.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LL1Analyzer.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerATNConfig.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerATNConfig.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerATNSimulator.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerATNSimulator.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerAction.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerAction.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerActionExecutor.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerActionExecutor.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerChannelAction.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerChannelAction.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerCustomAction.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerCustomAction.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerIndexedCustomAction.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerIndexedCustomAction.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerModeAction.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerModeAction.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerMoreAction.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerMoreAction.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerPopModeAction.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerPopModeAction.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerPushModeAction.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerPushModeAction.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerSkipAction.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerSkipAction.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerTypeAction.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LexerTypeAction.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LookaheadEventInfo.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LookaheadEventInfo.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LoopEndState.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/LoopEndState.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/NotSetTransition.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/NotSetTransition.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/OrderedATNConfigSet.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/OrderedATNConfigSet.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ParseInfo.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ParseInfo.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ParserATNSimulator.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ParserATNSimulator.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/PlusBlockStartState.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/PlusBlockStartState.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/PlusLoopbackState.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/PlusLoopbackState.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/PrecedencePredicateTransition.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/PrecedencePredicateTransition.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/PredicateEvalInfo.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/PredicateEvalInfo.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/PredicateTransition.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/PredicateTransition.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/PredictionContext.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/PredictionContext.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/PredictionMode.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/PredictionMode.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ProfilingATNSimulator.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/ProfilingATNSimulator.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/RangeTransition.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/RangeTransition.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/RuleStartState.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/RuleStartState.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/RuleStopState.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/RuleStopState.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/RuleTransition.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/RuleTransition.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/SemanticContext.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/SemanticContext.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/SetTransition.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/SetTransition.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/SingletonPredictionContext.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/SingletonPredictionContext.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/StarBlockStartState.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/StarBlockStartState.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/StarLoopEntryState.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/StarLoopEntryState.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/StarLoopbackState.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/StarLoopbackState.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/TokensStartState.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/TokensStartState.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/Transition.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/Transition.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/WildcardTransition.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/atn/WildcardTransition.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/dfa/DFA.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/dfa/DFA.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/dfa/DFASerializer.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/dfa/DFASerializer.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/dfa/DFAState.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/dfa/DFAState.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/dfa/LexerDFASerializer.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/dfa/LexerDFASerializer.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/misc/InterpreterDataReader.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/misc/InterpreterDataReader.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/misc/Interval.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/misc/Interval.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/misc/IntervalSet.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/misc/IntervalSet.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/misc/MurmurHash.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/misc/MurmurHash.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/misc/Predicate.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/misc/Predicate.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/support/Any.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/support/Any.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/support/Arrays.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/support/Arrays.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/support/CPPUtils.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/support/CPPUtils.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/support/StringUtils.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/support/StringUtils.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/support/guid.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/support/guid.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/ErrorNode.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/ErrorNode.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/ErrorNodeImpl.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/ErrorNodeImpl.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/IterativeParseTreeWalker.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/IterativeParseTreeWalker.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/ParseTree.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/ParseTree.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/ParseTreeListener.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/ParseTreeListener.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/ParseTreeVisitor.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/ParseTreeVisitor.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/ParseTreeWalker.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/ParseTreeWalker.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/TerminalNode.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/TerminalNode.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/TerminalNodeImpl.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/TerminalNodeImpl.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/Trees.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/Trees.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern/Chunk.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern/Chunk.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern/ParseTreeMatch.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern/ParseTreeMatch.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern/ParseTreePattern.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern/ParseTreePattern.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern/ParseTreePatternMatcher.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern/ParseTreePatternMatcher.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern/RuleTagToken.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern/RuleTagToken.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern/TagChunk.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern/TagChunk.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern/TextChunk.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern/TextChunk.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern/TokenTagToken.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/pattern/TokenTagToken.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPath.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPath.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathElement.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathElement.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathLexer.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathLexer.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathLexerErrorListener.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathLexerErrorListener.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathRuleAnywhereElement.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathRuleAnywhereElement.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathRuleElement.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathRuleElement.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathTokenAnywhereElement.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathTokenAnywhereElement.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathTokenElement.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathTokenElement.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathWildcardAnywhereElement.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathWildcardAnywhereElement.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathWildcardElement.cpp">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/tree/xpath/XPathWildcardElement.h">
+			<Option target="antlr4_static"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/FindANTLR.cmake">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\antlr4_runtime\"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\antlr4_runtime\runtime\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

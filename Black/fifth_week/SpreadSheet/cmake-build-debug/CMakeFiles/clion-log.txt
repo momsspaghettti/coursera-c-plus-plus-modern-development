@@ -1,0 +1,64 @@
+/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet"
+-- Building without demo. To enable demo build use: -DWITH_DEMO=True
+CMake Deprecation Warning at antlr4_runtime/CMakeLists.txt:31 (CMAKE_POLICY):
+  The OLD behavior for policy CMP0054 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+CMake Deprecation Warning at antlr4_runtime/CMakeLists.txt:32 (CMAKE_POLICY):
+  The OLD behavior for policy CMP0045 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+CMake Deprecation Warning at antlr4_runtime/CMakeLists.txt:33 (CMAKE_POLICY):
+  The OLD behavior for policy CMP0042 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+CMake Deprecation Warning at antlr4_runtime/CMakeLists.txt:38 (CMAKE_POLICY):
+  The OLD behavior for policy CMP0059 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+CMake Deprecation Warning at antlr4_runtime/CMakeLists.txt:39 (CMAKE_POLICY):
+  The OLD behavior for policy CMP0054 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+-- Configuring done
+CMake Warning (dev) at antlr4_runtime/runtime/CMakeLists.txt:27 (add_dependencies):
+  Policy CMP0046 is not set: Error on non-existent dependency in
+  add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
+  Use the cmake_policy command to set the policy and suppress this warning.
+
+  The dependency target "make_lib_output_dir" of target "antlr4_static" does
+  not exist.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Generating done
+-- Build files have been written to: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug
