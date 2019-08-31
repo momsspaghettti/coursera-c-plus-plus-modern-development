@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_O/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cff34/fast 
+/usr/bin/make -f CMakeFiles/cmTC_cff34.dir/build.make CMakeFiles/cmTC_cff34.dir/build
+make[1]: вход в каталог «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_O/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_cff34.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_cff34.dir/CheckSymbolExists.c.o   -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_O/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c"
+Linking C executable cmTC_cff34
+/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cff34.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_cff34.dir/CheckSymbolExists.c.o  -o cmTC_cff34 
+CMakeFiles/cmTC_cff34.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_cff34.dir/build.make:86: recipe for target 'cmTC_cff34' failed
+make[1]: *** [cmTC_cff34] Error 1
+make[1]: выход из каталога «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_O/cmake-build-debug/CMakeFiles/CMakeTmp»
+Makefile:121: recipe for target 'cmTC_cff34/fast' failed
+make: *** [cmTC_cff34/fast] Error 2
+
+File /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_O/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_O/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4950f/fast 
+/usr/bin/make -f CMakeFiles/cmTC_4950f.dir/build.make CMakeFiles/cmTC_4950f.dir/build
+make[1]: вход в каталог «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_O/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_4950f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_4950f.dir/CheckFunctionExists.c.o   -c /home/ivan/Документы/clion-2019.2/bin/cmake/linux/share/cmake-3.14/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4950f
+/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4950f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_4950f.dir/CheckFunctionExists.c.o  -o cmTC_4950f -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_4950f.dir/build.make:86: recipe for target 'cmTC_4950f' failed
+make[1]: *** [cmTC_4950f] Error 1
+make[1]: выход из каталога «/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_O/cmake-build-debug/CMakeFiles/CMakeTmp»
+Makefile:121: recipe for target 'cmTC_4950f/fast' failed
+make: *** [cmTC_4950f/fast] Error 2
+
+

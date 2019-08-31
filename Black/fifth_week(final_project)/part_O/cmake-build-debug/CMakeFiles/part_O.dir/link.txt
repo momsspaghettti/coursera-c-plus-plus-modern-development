@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/part_O.dir/transport_catalog.pb.cc.o CMakeFiles/part_O.dir/main.cpp.o CMakeFiles/part_O.dir/json.cpp.o CMakeFiles/part_O.dir/routes_database.cpp.o CMakeFiles/part_O.dir/stops_database.cpp.o CMakeFiles/part_O.dir/transport_guide_manager.cpp.o  -o part_O /usr/lib/libprotobuf.so -lpthread 

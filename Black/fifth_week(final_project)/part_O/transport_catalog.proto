@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package Serializer;
+
+
+message BusStopResponse {
+    repeated string buses_on_stop = 1;
+}
+
+message RouteResponse {
+    int32 stops_on_route = 1;
+    int32 unique_stops = 2;
+    uint32 route_length = 3;
+    float curvature = 4;
+}
+
+
+message TransportCatalog {
+    map<string, BusStopResponse> stop_responses = 1;
+    map<string, RouteResponse> route_responses = 2;
+}

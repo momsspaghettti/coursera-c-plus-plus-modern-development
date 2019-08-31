@@ -1,0 +1,4 @@
+/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_O"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_O/cmake-build-release
