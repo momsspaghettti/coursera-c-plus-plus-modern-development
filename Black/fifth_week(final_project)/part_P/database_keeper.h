@@ -21,5 +21,10 @@ public:
     }
 
 private:
+    std::unique_ptr<Serializer::TransportCatalog> serialized_catalog_;
     std::unique_ptr<Serializer::TransportCatalog> deserialized_catalog_;
+
+    void save_stops(const TransportGuideManager *base);
+    void save_buses(const TransportGuideManager *base);
+    void save_navigation_data_base(const TransportGuideManager *base);
 };

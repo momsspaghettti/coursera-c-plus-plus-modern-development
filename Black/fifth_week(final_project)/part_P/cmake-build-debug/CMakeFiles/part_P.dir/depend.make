@@ -30,6 +30,7 @@ CMakeFiles/part_P.dir/navigation_database.cpp.o: ../graph.h
 CMakeFiles/part_P.dir/navigation_database.cpp.o: ../navigation_database.cpp
 CMakeFiles/part_P.dir/navigation_database.cpp.o: ../navigation_database.h
 CMakeFiles/part_P.dir/navigation_database.cpp.o: ../router.h
+CMakeFiles/part_P.dir/navigation_database.cpp.o: transport_catalog.pb.h
 
 CMakeFiles/part_P.dir/routes_database.cpp.o: ../graph.h
 CMakeFiles/part_P.dir/routes_database.cpp.o: ../navigation_database.h
@@ -37,6 +38,7 @@ CMakeFiles/part_P.dir/routes_database.cpp.o: ../router.h
 CMakeFiles/part_P.dir/routes_database.cpp.o: ../routes_database.cpp
 CMakeFiles/part_P.dir/routes_database.cpp.o: ../routes_database.h
 CMakeFiles/part_P.dir/routes_database.cpp.o: ../stops_database.h
+CMakeFiles/part_P.dir/routes_database.cpp.o: transport_catalog.pb.h
 
 CMakeFiles/part_P.dir/stops_database.cpp.o: ../stops_database.cpp
 CMakeFiles/part_P.dir/stops_database.cpp.o: ../stops_database.h

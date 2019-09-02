@@ -6,96 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/cmake-build-debug/transport_catalog.pb.cc
-transport_catalog.pb.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/cmake-build-debug/transport_catalog.pb.h
-algorithm
--
-google/protobuf/stubs/common.h
--
-google/protobuf/io/coded_stream.h
--
-google/protobuf/extension_set.h
--
-google/protobuf/wire_format_lite.h
--
-google/protobuf/descriptor.h
--
-google/protobuf/generated_message_reflection.h
--
-google/protobuf/reflection_ops.h
--
-google/protobuf/wire_format.h
--
-google/protobuf/port_def.inc
--
-google/protobuf/port_undef.inc
--
-
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/cmake-build-debug/transport_catalog.pb.h
-limits
--
-string
--
-google/protobuf/port_def.inc
--
-google/protobuf/port_undef.inc
--
-google/protobuf/io/coded_stream.h
--
-google/protobuf/arena.h
--
-google/protobuf/arenastring.h
--
-google/protobuf/generated_message_table_driven.h
--
-google/protobuf/generated_message_util.h
--
-google/protobuf/inlined_string_field.h
--
-google/protobuf/metadata.h
--
-google/protobuf/generated_message_reflection.h
--
-google/protobuf/message.h
--
-google/protobuf/repeated_field.h
--
-google/protobuf/extension_set.h
--
-google/protobuf/map.h
--
-google/protobuf/map_entry.h
--
-google/protobuf/map_field_inl.h
--
-google/protobuf/unknown_field_set.h
--
-google/protobuf/port_def.inc
--
-google/protobuf/port_undef.inc
--
-
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/database_keeper.cpp
-iostream
--
-fstream
--
-database_keeper.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/database_keeper.h
-transport_guide_manager.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/transport_guide_manager.h
-transport_catalog.pb.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/transport_catalog.pb.h
-
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/database_keeper.h
-string
--
-memory
--
-transport_catalog.pb.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/transport_catalog.pb.h
-
 /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/graph.h
 cstdlib
 -
@@ -104,32 +14,6 @@ deque
 vector
 -
 
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/json.h
-istream
--
-string
--
-variant
--
-vector
--
-memory
--
-utility
--
-map
--
-cstdint
--
-
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/main.cpp
-iostream
--
-string_view
--
-transport_guide_manager.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/transport_guide_manager.h
-
 /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/navigation_database.cpp
 navigation_database.h
 /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/navigation_database.h
@@ -137,8 +21,6 @@ cstdint
 -
 
 /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/navigation_database.h
-graph.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/graph.h
 string
 -
 unordered_map
@@ -153,6 +35,10 @@ string
 -
 variant
 -
+graph.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/graph.h
+transport_catalog.pb.h
+/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/transport_catalog.pb.h
 
 /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/router.h
 graph.h
@@ -173,70 +59,6 @@ utility
 -
 vector
 -
-
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/routes_database.h
-stops_database.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/stops_database.h
-vector
--
-optional
--
-utility
--
-unordered_map
--
-unordered_set
--
-memory
--
-cstdint
--
-navigation_database.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/navigation_database.h
-
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/stops_database.h
-string
--
-string
--
-set
--
-optional
--
-memory
--
-unordered_map
--
-
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/transport_guide_manager.cpp
-string
--
-iostream
--
-string_view
--
-transport_guide_manager.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/transport_guide_manager.h
-json.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/json.h
-database_keeper.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/database_keeper.h
-
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/transport_guide_manager.h
-memory
--
-iostream
--
-routes_database.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/routes_database.h
-stops_database.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/stops_database.h
-json.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/json.h
-navigation_database.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/navigation_database.h
-database_keeper.h
-/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/database_keeper.h
 
 transport_catalog.pb.h
 limits

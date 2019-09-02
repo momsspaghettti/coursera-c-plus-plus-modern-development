@@ -40,6 +40,8 @@ namespace Graph {
         using IncidentEdgesRange = Range<typename IncidenceList::const_iterator>;
 
     public:
+        DirectedWeightedGraph() = default;
+
         DirectedWeightedGraph(size_t vertex_count);
 
         EdgeId AddEdge(const Edge<Weight> &edge);
@@ -51,6 +53,22 @@ namespace Graph {
         const Edge<Weight> &GetEdge(EdgeId edge_id) const;
 
         [[nodiscard]] IncidentEdgesRange GetIncidentEdges(VertexId vertex) const;
+
+        [[nodiscard]] const std::vector<Edge<Weight>>& GetEdges() const {
+            return edges_;
+        }
+
+        [[nodiscard]] const std::vector<IncidenceList>& GetIncidenceLists() const {
+            return incidence_lists_;
+        }
+
+        [[nodiscard]] std::vector<Edge<Weight>>& GetEdges() {
+            return edges_;
+        }
+
+        [[nodiscard]] std::vector<IncidenceList>& GetIncidenceLists() {
+            return incidence_lists_;
+        }
 
     private:
         std::vector<Edge<Weight>> edges_;

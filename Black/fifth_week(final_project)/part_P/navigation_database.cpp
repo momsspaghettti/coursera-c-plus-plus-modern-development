@@ -6,26 +6,92 @@ void BusInfo::AddDirectStop(size_t index, unsigned length) {
     direct_stops_.push_back(BusStopInfo{index, length});
 }
 
-
 void BusInfo::AddReverseStop(size_t index, unsigned length) {
     reverse_stops_.push_back(BusStopInfo{index, length});
 }
-
 
 bool BusInfo::IsDirectBus() const {
     return !reverse_stops_.empty();
 }
 
-
 const std::vector<BusStopInfo> &BusInfo::GetDirectStops() const {
     return direct_stops_;
 }
-
 
 const std::vector<BusStopInfo> &BusInfo::GetReverseStops() const {
     return reverse_stops_;
 }
 
+
+NavigationDataBase::NavigationDataBase(
+        const std::unique_ptr<Serializer::TransportCatalog> &deserialized_base
+) : settings_(NavigationSettings{
+        deserialized_base->mutable_navigation_database()->settings().bus_wait_time(),
+        deserialized_base->mutable_navigation_database()->settings().bus_velocity()
+}), deserialized_base_(deserialized_base.get()) {
+    /*stop_name_to_vertex_id_ = std::make_shared<std::unordered_map<std::string, Graph::VertexId>>();
+    stop_name_to_vertex_id_->reserve(
+            deserialized_base->mutable_navigation_database()->mutable_stop_name_to_vertex_id()->size()
+    );
+    for (const auto&[stop_name, vertex_id] : *deserialized_base->mutable_navigation_database()->
+            mutable_stop_name_to_vertex_id()) {
+        (*stop_name_to_vertex_id_)[stop_name] = vertex_id;
+    }
+
+    vertex_id_to_stop_name_ = std::make_shared<std::vector<std::string>>();
+    vertex_id_to_stop_name_->reserve(
+            deserialized_base->mutable_navigation_database()->mutable_vertex_id_to_stop_name()->size()
+    );
+    for (const auto &stop_name : *deserialized_base->mutable_navigation_database()->mutable_vertex_id_to_stop_name()) {
+        vertex_id_to_stop_name_->push_back(stop_name);
+    }
+
+    edge_id_to_edge_info_ = std::make_shared<std::vector<EdgeInfo>>();
+    edge_id_to_edge_info_->reserve(
+            deserialized_base->mutable_navigation_database()->mutable_edge_id_to_edge_info()->size()
+    );
+    for (const auto &edge_info: *deserialized_base->mutable_navigation_database()->
+            mutable_edge_id_to_edge_info()) {
+        edge_id_to_edge_info_->push_back(
+                EdgeInfo{
+                        edge_info.bus(),
+                        edge_info.span_count()
+                }
+        );
+    }*/
+
+    roads_graph_ = std::make_shared<Graph::DirectedWeightedGraph<double>>();
+    auto &edges = roads_graph_->GetEdges();
+    edges.reserve(
+            deserialized_base->mutable_navigation_database()->mutable_roads_graph()->mutable_edges()->size()
+    );
+    for (const auto &edge : *deserialized_base->mutable_navigation_database()->
+            mutable_roads_graph()->mutable_edges()) {
+        edges.push_back(
+                Graph::Edge<double>{
+                        edge.from(),
+                        edge.to(),
+                        edge.weight()
+                }
+        );
+    }
+
+    auto &incidence_lists = roads_graph_->GetIncidenceLists();
+    incidence_lists.reserve(
+            deserialized_base->mutable_navigation_database()->mutable_roads_graph()->mutable_incidence_lists()->size()
+    );
+    for (const auto &incidence_list : *deserialized_base->mutable_navigation_database()->mutable_roads_graph()->
+            mutable_incidence_lists()) {
+        std::vector<Graph::EdgeId> list;
+        list.reserve(incidence_list.incidence_list().size());
+        for (const auto &id : incidence_list.incidence_list()) {
+            list.push_back(id);
+        }
+        incidence_lists.push_back(list);
+    }
+
+    router_ = std::make_shared<Graph::Router<double>>(*roads_graph_);
+}
 
 void NavigationDataBase::AddDirectStop(const std::string &bus_name,
                                        const std::string &stop_name, unsigned distances_to_next) {
@@ -51,14 +117,12 @@ void NavigationDataBase::AddDirectStop(const std::string &bus_name,
     }
 }
 
-
 void NavigationDataBase::AddReverseStop(const std::string &bus_name,
                                         const std::string &stop_name, unsigned distances_to_next) {
     const auto finder = stop_name_to_vertex_id_->find(stop_name);
 
     bus_name_to_bus_info_[bus_name]->AddReverseStop(finder->second, distances_to_next);
 }
-
 
 void NavigationDataBase::Build() {
     for (const auto &bus_pair : bus_name_to_bus_info_) {
@@ -69,9 +133,8 @@ void NavigationDataBase::Build() {
         }
     }
 
-    router_ = std::make_shared<Graph::Router<double>>(*roads_graph_);
+    // router_ = std::make_shared<Graph::Router<double>>(*roads_graph_);
 }
-
 
 void NavigationDataBase::build_direct_route(
         const std::pair<std::string, std::shared_ptr<BusInfo>> &bus_pair) const {
@@ -136,7 +199,6 @@ void NavigationDataBase::build_direct_route(
     }
 }
 
-
 void NavigationDataBase::build_round_route(
         const std::pair<std::string, std::shared_ptr<BusInfo>> &bus_pair) const {
     for (size_t i = 0; i < bus_pair.second->GetDirectStops().size() - 1; ++i) {
@@ -160,17 +222,18 @@ void NavigationDataBase::build_round_route(
     }
 }
 
-
 std::optional<NavigationResponse> NavigationDataBase::GetDirections(
         const std::string &from, const std::string &to) const {
     if (from == to) {
         return NavigationResponse();
     }
 
-    const auto from_finder = stop_name_to_vertex_id_->find(from);
-    const auto to_finder = stop_name_to_vertex_id_->find(to);
+    const auto& stop_name_to_vertex_id = deserialized_base_->navigation_database().stop_name_to_vertex_id();
 
-    if (from_finder == stop_name_to_vertex_id_->end() || to_finder == stop_name_to_vertex_id_->end())
+    const auto from_finder = stop_name_to_vertex_id.find(from);
+    const auto to_finder = stop_name_to_vertex_id.find(to);
+
+    if (from_finder == stop_name_to_vertex_id.end() || to_finder == stop_name_to_vertex_id.end())
         return std::nullopt;
 
     const auto from_id = from_finder->second;
@@ -179,6 +242,9 @@ std::optional<NavigationResponse> NavigationDataBase::GetDirections(
     const auto route_info = router_->BuildRoute(from_id, to_id);
 
     if (route_info) {
+        const auto &vertex_id_to_stop_name = deserialized_base_->navigation_database().vertex_id_to_stop_name();
+        const auto &edge_id_to_edge_info = deserialized_base_->navigation_database().edge_id_to_edge_info();
+
         NavigationResponse result;
         result.total_time = route_info->weight;
         result.items.reserve(2 * route_info->edge_count);
@@ -188,12 +254,12 @@ std::optional<NavigationResponse> NavigationDataBase::GetDirections(
             const auto edge = roads_graph_->GetEdge(edge_id);
 
             result.items.push_back(std::make_shared<RoadStop>(
-                    vertex_id_to_stop_name_->at(edge.from), settings_.bus_wait_time));
+                    vertex_id_to_stop_name[edge.from], settings_.bus_wait_time));
 
             result.items.push_back(std::make_shared<RoadBus>(
-                    edge_id_to_edge_info_->at(edge_id).bus,
+                    edge_id_to_edge_info[edge_id].bus(),
                     edge.weight - settings_.bus_wait_time,
-                    edge_id_to_edge_info_->at(edge_id).span_count));
+                    edge_id_to_edge_info[edge_id].span_count()));
         }
 
         return result;

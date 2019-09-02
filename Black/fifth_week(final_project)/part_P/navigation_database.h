@@ -155,6 +155,8 @@ public:
         bus_name_to_bus_info_.reserve(400);
     }
 
+    NavigationDataBase(const std::unique_ptr<Serializer::TransportCatalog>&);
+
     void AddDirectStop(const std::string &bus_name,
                        const std::string &stop_name, unsigned distances_to_next);
 
@@ -181,7 +183,11 @@ private:
 
     std::shared_ptr<Graph::Router<double>> router_;
 
+    const Serializer::TransportCatalog* deserialized_base_;
+
     void build_direct_route(const std::pair<std::string, std::shared_ptr<BusInfo>> &) const;
 
     void build_round_route(const std::pair<std::string, std::shared_ptr<BusInfo>> &) const;
+
+    friend class DataBaseKeeper;
 };

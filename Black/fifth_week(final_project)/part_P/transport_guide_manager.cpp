@@ -72,6 +72,7 @@ void TransportGuideManager::PerformWriteQueries(std::istream &input, std::ostrea
             json_input.AsMap().at("serialization_settings").AsMap().at("file").AsString();
     keeper_ = std::make_unique<DataBaseKeeper>();
     keeper_->LoadDataBase(file_name);
+    navigation_database_ = std::make_shared<NavigationDataBase>(keeper_->GetDeserializedDataBase());
     perform_write_queries(
             json_input.AsMap().at("stat_requests").AsArray(),
             output

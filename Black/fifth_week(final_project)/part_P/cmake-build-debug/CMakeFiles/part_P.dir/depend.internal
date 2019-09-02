@@ -31,6 +31,7 @@ CMakeFiles/part_P.dir/navigation_database.cpp.o
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/navigation_database.cpp
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/navigation_database.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/router.h
+ transport_catalog.pb.h
 CMakeFiles/part_P.dir/routes_database.cpp.o
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/graph.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/navigation_database.h
@@ -38,6 +39,7 @@ CMakeFiles/part_P.dir/routes_database.cpp.o
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/routes_database.cpp
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/routes_database.h
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/stops_database.h
+ transport_catalog.pb.h
 CMakeFiles/part_P.dir/stops_database.cpp.o
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/stops_database.cpp
  /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_P/stops_database.h
