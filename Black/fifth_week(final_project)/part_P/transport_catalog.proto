@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+package Serializer;
+
+
+message BusStopResponse {
+    repeated string buses_on_stop = 1;
+}
+
+
+message RouteResponse {
+    int32 stops_on_route = 1;
+    int32 unique_stops = 2;
+    uint32 route_length = 3;
+    float curvature = 4;
+}
+
+
+message Edge {
+    uint32 from = 1;
+    uint32 to = 2;
+    double weight = 3;
+}
+
+message IncidenceList {
+    repeated uint32 incidence_list = 1;
+}
+
+message Graph {
+    repeated Edge edges = 1;
+    repeated IncidenceList incidence_lists = 2;
+}
+
+message NavigationSettings {
+    uint32 bus_wait_time = 1;
+    double bus_velocity = 2;
+}
+
+message EdgeInfo {
+    string bus = 1;
+    uint32 span_count = 2;
+};
+
+message NavigationDataBase {
+    NavigationSettings settings = 1;
+    map<string, uint32> stop_name_to_vertex_id = 2;
+    repeated string vertex_id_to_stop_name = 3;
+    repeated EdgeInfo edge_id_to_edge_info = 4;
+    Graph roads_graph = 5;
+}
+
+
+message TransportCatalog {
+    map<string, BusStopResponse> stop_responses = 1;
+    map<string, RouteResponse> route_responses = 2;
+    NavigationDataBase navigation_database = 3;
+}
