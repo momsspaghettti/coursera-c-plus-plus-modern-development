@@ -11,11 +11,10 @@ int main(int argc, const char *argv[]) {
 
     const std::string_view mode(argv[1]);
 
-    TransportGuideManager manager;
-
     if (mode == "make_base") {
-        manager.PerformReadQueries();
+        TransportGuideManager::PerformReadQueries();
     } else if (mode == "process_requests") {
+        TransportGuideManager manager;
         manager.PerformWriteQueries();
     }
 

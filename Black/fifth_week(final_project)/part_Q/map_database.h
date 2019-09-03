@@ -97,8 +97,6 @@ namespace Map {
                 const std::string &,
                 size_t
         );
-
-        friend void TestRenderSettings();
     };
 
 }

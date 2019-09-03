@@ -123,33 +123,6 @@ part_Q/fast:
 	$(MAKE) -f CMakeFiles/part_Q.dir/build.make CMakeFiles/part_Q.dir/build
 .PHONY : part_Q/fast
 
-database_keeper.o: database_keeper.cpp.o
-
-.PHONY : database_keeper.o
-
-# target to build an object file
-database_keeper.cpp.o:
-	$(MAKE) -f CMakeFiles/part_Q.dir/build.make CMakeFiles/part_Q.dir/database_keeper.cpp.o
-.PHONY : database_keeper.cpp.o
-
-database_keeper.i: database_keeper.cpp.i
-
-.PHONY : database_keeper.i
-
-# target to preprocess a source file
-database_keeper.cpp.i:
-	$(MAKE) -f CMakeFiles/part_Q.dir/build.make CMakeFiles/part_Q.dir/database_keeper.cpp.i
-.PHONY : database_keeper.cpp.i
-
-database_keeper.s: database_keeper.cpp.s
-
-.PHONY : database_keeper.s
-
-# target to generate assembly for a file
-database_keeper.cpp.s:
-	$(MAKE) -f CMakeFiles/part_Q.dir/build.make CMakeFiles/part_Q.dir/database_keeper.cpp.s
-.PHONY : database_keeper.cpp.s
-
 json.o: json.cpp.o
 
 .PHONY : json.o
@@ -231,33 +204,6 @@ map_database.cpp.s:
 	$(MAKE) -f CMakeFiles/part_Q.dir/build.make CMakeFiles/part_Q.dir/map_database.cpp.s
 .PHONY : map_database.cpp.s
 
-navigation_catalog.pb.o: navigation_catalog.pb.cc.o
-
-.PHONY : navigation_catalog.pb.o
-
-# target to build an object file
-navigation_catalog.pb.cc.o:
-	$(MAKE) -f CMakeFiles/part_Q.dir/build.make CMakeFiles/part_Q.dir/navigation_catalog.pb.cc.o
-.PHONY : navigation_catalog.pb.cc.o
-
-navigation_catalog.pb.i: navigation_catalog.pb.cc.i
-
-.PHONY : navigation_catalog.pb.i
-
-# target to preprocess a source file
-navigation_catalog.pb.cc.i:
-	$(MAKE) -f CMakeFiles/part_Q.dir/build.make CMakeFiles/part_Q.dir/navigation_catalog.pb.cc.i
-.PHONY : navigation_catalog.pb.cc.i
-
-navigation_catalog.pb.s: navigation_catalog.pb.cc.s
-
-.PHONY : navigation_catalog.pb.s
-
-# target to generate assembly for a file
-navigation_catalog.pb.cc.s:
-	$(MAKE) -f CMakeFiles/part_Q.dir/build.make CMakeFiles/part_Q.dir/navigation_catalog.pb.cc.s
-.PHONY : navigation_catalog.pb.cc.s
-
 navigation_database.o: navigation_database.cpp.o
 
 .PHONY : navigation_database.o
@@ -311,33 +257,6 @@ points_computer.s: points_computer.cpp.s
 points_computer.cpp.s:
 	$(MAKE) -f CMakeFiles/part_Q.dir/build.make CMakeFiles/part_Q.dir/points_computer.cpp.s
 .PHONY : points_computer.cpp.s
-
-render_settings.pb.o: render_settings.pb.cc.o
-
-.PHONY : render_settings.pb.o
-
-# target to build an object file
-render_settings.pb.cc.o:
-	$(MAKE) -f CMakeFiles/part_Q.dir/build.make CMakeFiles/part_Q.dir/render_settings.pb.cc.o
-.PHONY : render_settings.pb.cc.o
-
-render_settings.pb.i: render_settings.pb.cc.i
-
-.PHONY : render_settings.pb.i
-
-# target to preprocess a source file
-render_settings.pb.cc.i:
-	$(MAKE) -f CMakeFiles/part_Q.dir/build.make CMakeFiles/part_Q.dir/render_settings.pb.cc.i
-.PHONY : render_settings.pb.cc.i
-
-render_settings.pb.s: render_settings.pb.cc.s
-
-.PHONY : render_settings.pb.s
-
-# target to generate assembly for a file
-render_settings.pb.cc.s:
-	$(MAKE) -f CMakeFiles/part_Q.dir/build.make CMakeFiles/part_Q.dir/render_settings.pb.cc.s
-.PHONY : render_settings.pb.cc.s
 
 route_map.o: route_map.cpp.o
 
@@ -537,9 +456,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... part_Q"
 	@echo "... edit_cache"
-	@echo "... database_keeper.o"
-	@echo "... database_keeper.i"
-	@echo "... database_keeper.s"
 	@echo "... json.o"
 	@echo "... json.i"
 	@echo "... json.s"
@@ -549,18 +465,12 @@ help:
 	@echo "... map_database.o"
 	@echo "... map_database.i"
 	@echo "... map_database.s"
-	@echo "... navigation_catalog.pb.o"
-	@echo "... navigation_catalog.pb.i"
-	@echo "... navigation_catalog.pb.s"
 	@echo "... navigation_database.o"
 	@echo "... navigation_database.i"
 	@echo "... navigation_database.s"
 	@echo "... points_computer.o"
 	@echo "... points_computer.i"
 	@echo "... points_computer.s"
-	@echo "... render_settings.pb.o"
-	@echo "... render_settings.pb.i"
-	@echo "... render_settings.pb.s"
 	@echo "... route_map.o"
 	@echo "... route_map.i"
 	@echo "... route_map.s"

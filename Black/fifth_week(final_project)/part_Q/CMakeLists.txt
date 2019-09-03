@@ -11,8 +11,6 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 protobuf_generate_cpp(
         PROTO_SRCS
         PROTO_HDRS
-        navigation_catalog.proto
-        render_settings.proto
         transport_catalog.proto
 )
 
@@ -21,7 +19,7 @@ add_executable(
         navigation_database.h navigation_database.cpp router.h routes_database.h
         routes_database.cpp stops_database.h stops_database.cpp
         transport_guide_manager.h transport_guide_manager.cpp
-        database_keeper.cpp database_keeper.h map_database.h map_database.cpp
+        map_database.h map_database.cpp layers.h
         points_computer.h points_computer.cpp stops_database.h stops_builder.cpp
         svg.h svg.cpp route_map.h route_map.cpp
 )

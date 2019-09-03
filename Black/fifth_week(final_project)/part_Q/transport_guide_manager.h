@@ -7,7 +7,6 @@
 #include <iostream>
 #include "navigation_database.h"
 #include "map_database.h"
-#include "database_keeper.h"
 
 
 class TransportGuideManager {
@@ -15,9 +14,10 @@ public:
     TransportGuideManager() {
         stops_database_ = std::make_shared<BusStopsDataBase>();
         routes_database_ = std::make_shared<RoutesDataBase>();
+        map_database_ = std::make_shared<Map::MapDataBase>(stops_database_, routes_database_);
     }
 
-    void PerformReadQueries(std::istream &input = std::cin);
+    static void PerformReadQueries(std::istream &input = std::cin);
 
     void PerformWriteQueries(std::istream &input = std::cin, std::ostream &output = std::cout);
 
@@ -42,9 +42,6 @@ private:
     void read_stop(const Json::Node &request) const;
 
     void read_bus(const Json::Node &request) const;
-
-    friend class DataBaseKeeper;
-    std::unique_ptr<DataBaseKeeper> keeper_;
 
     void perform_write_queries(
             const std::vector<Json::Node> &get_requests, std::ostream &output) const;

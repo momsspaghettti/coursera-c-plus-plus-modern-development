@@ -86,24 +86,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-debug/navigation_catalog.pb.cc">
-			<Option target="part_Q"/>
-		</Unit>
-		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-debug/navigation_catalog.pb.h">
-			<Option target="part_Q"/>
-		</Unit>
-		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-debug/navigation_catalog.pb.h.rule">
-			<Option target="part_Q"/>
-		</Unit>
-		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-debug/render_settings.pb.cc">
-			<Option target="part_Q"/>
-		</Unit>
-		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-debug/render_settings.pb.h">
-			<Option target="part_Q"/>
-		</Unit>
-		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-debug/render_settings.pb.h.rule">
-			<Option target="part_Q"/>
-		</Unit>
 		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-debug/transport_catalog.pb.cc">
 			<Option target="part_Q"/>
 		</Unit>
@@ -113,12 +95,6 @@
 		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-debug/transport_catalog.pb.h.rule">
 			<Option target="part_Q"/>
 		</Unit>
-		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/database_keeper.cpp">
-			<Option target="part_Q"/>
-		</Unit>
-		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/database_keeper.h">
-			<Option target="part_Q"/>
-		</Unit>
 		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/graph.h">
 			<Option target="part_Q"/>
 		</Unit>
@@ -126,6 +102,9 @@
 			<Option target="part_Q"/>
 		</Unit>
 		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/json.h">
+			<Option target="part_Q"/>
+		</Unit>
+		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/layers.h">
 			<Option target="part_Q"/>
 		</Unit>
 		<Unit filename="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/main.cpp">

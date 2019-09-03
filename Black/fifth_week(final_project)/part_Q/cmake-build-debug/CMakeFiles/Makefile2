@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = "/home/ivan/Рабочий стол/coursera-c-plus-plus-mode
 CMakeFiles/part_Q.dir/all:
 	$(MAKE) -f CMakeFiles/part_Q.dir/build.make CMakeFiles/part_Q.dir/depend
 	$(MAKE) -f CMakeFiles/part_Q.dir/build.make CMakeFiles/part_Q.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19 "Built target part_Q"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target part_Q"
 .PHONY : CMakeFiles/part_Q.dir/all
 
 # Include target in all.
@@ -81,7 +81,7 @@ all: CMakeFiles/part_Q.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/part_Q.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-debug/CMakeFiles" 19
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-debug/CMakeFiles" 14
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/part_Q.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-debug/CMakeFiles" 0
 .PHONY : CMakeFiles/part_Q.dir/rule

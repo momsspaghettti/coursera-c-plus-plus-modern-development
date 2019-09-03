@@ -30,10 +30,10 @@ struct RouteStats {
 class IRouteInfo {
 public:
     IRouteInfo() {
-        stops_.reserve(100);
+        stops_.reserve(450);
         route_stats_ = RouteStats();
         stop_name_to_numbers_ = std::make_unique<std::unordered_map<std::string, std::vector<size_t>>>();
-        stop_name_to_numbers_->reserve(100);
+        stop_name_to_numbers_->reserve(450);
     }
 
     void AddStop(const std::string &stop);
@@ -115,7 +115,7 @@ public:
     RoutesDataBase() {
         routes_ = std::make_unique<std::unordered_map<std::string,
                 std::shared_ptr<IRouteInfo>>>();
-        routes_->reserve(2000);
+        routes_->reserve(450);
     }
 
     void AddRoute(const std::string &bus_name, const std::shared_ptr<IRouteInfo> &);

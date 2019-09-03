@@ -8,7 +8,6 @@
 #include <variant>
 #include "router.h"
 #include "graph.h"
-#include "transport_catalog.pb.h"
 
 
 struct NavigationSettings {
@@ -163,13 +162,11 @@ public:
 
         bus_name_to_bus_info_ =
                 std::make_unique<std::unordered_map<std::string, std::shared_ptr<BusInfo>>>();
-        bus_name_to_bus_info_->reserve(100);
+        bus_name_to_bus_info_->reserve(450);
 
         edge_id_to_vertex_ids_ = std::make_unique<std::vector<std::vector<Graph::VertexId>>>();
         edge_id_to_vertex_ids_->reserve(400 * stops_count);
     }
-
-    explicit NavigationDataBase(const std::unique_ptr<Serializer::TransportCatalog>&);
 
     void AddDirectStop(const std::string &bus_name,
                        const std::string &stop_name, unsigned distances_to_next);
@@ -201,11 +198,7 @@ private:
 
     std::unique_ptr<Graph::Router<double>> router_;
 
-    const Serializer::TransportCatalog* deserialized_base_;
-
     void build_direct_route(const std::pair<std::string, std::shared_ptr<BusInfo>> &) const;
 
     void build_round_route(const std::pair<std::string, std::shared_ptr<BusInfo>> &) const;
-
-    friend class DataBaseKeeper;
 };

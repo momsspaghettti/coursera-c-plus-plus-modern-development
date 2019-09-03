@@ -1,7 +1,0 @@
-syntax = "proto3";
-
-package Serializer;
-
-message RenderSettings {
-    string settings_in_json = 1;
-}

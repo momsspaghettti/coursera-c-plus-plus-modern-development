@@ -57,59 +57,17 @@ include CMakeFiles/part_Q.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/part_Q.dir/flags.make
 
-navigation_catalog.pb.h: ../navigation_catalog.proto
-navigation_catalog.pb.h: /usr/bin/protoc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Running cpp protocol buffer compiler on navigation_catalog.proto"
-	/usr/bin/protoc --cpp_out "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release" -I "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q" "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/navigation_catalog.proto"
-
-navigation_catalog.pb.cc: navigation_catalog.pb.h
-	@$(CMAKE_COMMAND) -E touch_nocreate navigation_catalog.pb.cc
-
-render_settings.pb.h: ../render_settings.proto
-render_settings.pb.h: /usr/bin/protoc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Running cpp protocol buffer compiler on render_settings.proto"
-	/usr/bin/protoc --cpp_out "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release" -I "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q" "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/render_settings.proto"
-
-render_settings.pb.cc: render_settings.pb.h
-	@$(CMAKE_COMMAND) -E touch_nocreate render_settings.pb.cc
-
 transport_catalog.pb.h: ../transport_catalog.proto
 transport_catalog.pb.h: /usr/bin/protoc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Running cpp protocol buffer compiler on transport_catalog.proto"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Running cpp protocol buffer compiler on transport_catalog.proto"
 	/usr/bin/protoc --cpp_out "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release" -I "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q" "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/transport_catalog.proto"
 
 transport_catalog.pb.cc: transport_catalog.pb.h
 	@$(CMAKE_COMMAND) -E touch_nocreate transport_catalog.pb.cc
 
-CMakeFiles/part_Q.dir/navigation_catalog.pb.cc.o: CMakeFiles/part_Q.dir/flags.make
-CMakeFiles/part_Q.dir/navigation_catalog.pb.cc.o: navigation_catalog.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/part_Q.dir/navigation_catalog.pb.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/part_Q.dir/navigation_catalog.pb.cc.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/navigation_catalog.pb.cc"
-
-CMakeFiles/part_Q.dir/navigation_catalog.pb.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/part_Q.dir/navigation_catalog.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/navigation_catalog.pb.cc" > CMakeFiles/part_Q.dir/navigation_catalog.pb.cc.i
-
-CMakeFiles/part_Q.dir/navigation_catalog.pb.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/part_Q.dir/navigation_catalog.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/navigation_catalog.pb.cc" -o CMakeFiles/part_Q.dir/navigation_catalog.pb.cc.s
-
-CMakeFiles/part_Q.dir/render_settings.pb.cc.o: CMakeFiles/part_Q.dir/flags.make
-CMakeFiles/part_Q.dir/render_settings.pb.cc.o: render_settings.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/part_Q.dir/render_settings.pb.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/part_Q.dir/render_settings.pb.cc.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/render_settings.pb.cc"
-
-CMakeFiles/part_Q.dir/render_settings.pb.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/part_Q.dir/render_settings.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/render_settings.pb.cc" > CMakeFiles/part_Q.dir/render_settings.pb.cc.i
-
-CMakeFiles/part_Q.dir/render_settings.pb.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/part_Q.dir/render_settings.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/render_settings.pb.cc" -o CMakeFiles/part_Q.dir/render_settings.pb.cc.s
-
 CMakeFiles/part_Q.dir/transport_catalog.pb.cc.o: CMakeFiles/part_Q.dir/flags.make
 CMakeFiles/part_Q.dir/transport_catalog.pb.cc.o: transport_catalog.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/part_Q.dir/transport_catalog.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/part_Q.dir/transport_catalog.pb.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/part_Q.dir/transport_catalog.pb.cc.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/transport_catalog.pb.cc"
 
 CMakeFiles/part_Q.dir/transport_catalog.pb.cc.i: cmake_force
@@ -122,7 +80,7 @@ CMakeFiles/part_Q.dir/transport_catalog.pb.cc.s: cmake_force
 
 CMakeFiles/part_Q.dir/main.cpp.o: CMakeFiles/part_Q.dir/flags.make
 CMakeFiles/part_Q.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/part_Q.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/part_Q.dir/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/part_Q.dir/main.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/main.cpp"
 
 CMakeFiles/part_Q.dir/main.cpp.i: cmake_force
@@ -135,7 +93,7 @@ CMakeFiles/part_Q.dir/main.cpp.s: cmake_force
 
 CMakeFiles/part_Q.dir/json.cpp.o: CMakeFiles/part_Q.dir/flags.make
 CMakeFiles/part_Q.dir/json.cpp.o: ../json.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/part_Q.dir/json.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/part_Q.dir/json.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/part_Q.dir/json.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/json.cpp"
 
 CMakeFiles/part_Q.dir/json.cpp.i: cmake_force
@@ -148,7 +106,7 @@ CMakeFiles/part_Q.dir/json.cpp.s: cmake_force
 
 CMakeFiles/part_Q.dir/navigation_database.cpp.o: CMakeFiles/part_Q.dir/flags.make
 CMakeFiles/part_Q.dir/navigation_database.cpp.o: ../navigation_database.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/part_Q.dir/navigation_database.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/part_Q.dir/navigation_database.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/part_Q.dir/navigation_database.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/navigation_database.cpp"
 
 CMakeFiles/part_Q.dir/navigation_database.cpp.i: cmake_force
@@ -161,7 +119,7 @@ CMakeFiles/part_Q.dir/navigation_database.cpp.s: cmake_force
 
 CMakeFiles/part_Q.dir/routes_database.cpp.o: CMakeFiles/part_Q.dir/flags.make
 CMakeFiles/part_Q.dir/routes_database.cpp.o: ../routes_database.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/part_Q.dir/routes_database.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/part_Q.dir/routes_database.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/part_Q.dir/routes_database.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/routes_database.cpp"
 
 CMakeFiles/part_Q.dir/routes_database.cpp.i: cmake_force
@@ -174,7 +132,7 @@ CMakeFiles/part_Q.dir/routes_database.cpp.s: cmake_force
 
 CMakeFiles/part_Q.dir/stops_database.cpp.o: CMakeFiles/part_Q.dir/flags.make
 CMakeFiles/part_Q.dir/stops_database.cpp.o: ../stops_database.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/part_Q.dir/stops_database.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/part_Q.dir/stops_database.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/part_Q.dir/stops_database.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/stops_database.cpp"
 
 CMakeFiles/part_Q.dir/stops_database.cpp.i: cmake_force
@@ -187,7 +145,7 @@ CMakeFiles/part_Q.dir/stops_database.cpp.s: cmake_force
 
 CMakeFiles/part_Q.dir/transport_guide_manager.cpp.o: CMakeFiles/part_Q.dir/flags.make
 CMakeFiles/part_Q.dir/transport_guide_manager.cpp.o: ../transport_guide_manager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/part_Q.dir/transport_guide_manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/part_Q.dir/transport_guide_manager.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/part_Q.dir/transport_guide_manager.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/transport_guide_manager.cpp"
 
 CMakeFiles/part_Q.dir/transport_guide_manager.cpp.i: cmake_force
@@ -198,22 +156,9 @@ CMakeFiles/part_Q.dir/transport_guide_manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/part_Q.dir/transport_guide_manager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/transport_guide_manager.cpp" -o CMakeFiles/part_Q.dir/transport_guide_manager.cpp.s
 
-CMakeFiles/part_Q.dir/database_keeper.cpp.o: CMakeFiles/part_Q.dir/flags.make
-CMakeFiles/part_Q.dir/database_keeper.cpp.o: ../database_keeper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/part_Q.dir/database_keeper.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/part_Q.dir/database_keeper.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/database_keeper.cpp"
-
-CMakeFiles/part_Q.dir/database_keeper.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/part_Q.dir/database_keeper.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/database_keeper.cpp" > CMakeFiles/part_Q.dir/database_keeper.cpp.i
-
-CMakeFiles/part_Q.dir/database_keeper.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/part_Q.dir/database_keeper.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/database_keeper.cpp" -o CMakeFiles/part_Q.dir/database_keeper.cpp.s
-
 CMakeFiles/part_Q.dir/map_database.cpp.o: CMakeFiles/part_Q.dir/flags.make
 CMakeFiles/part_Q.dir/map_database.cpp.o: ../map_database.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/part_Q.dir/map_database.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/part_Q.dir/map_database.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/part_Q.dir/map_database.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/map_database.cpp"
 
 CMakeFiles/part_Q.dir/map_database.cpp.i: cmake_force
@@ -226,7 +171,7 @@ CMakeFiles/part_Q.dir/map_database.cpp.s: cmake_force
 
 CMakeFiles/part_Q.dir/points_computer.cpp.o: CMakeFiles/part_Q.dir/flags.make
 CMakeFiles/part_Q.dir/points_computer.cpp.o: ../points_computer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/part_Q.dir/points_computer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/part_Q.dir/points_computer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/part_Q.dir/points_computer.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/points_computer.cpp"
 
 CMakeFiles/part_Q.dir/points_computer.cpp.i: cmake_force
@@ -239,7 +184,7 @@ CMakeFiles/part_Q.dir/points_computer.cpp.s: cmake_force
 
 CMakeFiles/part_Q.dir/stops_builder.cpp.o: CMakeFiles/part_Q.dir/flags.make
 CMakeFiles/part_Q.dir/stops_builder.cpp.o: ../stops_builder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/part_Q.dir/stops_builder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/part_Q.dir/stops_builder.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/part_Q.dir/stops_builder.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/stops_builder.cpp"
 
 CMakeFiles/part_Q.dir/stops_builder.cpp.i: cmake_force
@@ -252,7 +197,7 @@ CMakeFiles/part_Q.dir/stops_builder.cpp.s: cmake_force
 
 CMakeFiles/part_Q.dir/svg.cpp.o: CMakeFiles/part_Q.dir/flags.make
 CMakeFiles/part_Q.dir/svg.cpp.o: ../svg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/part_Q.dir/svg.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/part_Q.dir/svg.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/part_Q.dir/svg.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/svg.cpp"
 
 CMakeFiles/part_Q.dir/svg.cpp.i: cmake_force
@@ -265,7 +210,7 @@ CMakeFiles/part_Q.dir/svg.cpp.s: cmake_force
 
 CMakeFiles/part_Q.dir/route_map.cpp.o: CMakeFiles/part_Q.dir/flags.make
 CMakeFiles/part_Q.dir/route_map.cpp.o: ../route_map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/part_Q.dir/route_map.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/part_Q.dir/route_map.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/part_Q.dir/route_map.cpp.o -c "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/route_map.cpp"
 
 CMakeFiles/part_Q.dir/route_map.cpp.i: cmake_force
@@ -278,8 +223,6 @@ CMakeFiles/part_Q.dir/route_map.cpp.s: cmake_force
 
 # Object files for target part_Q
 part_Q_OBJECTS = \
-"CMakeFiles/part_Q.dir/navigation_catalog.pb.cc.o" \
-"CMakeFiles/part_Q.dir/render_settings.pb.cc.o" \
 "CMakeFiles/part_Q.dir/transport_catalog.pb.cc.o" \
 "CMakeFiles/part_Q.dir/main.cpp.o" \
 "CMakeFiles/part_Q.dir/json.cpp.o" \
@@ -287,7 +230,6 @@ part_Q_OBJECTS = \
 "CMakeFiles/part_Q.dir/routes_database.cpp.o" \
 "CMakeFiles/part_Q.dir/stops_database.cpp.o" \
 "CMakeFiles/part_Q.dir/transport_guide_manager.cpp.o" \
-"CMakeFiles/part_Q.dir/database_keeper.cpp.o" \
 "CMakeFiles/part_Q.dir/map_database.cpp.o" \
 "CMakeFiles/part_Q.dir/points_computer.cpp.o" \
 "CMakeFiles/part_Q.dir/stops_builder.cpp.o" \
@@ -297,8 +239,6 @@ part_Q_OBJECTS = \
 # External object files for target part_Q
 part_Q_EXTERNAL_OBJECTS =
 
-part_Q: CMakeFiles/part_Q.dir/navigation_catalog.pb.cc.o
-part_Q: CMakeFiles/part_Q.dir/render_settings.pb.cc.o
 part_Q: CMakeFiles/part_Q.dir/transport_catalog.pb.cc.o
 part_Q: CMakeFiles/part_Q.dir/main.cpp.o
 part_Q: CMakeFiles/part_Q.dir/json.cpp.o
@@ -306,7 +246,6 @@ part_Q: CMakeFiles/part_Q.dir/navigation_database.cpp.o
 part_Q: CMakeFiles/part_Q.dir/routes_database.cpp.o
 part_Q: CMakeFiles/part_Q.dir/stops_database.cpp.o
 part_Q: CMakeFiles/part_Q.dir/transport_guide_manager.cpp.o
-part_Q: CMakeFiles/part_Q.dir/database_keeper.cpp.o
 part_Q: CMakeFiles/part_Q.dir/map_database.cpp.o
 part_Q: CMakeFiles/part_Q.dir/points_computer.cpp.o
 part_Q: CMakeFiles/part_Q.dir/stops_builder.cpp.o
@@ -315,7 +254,7 @@ part_Q: CMakeFiles/part_Q.dir/route_map.cpp.o
 part_Q: CMakeFiles/part_Q.dir/build.make
 part_Q: /usr/lib/libprotobuf.so
 part_Q: CMakeFiles/part_Q.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable part_Q"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable part_Q"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/part_Q.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -327,10 +266,6 @@ CMakeFiles/part_Q.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/part_Q.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/part_Q.dir/clean
 
-CMakeFiles/part_Q.dir/depend: navigation_catalog.pb.h
-CMakeFiles/part_Q.dir/depend: navigation_catalog.pb.cc
-CMakeFiles/part_Q.dir/depend: render_settings.pb.h
-CMakeFiles/part_Q.dir/depend: render_settings.pb.cc
 CMakeFiles/part_Q.dir/depend: transport_catalog.pb.h
 CMakeFiles/part_Q.dir/depend: transport_catalog.pb.cc
 	cd "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q" "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q" "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release" "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release" "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/part_Q/cmake-build-release/CMakeFiles/part_Q.dir/DependInfo.cmake" --color=$(COLOR)

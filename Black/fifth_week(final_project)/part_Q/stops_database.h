@@ -77,7 +77,8 @@ class BusStopsDataBase {
 public:
     BusStopsDataBase() {
         single_stops_ = std::make_unique<std::unordered_set<std::string>>();
-        bus_stops_.reserve(100);
+        single_stops_->reserve(50);
+        bus_stops_.reserve(450);
     }
 
     void AddStop(const BusStop &bus_stop);

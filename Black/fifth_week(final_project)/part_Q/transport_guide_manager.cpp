@@ -1,20 +1,51 @@
-#include "transport_guide_manager.h"
+#include <sstream>
 #include <string>
 #include <string_view>
+#include <fstream>
+#include "transport_guide_manager.h"
 #include "json.h"
+#include "transport_catalog.pb.h"
 
+
+std::string ReadFileData(const std::string &file_name) {
+    std::ifstream file(file_name, std::ios::binary | std::ios::ate);
+    const std::ifstream::pos_type end_pos = file.tellg();
+    file.seekg(0, std::ios::beg);
+
+    std::string data(end_pos, '\0');
+    file.read(&data[0], end_pos);
+    return data;
+}
 
 void TransportGuideManager::PerformReadQueries(std::istream &input) {
-    const auto json_input = Json::Load(input).GetRoot();
-    perform_read_queries(json_input.AsMap().at("base_requests").AsArray());
+    std::string result;
+    std::string line;
+    while (std::getline(input, line)) {
+        result += line + '\n';
+    }
+    std::istringstream in(result);
+    const auto json_input = Json::Load(in).GetRoot();
+    const std::string file_name = json_input.AsMap().at("serialization_settings").AsMap().at("file").AsString();
+    std::ofstream file(file_name, std::ios::binary | std::ios::ate);
+    Serializer::TransportCatalog transportCatalog;
+    *transportCatalog.mutable_input() = result;
+    transportCatalog.SerializeToOstream(&file);
+    file.close();
+}
 
-    build_transport_databases(json_input);
+void TransportGuideManager::PerformWriteQueries(std::istream &input, std::ostream &output) {
+    const auto write_input = Json::Load(input).GetRoot();
+    const std::string file_name = write_input.AsMap().at("serialization_settings").AsMap().at("file").AsString();
+    Serializer::TransportCatalog deserialized_catalog;
+    deserialized_catalog.ParseFromString(ReadFileData(file_name));
+    std::istringstream deserialized_input(deserialized_catalog.input());
+    const auto read_input = Json::Load(deserialized_input).GetRoot();
 
-    keeper_ = std::make_unique<DataBaseKeeper>();
-    keeper_->SaveDataBase(
-            json_input.AsMap().at("serialization_settings").AsMap().at("file").AsString(),
-            this
-    );
+    perform_read_queries(read_input.AsMap().at("base_requests").AsArray());
+    build_transport_databases(read_input);
+    build_map_database(read_input);
+
+    perform_write_queries(write_input.AsMap().at("stat_requests").AsArray(), output);
 }
 
 void TransportGuideManager::perform_read_queries(
@@ -30,6 +61,7 @@ void TransportGuideManager::perform_read_queries(
 
 void TransportGuideManager::read_stop(const Json::Node &request) const {
     BusStop stop;
+
     stop.name = request.AsMap().at("name").AsString();
     stop.coordinate = GroundPoint(request.AsMap().at("latitude").AsDouble(),
                                   request.AsMap().at("longitude").AsDouble());
@@ -70,21 +102,6 @@ void TransportGuideManager::build_transport_databases(const Json::Node &configs)
 void TransportGuideManager::build_map_database(const Json::Node &configs) {
     map_database_->AddRenderSettings(configs.AsMap().at("render_settings").AsMap());
     map_database_->BuildMap();
-}
-
-void TransportGuideManager::PerformWriteQueries(std::istream &input, std::ostream &output) {
-    const auto json_input = Json::Load(input).GetRoot();
-    const std::string file_name =
-            json_input.AsMap().at("serialization_settings").AsMap().at("file").AsString();
-    keeper_ = std::make_unique<DataBaseKeeper>();
-    keeper_->LoadDataBase(file_name);
-    navigation_database_ = std::make_shared<NavigationDataBase>(keeper_->GetDeserializedDataBase());
-    map_database_ = std::make_shared<Map::MapDataBase>();
-    build_map_database();
-    perform_write_queries(
-            json_input.AsMap().at("stat_requests").AsArray(),
-            output
-    );
 }
 
 void TransportGuideManager::perform_write_queries(
