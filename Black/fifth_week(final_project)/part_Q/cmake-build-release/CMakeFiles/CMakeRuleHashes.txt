@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+7d07ddb697595e52f69e80da9276bcc3 navigation_catalog.pb.h
+33cfc99fc70b98120fd8535f018018b9 render_settings.pb.h
+a95d003ee74eccf7f937316438627109 transport_catalog.pb.h

@@ -45,9 +45,7 @@ public:
 
     [[nodiscard]] bool IsDirectBus() const;
 
-
     [[nodiscard]] const std::vector<BusStopInfo> &GetDirectStops() const;
-
 
     [[nodiscard]] const std::vector<BusStopInfo> &GetReverseStops() const;
 
@@ -155,7 +153,7 @@ public:
         bus_name_to_bus_info_.reserve(400);
     }
 
-    NavigationDataBase(const std::unique_ptr<Serializer::TransportCatalog>&);
+    explicit NavigationDataBase(const std::unique_ptr<Serializer::TransportCatalog>&);
 
     void AddDirectStop(const std::string &bus_name,
                        const std::string &stop_name, unsigned distances_to_next);

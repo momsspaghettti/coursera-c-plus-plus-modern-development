@@ -29,37 +29,6 @@ NavigationDataBase::NavigationDataBase(
         deserialized_base->mutable_navigation_database()->settings().bus_wait_time(),
         deserialized_base->mutable_navigation_database()->settings().bus_velocity()
 }), deserialized_base_(deserialized_base.get()) {
-    /*stop_name_to_vertex_id_ = std::make_shared<std::unordered_map<std::string, Graph::VertexId>>();
-    stop_name_to_vertex_id_->reserve(
-            deserialized_base->mutable_navigation_database()->mutable_stop_name_to_vertex_id()->size()
-    );
-    for (const auto&[stop_name, vertex_id] : *deserialized_base->mutable_navigation_database()->
-            mutable_stop_name_to_vertex_id()) {
-        (*stop_name_to_vertex_id_)[stop_name] = vertex_id;
-    }
-
-    vertex_id_to_stop_name_ = std::make_shared<std::vector<std::string>>();
-    vertex_id_to_stop_name_->reserve(
-            deserialized_base->mutable_navigation_database()->mutable_vertex_id_to_stop_name()->size()
-    );
-    for (const auto &stop_name : *deserialized_base->mutable_navigation_database()->mutable_vertex_id_to_stop_name()) {
-        vertex_id_to_stop_name_->push_back(stop_name);
-    }
-
-    edge_id_to_edge_info_ = std::make_shared<std::vector<EdgeInfo>>();
-    edge_id_to_edge_info_->reserve(
-            deserialized_base->mutable_navigation_database()->mutable_edge_id_to_edge_info()->size()
-    );
-    for (const auto &edge_info: *deserialized_base->mutable_navigation_database()->
-            mutable_edge_id_to_edge_info()) {
-        edge_id_to_edge_info_->push_back(
-                EdgeInfo{
-                        edge_info.bus(),
-                        edge_info.span_count()
-                }
-        );
-    }*/
-
     roads_graph_ = std::make_shared<Graph::DirectedWeightedGraph<double>>();
     auto &edges = roads_graph_->GetEdges();
     edges.reserve(
@@ -132,8 +101,6 @@ void NavigationDataBase::Build() {
             build_round_route(bus_pair);
         }
     }
-
-    // router_ = std::make_shared<Graph::Router<double>>(*roads_graph_);
 }
 
 void NavigationDataBase::build_direct_route(
@@ -228,7 +195,7 @@ std::optional<NavigationResponse> NavigationDataBase::GetDirections(
         return NavigationResponse();
     }
 
-    const auto& stop_name_to_vertex_id = deserialized_base_->navigation_database().stop_name_to_vertex_id();
+    const auto &stop_name_to_vertex_id = deserialized_base_->navigation_database().stop_name_to_vertex_id();
 
     const auto from_finder = stop_name_to_vertex_id.find(from);
     const auto to_finder = stop_name_to_vertex_id.find(to);
