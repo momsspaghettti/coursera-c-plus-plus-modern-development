@@ -1,4 +1,4 @@
-# Install script for directory: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime
+# Install script for directory: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/SpreadSheet/antlr4_runtime
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,14 +39,14 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/doc/libantlr4" TYPE FILE FILES
-    "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/README.md"
-    "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/VERSION"
+    "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/SpreadSheet/antlr4_runtime/README.md"
+    "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/SpreadSheet/antlr4_runtime/VERSION"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-release/antlr4_runtime/runtime/cmake_install.cmake")
+  include("/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/SpreadSheet/cmake-build-release/antlr4_runtime/runtime/cmake_install.cmake")
 
 endif()
 

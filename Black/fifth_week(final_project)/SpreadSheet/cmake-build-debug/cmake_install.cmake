@@ -1,4 +1,4 @@
-# Install script for directory: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet
+# Install script for directory: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/SpreadSheet
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/spreadsheet"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/spreadsheet")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/SpreadSheet/cmake-build-debug/spreadsheet")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/spreadsheet" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/spreadsheet")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -55,7 +55,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/cmake_install.cmake")
+  include("/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/SpreadSheet/cmake-build-debug/antlr4_runtime/cmake_install.cmake")
 
 endif()
 
@@ -67,5 +67,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/SpreadSheet/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

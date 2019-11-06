@@ -1,7 +1,6 @@
 #include <ANTLRInputStream.h>
 #include "FormulaLexer.h"
 #include "FormulaParser.h"
-#include "my_listener.h"
 #include "common.h"
 #include "formula.h"
 #include "test_runner.h"

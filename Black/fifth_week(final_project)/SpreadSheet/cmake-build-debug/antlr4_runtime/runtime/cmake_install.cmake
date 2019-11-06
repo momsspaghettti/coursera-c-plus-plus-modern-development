@@ -1,4 +1,4 @@
-# Install script for directory: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime
+# Install script for directory: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/SpreadSheet/antlr4_runtime/runtime
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,10 +38,10 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-debug/antlr4_runtime/runtime/libantlr4-runtime.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/SpreadSheet/cmake-build-debug/antlr4_runtime/runtime/libantlr4-runtime.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/antlr4-runtime" TYPE DIRECTORY FILES "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/antlr4_runtime/runtime/src/" FILES_MATCHING REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/antlr4-runtime" TYPE DIRECTORY FILES "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/SpreadSheet/antlr4_runtime/runtime/src/" FILES_MATCHING REGEX "/[^/]*\\.h$")
 endif()
 

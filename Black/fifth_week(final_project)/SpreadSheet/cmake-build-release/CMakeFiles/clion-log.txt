@@ -1,4 +1,4 @@
-/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet"
+/home/ivan/Документы/clion-2019.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" "/home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/SpreadSheet"
 -- Building without demo. To enable demo build use: -DWITH_DEMO=True
 CMake Deprecation Warning at antlr4_runtime/CMakeLists.txt:31 (CMAKE_POLICY):
   The OLD behavior for policy CMP0054 will be removed from a future version
@@ -61,4 +61,4 @@ CMake Warning (dev) at antlr4_runtime/runtime/CMakeLists.txt:27 (add_dependencie
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
 -- Generating done
--- Build files have been written to: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week/SpreadSheet/cmake-build-release
+-- Build files have been written to: /home/ivan/Рабочий стол/coursera-c-plus-plus-modern-development/Black/fifth_week(final_project)/SpreadSheet/cmake-build-release

@@ -45,7 +45,7 @@ add_executable(
   spreadsheet
   ${ANTLR_FormulaParser_CXX_OUTPUTS}
   ${sources}
-        my_common.cpp cell.h sheet.h cell.cpp my_listener.h tree.h tree.cpp my_listener.cpp sheet.cpp)
+        cell.h sheet.h cell.cpp sheet.cpp)
 
 target_link_libraries(spreadsheet antlr4_static)
 if(MSVC)
